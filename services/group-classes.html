@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Classes - Q Fitness West Chester</title>
+    <meta name="description" content="Join our energizing group classes at Q Fitness. HIIT, Yoga, and Total Body Fitness classes for 3-5 people. Affordable group training in West Chester, PA.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link href="../styles.css" rel="stylesheet" />
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1E40AF',
+                        'primary-green': '#10B981',
+                        'primary-green-dark': '#0F766E'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary-blue">Q Fitness</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary-green">Home</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">The Gym</a>
+                            <a href="../about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Michael Quarto</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="personal-training.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Personal Training</a>
+                            <a href="group-classes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Group Classes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Membership Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Membership
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../membership/membership-rates.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Rates</a>
+                            <a href="../membership/schedule-bookings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Schedule</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Community
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../community/testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+                            <a href="../community/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blog</a>
+                        </div>
+                    </div>
+                    
+                    <a href="../contact.html" class="text-gray-700 hover:text-primary-green">Contact</a>
+                    <a href="../faq.html" class="text-gray-700 hover:text-primary-green">FAQ</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="bg-primary-blue text-white py-20">
+        <div class="container text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Energize with Group Classes</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Take your workout to the next level at a fraction of the cost of personal training</p>
+        </div>
+    </section>
+
+    <!-- Class Schedule Table -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-primary-blue mb-6">Class Schedule</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join our small group training classes (3-5 people) for maximum attention and results</p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">Class</th>
+                            <th scope="col" class="px-6 py-3">Day</th>
+                            <th scope="col" class="px-6 py-3">Time</th>
+                            <th scope="col" class="px-6 py-3">Duration</th>
+                            <th scope="col" class="px-6 py-3">Max Participants</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900">HIIT</th>
+                            <td class="px-6 py-4">Monday</td>
+                            <td class="px-6 py-4">6:00 PM</td>
+                            <td class="px-6 py-4">45 minutes</td>
+                            <td class="px-6 py-4">5 people</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900">Yoga</th>
+                            <td class="px-6 py-4">Wednesday</td>
+                            <td class="px-6 py-4">7:00 PM</td>
+                            <td class="px-6 py-4">60 minutes</td>
+                            <td class="px-6 py-4">5 people</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900">Total Body Fitness</th>
+                            <td class="px-6 py-4">Friday</td>
+                            <td class="px-6 py-4">6:30 PM</td>
+                            <td class="px-6 py-4">50 minutes</td>
+                            <td class="px-6 py-4">5 people</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900">Strength Training</th>
+                            <td class="px-6 py-4">Saturday</td>
+                            <td class="px-6 py-4">10:00 AM</td>
+                            <td class="px-6 py-4">45 minutes</td>
+                            <td class="px-6 py-4">4 people</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Benefits Card -->
+                <div class="card">
+                    <h2 class="text-3xl font-bold text-primary-blue mb-6">Why Group Classes Work</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-green rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary-blue mb-2">Cost-Effective Training</h3>
+                                <p class="text-gray-600">Get professional guidance at a fraction of the cost of personal training</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-green rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary-blue mb-2">Small Group Size</h3>
+                                <p class="text-gray-600">Maximum 5 people ensures individual attention and proper form correction</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-green rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary-blue mb-2">Community Support</h3>
+                                <p class="text-gray-600">Work out with like-minded individuals who motivate and encourage each other</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-green rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary-blue mb-2">Variety of Classes</h3>
+                                <p class="text-gray-600">From HIIT to Yoga, find the perfect workout style for your fitness goals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Benefits Card -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-6">Community Benefits</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Lose weight and burn fat effectively</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Build strength and muscle tone</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Boost metabolism and energy levels</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Improve flexibility and mobility</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Build lasting friendships and accountability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary-blue text-white">
+        <div class="container text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Join a Class?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">View our complete schedule and book your spot in our energizing group classes</p>
+            <a href="../membership/schedule-bookings.html" class="inline-block bg-primary-green hover:bg-primary-green-dark text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                View Schedule
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Q Fitness</h3>
+                    <p class="text-gray-300 mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../about/the-gym.html" class="text-gray-300 hover:text-primary-green transition duration-300">About Us</a></li>
+                        <li><a href="group-classes.html" class="text-gray-300 hover:text-primary-green transition duration-300">Services</a></li>
+                        <li><a href="../membership/membership-rates.html" class="text-gray-300 hover:text-primary-green transition duration-300">Membership</a></li>
+                        <li><a href="../contact.html" class="text-gray-300 hover:text-primary-green transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>1306 Wilmington Pike</p>
+                        <p>West Chester, PA 19380</p>
+                        <p>Phone: (610) 918-9200</p>
+                        <p>Email: info@qfitness.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Q Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+</body>
+</html>

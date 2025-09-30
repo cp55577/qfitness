@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership & Rates - Q Fitness West Chester</title>
+    <meta name="description" content="Join Q Fitness with flexible membership options. Basic $30/month, Premium $50/month, Elite $80/month. 24/7 access, secure entry, and expert guidance in West Chester, PA.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link href="../styles.css" rel="stylesheet" />
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1E40AF',
+                        'primary-green': '#10B981',
+                        'primary-green-dark': '#0F766E'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-primary-blue">Q Fitness</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary-green">Home</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">The Gym</a>
+                            <a href="../about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Michael Quarto</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../services/personal-training.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Personal Training</a>
+                            <a href="../services/group-classes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Group Classes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Membership Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Membership
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="membership-rates.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Rates</a>
+                            <a href="schedule-bookings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Schedule</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Community
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../community/testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+                            <a href="../community/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blog</a>
+                        </div>
+                    </div>
+                    
+                    <a href="../contact.html" class="text-gray-700 hover:text-primary-green">Contact</a>
+                    <a href="../faq.html" class="text-gray-700 hover:text-primary-green">FAQ</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="bg-primary-blue text-white py-20">
+        <div class="container text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Join Q Fitness</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Choose the membership plan that fits your fitness goals and lifestyle</p>
+        </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-primary-blue mb-6">Membership Plans</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Flexible options to fit your schedule and budget</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="card text-center">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Basic</h3>
+                    <div class="text-4xl font-bold text-primary-green mb-2">$30</div>
+                    <div class="text-gray-500 mb-6">per month</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            24/7 Gym Access
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Secure Entry System
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Video Surveillance
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            All Equipment Access
+                        </li>
+                    </ul>
+                    <a href="../contact.html" class="w-full bg-primary-green hover:bg-primary-green-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
+                        Sign Up Now
+                    </a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="card text-center border-2 border-primary-green relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-primary-green text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Premium</h3>
+                    <div class="text-4xl font-bold text-primary-green mb-2">$50</div>
+                    <div class="text-gray-500 mb-6">per month</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Everything in Basic
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Group Classes Included
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Nutrition Consultation
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Progress Tracking
+                        </li>
+                    </ul>
+                    <a href="../contact.html" class="w-full bg-primary-green hover:bg-primary-green-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
+                        Sign Up Now
+                    </a>
+                </div>
+
+                <!-- Elite Plan -->
+                <div class="card text-center">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Elite</h3>
+                    <div class="text-4xl font-bold text-primary-green mb-2">$80</div>
+                    <div class="text-gray-500 mb-6">per month</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Everything in Premium
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            2 Personal Training Sessions
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom Workout Plans
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary-green mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Priority Booking
+                        </li>
+                    </ul>
+                    <a href="../contact.html" class="w-full bg-primary-green hover:bg-primary-green-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
+                        Sign Up Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-primary-blue mb-6">Membership Benefits</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">What you get with every Q Fitness membership</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">24/7 Access</h3>
+                    <p class="text-gray-600">Work out on your schedule with round-the-clock access to our facility</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-primary-green rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">Secure Entry</h3>
+                    <p class="text-gray-600">Members-only access with video surveillance for your safety and security</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">Expert Guidance</h3>
+                    <p class="text-gray-600">Professional trainers with decades of experience to help you reach your goals</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-primary-green rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">Community</h3>
+                    <p class="text-gray-600">Join a supportive community of fitness enthusiasts in West Chester</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">Results</h3>
+                    <p class="text-gray-600">Proven track record of helping members achieve their fitness goals</p>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-primary-green rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-4">Flexibility</h3>
+                    <p class="text-gray-600">No long-term contracts - cancel anytime with 30 days notice</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary-blue text-white">
+        <div class="container text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Contact us today to sign up for your membership and start your fitness journey</p>
+            <a href="../contact.html" class="inline-block bg-primary-green hover:bg-primary-green-dark text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                Sign Up Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Q Fitness</h3>
+                    <p class="text-gray-300 mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../about/the-gym.html" class="text-gray-300 hover:text-primary-green transition duration-300">About Us</a></li>
+                        <li><a href="../services/personal-training.html" class="text-gray-300 hover:text-primary-green transition duration-300">Services</a></li>
+                        <li><a href="membership-rates.html" class="text-gray-300 hover:text-primary-green transition duration-300">Membership</a></li>
+                        <li><a href="../contact.html" class="text-gray-300 hover:text-primary-green transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>1306 Wilmington Pike</p>
+                        <p>West Chester, PA 19380</p>
+                        <p>Phone: (610) 918-9200</p>
+                        <p>Email: info@qfitness.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Q Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+</body>
+</html>

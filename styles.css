@@ -1,0 +1,70 @@
+/* Q Fitness - Styles for West Chester 24/7 Gym */
+:root {
+  --primary-blue: #1E40AF;
+  --primary-green: #10B981;
+  --primary-green-dark: #0F766E;
+  --background-gray: #F3F4F6;
+  --white: #FFFFFF;
+  --gray-50: #F9FAFB;
+  --gray-200: #E5E7EB;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition-base: 250ms ease-in-out;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-gray);
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+.bg-primary-blue { background-color: var(--primary-blue); }
+.text-primary-blue { color: var(--primary-blue); }
+.bg-primary-green { background-color: var(--primary-green); }
+.text-primary-green { color: var(--primary-green); }
+.hover\:bg-primary-green-dark:hover { background-color: var(--primary-green-dark); }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--white);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-2) 0;
+}
+
+.card {
+  @apply p-6 bg-white rounded-xl shadow-md;
+}
+
+.button {
+  @apply px-4 py-2 bg-primary-green text-white rounded-lg hover:bg-primary-green-dark transition;
+}
+
+h1, h2, h3 {
+  @apply font-bold text-primary-blue;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.5rem; }
+
+.container { max-width: 80rem; margin: 0 auto; padding: 0 var(--space-4); }
+.section { padding: var(--space-12) 0; }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 768px) {
+  .grid-cols-3 { grid-template-columns: 1fr; }
+  h1 { font-size: 1.875rem; }
+  h2 { font-size: 1.5rem; }
+}

@@ -127,11 +127,15 @@ h3 { font-size: 1.5rem; }
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  opacity: 0;
 }
 
-.accordion-content[aria-hidden="false"] {
-  max-height: 500px;
+/* When accordion is expanded */
+.accordion-header[aria-expanded="true"] + .accordion-content,
+.accordion-content:not([style*="display: none"]) {
+  max-height: 1000px;
   padding: 0 var(--space-6) var(--space-6);
+  opacity: 1;
 }
 
 /* FAQ specific styling */
@@ -166,6 +170,32 @@ h3 { font-size: 1.5rem; }
 .accordion-content,
 .accordion-icon {
   transition: all var(--transition-base);
+}
+
+/* Flowbite accordion compatibility */
+.accordion-content[data-carousel-item],
+.accordion-content:not(.hidden) {
+  max-height: none !important;
+  opacity: 1 !important;
+  padding: 0 var(--space-6) var(--space-6) !important;
+  overflow: visible !important;
+}
+
+/* Ensure content is visible when expanded */
+.accordion-header[aria-expanded="true"] + .accordion-content,
+.accordion-header[aria-expanded="true"] ~ .accordion-content {
+  max-height: none !important;
+  opacity: 1 !important;
+  padding: 0 var(--space-6) var(--space-6) !important;
+  overflow: visible !important;
+}
+
+/* Override any hidden states */
+.accordion-content:not([style*="display: none"]):not([style*="height: 0"]) {
+  max-height: none !important;
+  opacity: 1 !important;
+  padding: 0 var(--space-6) var(--space-6) !important;
+  overflow: visible !important;
 }
 
 /* Mobile responsive FAQ */

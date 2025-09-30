@@ -364,9 +364,22 @@ h3 {
   background-attachment: fixed;
 }
 
+/* Hero background with better scaling */
+.hero-bg-scaled {
+  background-size: 120%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: var(--primary-blue);
+}
+
 /* Mobile responsive background */
 @media (max-width: 768px) {
   .hero-bg-image {
+    background-attachment: scroll;
+  }
+  
+  .hero-bg-scaled {
+    background-size: 150%;
     background-attachment: scroll;
   }
 }

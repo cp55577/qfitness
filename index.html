@@ -117,8 +117,15 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-primary-blue text-white py-20">
-        <div class="container text-center">
+    <section class="relative bg-primary-blue text-white py-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('images/man_bench_press.jpg');"></div>
+        
+        <!-- Dark Overlay for Text Readability -->
+        <div class="absolute inset-0 bg-primary-blue bg-opacity-75"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 container text-center">
             <h1 class="text-5xl md:text-6xl font-bold mb-6">Unlock Your Potential 24/7</h1>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Join our West Chester community for fitness that fits your life!</p>
             <a href="membership/membership-rates.html" class="inline-block bg-primary-green hover:bg-primary-green-dark text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">

@@ -356,6 +356,21 @@ h3 {
   pointer-events: none;
 }
 
+/* Hero background image styling */
+.hero-bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Mobile responsive background */
+@media (max-width: 768px) {
+  .hero-bg-image {
+    background-attachment: scroll;
+  }
+}
+
 /* Premium feature cards */
 .feature-card {
   background: rgba(255, 255, 255, 0.95);

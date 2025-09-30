@@ -272,6 +272,32 @@ h3 {
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Hero headings on blue backgrounds - use white text instead of gradient */
+.bg-primary-blue .hero-heading,
+.bg-primary-blue h1,
+.bg-primary-blue h2,
+.bg-primary-blue h3 {
+  color: white !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: white !important;
+  background-clip: unset !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific overrides for common hero headings */
+.bg-primary-blue .text-5xl,
+.bg-primary-blue .text-6xl,
+.bg-primary-blue .text-4xl,
+.bg-primary-blue .text-3xl {
+  color: white !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: white !important;
+  background-clip: unset !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 768px) {
   .hero-heading {
     font-size: 2.5rem;

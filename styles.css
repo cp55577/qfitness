@@ -72,8 +72,9 @@ body::before {
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(30, 64, 175, 0.1);
   box-shadow: var(--shadow-lg);
-  padding: var(--space-2) 0;
+  padding: 1.5rem 0;
   transition: all var(--transition-base);
+  min-height: 5.5rem;
 }
 
 .navbar:hover {
@@ -81,26 +82,66 @@ body::before {
   box-shadow: var(--shadow-xl);
 }
 
-/* Navbar brand enhancement with universal est. 1994 */
+/* Navbar brand enhancement with logo and universal est. 1994 */
 .navbar-brand {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: all var(--transition-base);
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1.5rem;
 }
 
 .navbar-brand:hover {
   transform: scale(1.05);
 }
 
+.navbar-brand:hover::before {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2)) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15)) brightness(1.15) contrast(1.1);
+}
+
+.navbar-brand::before {
+  content: '';
+  width: 6rem;
+  height: 6rem;
+  background-image: url('images/newlogo4.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  margin: -1rem 0;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) brightness(1.1) contrast(1.05);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: all var(--transition-base);
+  transform: perspective(1000px) rotateX(5deg) rotateY(-2deg);
+}
+
+.navbar-brand::before::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 60%, rgba(30, 64, 175, 0.1) 100%);
+  pointer-events: none;
+  border-radius: 1.5rem;
+  box-shadow: inset 0 0 20px rgba(30, 64, 175, 0.1);
+}
+
 .navbar-brand::after {
   content: ' est. 1994';
-  font-size: 0.875rem;
-  font-weight: 300;
+  font-size: 1.125rem;
+  font-weight: 500;
   color: var(--gray-600);
   font-style: italic;
   transition: all var(--transition-base);
@@ -111,6 +152,47 @@ body::before {
 .navbar-brand:hover::after {
   color: var(--primary-green);
   transform: translateY(-1px);
+}
+
+/* Navigation menu items styling */
+.navbar a:not(.navbar-brand) {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all var(--transition-base);
+}
+
+.navbar a:not(.navbar-brand):hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Dropdown menu items styling */
+.navbar .group button {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all var(--transition-base);
+}
+
+.navbar .group button:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Dropdown content items */
+.navbar .group div a {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  transition: all var(--transition-base);
+}
+
+.navbar .group div a:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: translateX(4px);
 }
 
 /* ===== MICHAEL QUARTO PHOTOS STYLING ===== */

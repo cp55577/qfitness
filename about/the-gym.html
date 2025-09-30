@@ -40,7 +40,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="flex justify-between items-center">
-                <a href="../index.html" class="text-2xl font-bold text-primary-blue">Q Fitness</a>
+                <a href="../index.html" class="navbar-brand">Q Fitness</a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
@@ -54,9 +54,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <a href="the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">The Gym</a>
-                            <a href="michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Michael Quarto</a>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 about-dropdown">
+                            <a href="michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link">Michael Quarto</a>
+                            <a href="the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link">The Gym</a>
                         </div>
                     </div>
                     
@@ -117,8 +117,15 @@
     </nav>
 
     <!-- Header Section -->
-    <section class="bg-primary-blue text-white py-20">
-        <div class="container text-center">
+    <section class="relative bg-primary-blue text-white py-20 overflow-hidden">
+          <!-- Background Image -->
+          <div class="absolute inset-0 bg-no-repeat bg-cover bg-center" style="background-image: url('../images/7.jpg');"></div>
+        
+        <!-- Dark Overlay for Text Readability -->
+        <div class="absolute inset-0 bg-primary-blue bg-opacity-40"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 container text-center">
             <h1 class="text-5xl md:text-6xl font-bold mb-6">Our State-of-the-Art Facility</h1>
             <p class="text-xl md:text-2xl max-w-3xl mx-auto">Experience West Chester's premier 24/7 fitness destination with cutting-edge equipment and expert guidance</p>
         </div>

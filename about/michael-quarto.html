@@ -35,12 +35,12 @@
         }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 michael-page">
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <div class="flex justify-between items-center">
-                <a href="../index.html" class="text-2xl font-bold text-primary-blue">Q Fitness</a>
+                <a href="../index.html" class="navbar-brand">Q Fitness</a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
@@ -54,9 +54,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <a href="the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">The Gym</a>
-                            <a href="michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Michael Quarto</a>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 about-dropdown">
+                            <a href="michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link">Michael Quarto</a>
+                            <a href="the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link">The Gym</a>
                         </div>
                     </div>
                     
@@ -145,12 +145,12 @@
                 <!-- Headshot Placeholder Card -->
                 <div class="card">
                     <div class="text-center">
-                        <div class="bg-gray-200 rounded-lg h-80 flex items-center justify-center mb-6">
-                            <div class="text-center">
-                                <svg class="w-24 h-24 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                                </svg>
-                                <p class="text-gray-500">Headshot Coming Soon</p>
+                        <div class="michael-photos-container">
+                            <div class="michael-photo michael-photo-left">
+                                <img src="../images/mq.png" alt="Michael Quarto">
+                            </div>
+                            <div class="michael-photo michael-photo-right">
+                                <img src="../images/mq_founder2.png" alt="Michael Quarto Founder">
                             </div>
                         </div>
                         <h3 class="text-2xl font-bold text-primary-blue mb-4">Michael Quarto</h3>
@@ -201,6 +201,96 @@
                     </div>
                     <h3 class="text-xl font-bold text-primary-blue mb-4">30+ Years Experience</h3>
                     <p class="text-gray-600">Over three decades of helping clients and professional athletes achieve their fitness goals with proven methods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Bio Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="max-w-4xl mx-auto">
+                <div class="card">
+                    <h2 class="text-3xl font-bold text-primary-blue mb-6">Michael Quarto, PTA - Owner of Q Fitness</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        <strong>Currently training in West Chester, PA</strong>
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Michael Quarto is a Physical Therapist Assistant, Sports Therapist, and a Powerlifting National Record Holder. His education in the treatment and prevention of injuries, extensive experience (OVER 100,000 DOCUMENTED TRAINING HOURS SINCE 1994), hands-on approach, passion for the field make him the ultimate trainer. He has built, designed, staffed, and owned ten Training Centers as well as pioneered one of the first 24 hour gyms. His experience and knowledge is unparalleled to any other Therapist or Trainer. During his illustrious career he has helped thousands of people from fitness beginners to athletes in MLB, NHL and the NFL. He currently is training at Q Fitness in West Chester PA. Book your appointment now to start changing your life!
+                    </p>
+                    
+                    <div class="services-highlight">
+                        <h3 class="services-title">Current Services Include:</h3>
+                        <ul class="services-list">
+                            <li>• Fitness Training/Physical Therapy</li>
+                            <li>• Geriatric Rehabilitation</li>
+                            <li>• Sports Training</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Powerlifting Highlights Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-primary-blue mb-6">Powerlifting Highlights</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">National and state record holder with impressive strength achievements</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-6">Record Holders</h3>
+                    <div class="space-y-4">
+                        <div class="record-card record-card-national">
+                            <h4 class="record-title">National Record Holder</h4>
+                            <p class="record-org">United States Strength Sports Association (USSSA) Standing Power Curl</p>
+                            <p class="record-date">Since 11/2/02</p>
+                        </div>
+                        <div class="record-card record-card-state">
+                            <h4 class="record-title">Pennsylvania Record Holder</h4>
+                            <p class="record-org">United States Strength Sports Association (USSSA) Standing Power Curl</p>
+                            <p class="record-date">Since 6/16/99</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-6">Strength Achievements</h3>
+                    <div class="strength-achievements">
+                        <div class="strength-item">
+                            <span class="strength-exercise">Deadlift:</span>
+                            <span class="strength-weight">623lb</span>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-exercise">Squat:</span>
+                            <span class="strength-weight">500lb</span>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-exercise">Bench:</span>
+                            <span class="strength-weight">375lb</span>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-exercise">Standing Power Curl:</span>
+                            <span class="strength-weight">195lb</span>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-exercise">Bench Press (225lb):</span>
+                            <span class="strength-weight">49 times</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="youtube-section">
+                <div class="youtube-card">
+                    <h3 class="youtube-title">See Michael's Strength Feats</h3>
+                    <p class="youtube-description">Watch recent videos of Quarto's incredible strength achievements</p>
+                    <a href="https://www.youtube.com/@QFITNESS24HRGYM" target="_blank" class="youtube-button">
+                        Visit YouTube Channel
+                    </a>
                 </div>
             </div>
         </div>

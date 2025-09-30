@@ -81,7 +81,7 @@ body::before {
   box-shadow: var(--shadow-xl);
 }
 
-/* Navbar brand enhancement */
+/* Navbar brand enhancement with universal est. 1994 */
 .navbar-brand {
   font-weight: 800;
   font-size: 1.5rem;
@@ -90,10 +90,411 @@ body::before {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: all var(--transition-base);
+  position: relative;
 }
 
 .navbar-brand:hover {
   transform: scale(1.05);
+}
+
+.navbar-brand::after {
+  content: ' est. 1994';
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--gray-600);
+  font-style: italic;
+  transition: all var(--transition-base);
+  -webkit-text-fill-color: var(--gray-600);
+  background: none;
+}
+
+.navbar-brand:hover::after {
+  color: var(--primary-green);
+  transform: translateY(-1px);
+}
+
+/* ===== MICHAEL QUARTO PHOTOS STYLING ===== */
+.michael-photos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.michael-photo {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+  transition: all var(--transition-slow);
+  transform-style: preserve-3d;
+}
+
+.michael-photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  z-index: 1;
+}
+
+.michael-photo-left::before {
+  background: linear-gradient(135deg, var(--primary-green) 0%, rgba(16, 185, 129, 0.3) 100%);
+}
+
+.michael-photo-right::before {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, rgba(30, 64, 175, 0.3) 100%);
+}
+
+.michael-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-slow);
+}
+
+.michael-photo:hover {
+  transform: translateY(-8px) rotateY(5deg);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+.michael-photo:hover::before {
+  opacity: 0.2;
+}
+
+.michael-photo:hover img {
+  transform: scale(1.05);
+}
+
+.michael-photo-left:hover {
+  transform: translateY(-8px) rotateY(-5deg);
+}
+
+.michael-photo-right:hover {
+  transform: translateY(-8px) rotateY(5deg);
+}
+
+/* ===== MICHAEL QUARTO PAGE PROFESSIONAL STYLING ===== */
+
+/* Services Highlight */
+.services-highlight {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a8a 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.services-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Record Cards */
+.record-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.record-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.record-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2xl);
+}
+
+.record-card-national {
+  background: linear-gradient(135deg, var(--primary-green) 0%, #059669 100%);
+  color: white;
+}
+
+.record-card-state {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3a8a 100%);
+  color: white;
+}
+
+.record-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.record-org {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+.record-date {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Strength Achievements */
+.strength-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.strength-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--gray-200);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.strength-item:hover {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.05) 0%, transparent 100%);
+  border-bottom-color: var(--primary-green);
+  transform: translateX(4px);
+}
+
+.strength-item:last-child {
+  border-bottom: none;
+}
+
+.strength-exercise {
+  font-weight: 600;
+  color: var(--gray-700);
+  font-size: 1rem;
+}
+
+.strength-weight {
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* YouTube Section */
+.youtube-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.youtube-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.02) 0%, rgba(30, 64, 175, 0.02) 100%);
+  pointer-events: none;
+}
+
+.youtube-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2xl);
+}
+
+.youtube-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.youtube-description {
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.youtube-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.youtube-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+}
+
+.youtube-button:hover::before {
+  left: 100%;
+}
+
+/* Professional Bio Section */
+.bio-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(16, 185, 129, 0.03) 0%, rgba(30, 64, 175, 0.03) 100%);
+  pointer-events: none;
+}
+
+.bio-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bio-location {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bio-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--gray-700);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Enhanced Card Styling */
+.michael-page .card {
+  background: linear-gradient(135deg, white 0%, #fafbfc 100%);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.michael-page .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.02) 0%, rgba(30, 64, 175, 0.02) 100%);
+  pointer-events: none;
+}
+
+.michael-page .card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2xl);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+/* ===== NAVBAR DROPDOWN REORDERING ===== */
+/* Reorder About Us dropdown to show Michael Quarto first */
+.about-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-dropdown .michael-quarto-link {
+  order: 1;
+}
+
+.about-dropdown .the-gym-link {
+  order: 2;
 }
 
 /* Navbar links enhancement */

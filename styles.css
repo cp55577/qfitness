@@ -380,6 +380,12 @@ h3 {
   -webkit-mask-composite: source-in;
 }
 
+/* Edge fade overlay - fades from edges inward */
+.edge-fade-overlay {
+  background: radial-gradient(ellipse 90% 90% at center, transparent 60%, var(--primary-blue) 100%);
+  opacity: 0.6;
+}
+
 /* Mobile responsive background */
 @media (max-width: 768px) {
   .hero-bg-image {
@@ -394,6 +400,11 @@ h3 {
   .hero-image-feathered {
     mask: radial-gradient(ellipse 90% 90% at center, black 50%, transparent 100%);
     -webkit-mask: radial-gradient(ellipse 90% 90% at center, black 50%, transparent 100%);
+  }
+  
+  .edge-fade-overlay {
+    background: radial-gradient(ellipse 95% 95% at center, transparent 50%, var(--primary-blue) 100%);
+    opacity: 0.5;
   }
 }
 

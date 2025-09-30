@@ -479,6 +479,16 @@ h3 {
   border-color: var(--primary-blue);
 }
 
+/* Most Popular badge styling */
+.most-popular-badge {
+  z-index: 10;
+  box-shadow: var(--shadow-lg);
+}
+
+.most-popular-card {
+  margin-top: var(--space-8);
+}
+
 /* ===== FAQ ACCORDION STYLES ===== */
 .accordion {
   background: var(--white);

@@ -485,10 +485,6 @@ h3 {
   box-shadow: var(--shadow-lg);
 }
 
-.most-popular-card {
-  margin-top: var(--space-8);
-}
-
 /* ===== FAQ ACCORDION STYLES ===== */
 .accordion {
   background: var(--white);

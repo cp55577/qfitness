@@ -372,6 +372,14 @@ h3 {
   background-color: var(--primary-blue);
 }
 
+/* Feathered edges for hero image */
+.hero-image-feathered {
+  mask: radial-gradient(ellipse 80% 80% at center, black 60%, transparent 100%);
+  -webkit-mask: radial-gradient(ellipse 80% 80% at center, black 60%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+
 /* Mobile responsive background */
 @media (max-width: 768px) {
   .hero-bg-image {
@@ -381,6 +389,11 @@ h3 {
   .hero-bg-scaled {
     background-size: 150%;
     background-attachment: scroll;
+  }
+  
+  .hero-image-feathered {
+    mask: radial-gradient(ellipse 90% 90% at center, black 50%, transparent 100%);
+    -webkit-mask: radial-gradient(ellipse 90% 90% at center, black 50%, transparent 100%);
   }
 }
 

@@ -13,8 +13,8 @@
     --primary-orange-darker: #C2410C;
     --background-blue: #1E3A8A;
     --background-blue-light: #2563EB;
-    --white: #FFFFFF;
-    --gray-50: #F8FAFC;
+    --white: #F5F7FA;
+    --gray-50: #F5F7FA;
     --gray-200: #CBD5E1;
     --gray-600: #64748B;
     --gray-700: #334155;
@@ -48,10 +48,10 @@
     --transition-slow: 350ms ease-in-out;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--background-blue-light));
-    --gradient-orange: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-dark));
-    --gradient-hero: linear-gradient(135deg, var(--background-blue) 0%, var(--background-blue-light) 100%);
-    --gradient-main: linear-gradient(180deg, #0C1220 0%, var(--background-blue) 50%, var(--background-blue-light) 100%);
+    --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+    --gradient-orange: linear-gradient(135deg, #F97316 0%, #EA580C 70%);
+    --gradient-hero: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+    --gradient-main: linear-gradient(180deg, #0C1220 0%, #1E3A8A 50%, #2563EB 100%);
   }
 
   body {
@@ -68,13 +68,14 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
     line-height: 1.2;
     color: var(--gray-700);
   }
 
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.25rem; }
   h3 { font-size: 1.75rem; }
   h4 { font-size: 1.5rem; }
   h5 { font-size: 1.25rem; }
@@ -231,6 +232,24 @@
   .navbar .group div a:hover {
     background-color: rgba(249, 115, 22, 0.1);
     transform: translateX(4px);
+  }
+
+  /* Fix dropdown menu item contrast - white text on blue background */
+  .navbar .group div a {
+    color: var(--white) !important;
+  }
+
+  .navbar .group div a:hover {
+    background-color: rgba(249, 115, 22, 0.8) !important;
+    color: var(--white) !important;
+    transform: translateX(4px);
+  }
+
+  .navbar .group div a:active,
+  .navbar .group div a:focus,
+  .navbar .group div a[aria-current="page"] {
+    background-color: var(--primary-orange) !important;
+    color: var(--white) !important;
   }
 
   .navbar-brand {
@@ -885,7 +904,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 64, 175, 0.05) 0%, rgba(249, 115, 22, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
     pointer-events: none;
     z-index: -1;
   }
@@ -926,16 +945,17 @@
 /* Utility classes and animations */
 @layer utilities {
   .hero-heading {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     font-size: 3rem;
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -0.04em;
     /* Enhanced text visibility for both light and dark backgrounds */
     text-shadow: 
-      0 0 10px rgba(0, 0, 0, 0.8),
-      0 0 20px rgba(0, 0, 0, 0.6),
-      0 2px 4px rgba(0, 0, 0, 0.9),
-      0 4px 8px rgba(0, 0, 0, 0.7);
+      0 0 8px rgba(0, 0, 0, 0.6),
+      0 0 16px rgba(0, 0, 0, 0.4),
+      0 2px 4px rgba(0, 0, 0, 0.7),
+      0 4px 8px rgba(0, 0, 0, 0.5);
     /* Text outline for better contrast */
     -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.4);
   }
@@ -954,9 +974,9 @@
     background-clip: unset !important;
     /* Enhanced text visibility for blue backgrounds */
     text-shadow: 
-      0 0 8px rgba(0, 0, 0, 0.9),
-      0 0 16px rgba(0, 0, 0, 0.7),
-      0 2px 4px rgba(0, 0, 0, 0.8);
+      0 0 6px rgba(0, 0, 0, 0.7),
+      0 0 12px rgba(0, 0, 0, 0.5),
+      0 2px 4px rgba(0, 0, 0, 0.6);
   }
 
   .hero-section h1,
@@ -967,12 +987,12 @@
   .hero-section .text-3xl {
     /* Multiple text shadows for maximum visibility */
     text-shadow: 
-      0 0 10px rgba(0, 0, 0, 0.8),
-      0 0 20px rgba(0, 0, 0, 0.6),
-      0 2px 4px rgba(0, 0, 0, 0.9),
-      0 4px 8px rgba(0, 0, 0, 0.7),
-      2px 2px 4px rgba(0, 0, 0, 0.8),
-      -2px -2px 4px rgba(0, 0, 0, 0.8);
+      0 0 8px rgba(0, 0, 0, 0.6),
+      0 0 16px rgba(0, 0, 0, 0.4),
+      0 2px 4px rgba(0, 0, 0, 0.7),
+      0 4px 8px rgba(0, 0, 0, 0.5),
+      2px 2px 4px rgba(0, 0, 0, 0.6),
+      -2px -2px 4px rgba(0, 0, 0, 0.6);
     /* Subtle text outline for extra contrast */
     -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.4);
   }
@@ -1275,11 +1295,11 @@
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }
 

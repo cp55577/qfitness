@@ -2779,3 +2779,22 @@ footer a:hover {
   color: #C4CED4 !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
 }
+
+/* NUCLEAR OPTION - Force ALL footer headings to be white */
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Override any blue colors in footer */
+footer .text-blue-600, footer .text-blue-500, footer .text-blue-400, 
+footer .text-blue-300, footer .text-blue-200, footer .text-blue-100 {
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Force specific footer headings */
+footer h4.text-lg.font-semibold {
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}

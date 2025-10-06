@@ -132,12 +132,12 @@ const footer = `
     <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="col-span-1 md:col-span-2">
-                <h3 class="text-2xl font-bold text-white mb-4">Q Fitness</h3>
+                <h3 class="text-2xl font-bold mb-4" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important; -webkit-text-fill-color: #ffffff !important;">Q Fitness</h3>
                 <p class="text-white mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
             </div>
             
             <div>
-                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <h4 class="text-lg font-semibold mb-4" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important; -webkit-text-fill-color: #ffffff !important;">Quick Links</h4>
                 <ul class="space-y-2">
                     <li><a href="${pathPrefix}about/the-gym.html" class="text-white hover:text-primary-green transition duration-300">About Us</a></li>
                     <li><a href="${pathPrefix}services/personal-training.html" class="text-white hover:text-primary-green transition duration-300">Services</a></li>
@@ -147,7 +147,7 @@ const footer = `
             </div>
             
             <div>
-                <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                <h4 class="text-lg font-semibold mb-4" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important; -webkit-text-fill-color: #ffffff !important;">Contact Info</h4>
                 <div class="space-y-2 text-white">
                     <p>1306 Wilmington Pike</p>
                     <p>West Chester, PA 19380</p>
@@ -157,9 +157,9 @@ const footer = `
             </div>
         </div>
         
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p class="text-gray-400">&copy; 2024 Q Fitness. All rights reserved.</p>
-        </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Q Fitness. All rights reserved.</p>
+            </div>
     </div>
 </footer>
 `;

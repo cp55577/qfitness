@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tips & Updates - Q Fitness Blog</title>
+    <meta name="description" content="Stay updated with fitness tips, workout routines, nutrition advice, and Q Fitness news. Expert guidance from Michael Quarto and our West Chester team.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../load-navbar.js"></script>
+    
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link href="../styles.css" rel="stylesheet" />
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#0C2340',
+                        'primary-green': '#10B981',
+                        'primary-green-dark': '#0F766E'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="scheme-ocean">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="navbar-brand flex items-center p-0">
+                    <img src="../images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
+                </a>
+                <span style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary-green">Home</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 about-dropdown">
+                            <a href="../about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link">Michael Quarto</a>
+                            <a href="../about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link">The Gym</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../services/personal-training.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Personal Training</a>
+                            <a href="../services/group-classes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Group Classes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Membership Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Membership
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../membership/membership-rates.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Rates</a>
+                            <a href="../membership/schedule-bookings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Schedule</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Community
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+                            <a href="blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blog</a>
+                        </div>
+                    </div>
+                    
+                    <a href="../contact.html" class="text-gray-700 hover:text-primary-green">Contact</a>
+                    <a href="../faq.html" class="text-gray-700 hover:text-primary-green">FAQ</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative text-white py-20 overflow-hidden" style="background: #f8fafc !important;">
+        <div class="container text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Fitness Tips & Updates</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Expert guidance, workout routines, and the latest from Q Fitness</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="card">
+                    <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-6">
+                        <div class="text-center">
+                            <svg class="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <p class="text-gray-500 text-sm">Featured Image</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-3">5 Tips for Busy Professionals</h3>
+                    <p class="text-gray-600 mb-4">Learn how to fit effective workouts into your busy schedule with these time-efficient strategies from Michael Quarto.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">March 15, 2024</span>
+                        <a href="#" class="text-primary-green hover:text-primary-green-dark font-semibold">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="card">
+                    <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-6">
+                        <div class="text-center">
+                            <svg class="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <p class="text-gray-500 text-sm">Featured Image</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-3">Proper Form: The Foundation of Success</h3>
+                    <p class="text-gray-600 mb-4">Why proper form matters more than heavy weights, and how to ensure you're performing exercises correctly.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">March 10, 2024</span>
+                        <a href="#" class="text-primary-green hover:text-primary-green-dark font-semibold">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="card">
+                    <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-6">
+                        <div class="text-center">
+                            <svg class="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <p class="text-gray-500 text-sm">Featured Image</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-blue mb-3">Nutrition for Recovery</h3>
+                    <p class="text-gray-600 mb-4">What to eat before and after your workouts to maximize results and speed up recovery time.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">March 5, 2024</span>
+                        <a href="#" class="text-primary-green hover:text-primary-green-dark font-semibold">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section bg-primary-blue text-white">
+        <div class="container text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Stay Updated</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Get the latest fitness tips, workout routines, and Q Fitness news delivered to your inbox</p>
+            
+            <form class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-primary-green focus:outline-none" required>
+                    <button type="submit" class="bg-primary-green hover:bg-primary-green-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Q Fitness</h3>
+                    <p class="text-gray-300 mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../about/the-gym.html" class="text-gray-300 hover:text-primary-green transition duration-300">About Us</a></li>
+                        <li><a href="../services/personal-training.html" class="text-gray-300 hover:text-primary-green transition duration-300">Services</a></li>
+                        <li><a href="../membership/membership-rates.html" class="text-gray-300 hover:text-primary-green transition duration-300">Membership</a></li>
+                        <li><a href="../contact.html" class="text-gray-300 hover:text-primary-green transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>1306 Wilmington Pike</p>
+                        <p>West Chester, PA 19380</p>
+                        <p>Phone: (610) 918-9200</p>
+                        <p>Email: info@qfitness.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Q Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+</body>
+</html>

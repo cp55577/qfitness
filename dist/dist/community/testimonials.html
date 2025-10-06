@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Success Stories - Q Fitness West Chester</title>
+    <meta name="description" content="Read inspiring success stories from Q Fitness members. Real results from real people in our West Chester community - weight loss, strength gains, and fitness transformations.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../load-navbar.js"></script>
+    
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link href="../styles.css" rel="stylesheet" />
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#0C2340',
+                        'primary-green': '#10B981',
+                        'primary-green-dark': '#0F766E'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="scheme-ocean">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="navbar-brand flex items-center p-0">
+                    <img src="../images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
+                </a>
+                <span style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary-green">Home</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 about-dropdown">
+                            <a href="../about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link">Michael Quarto</a>
+                            <a href="../about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link">The Gym</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../services/personal-training.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Personal Training</a>
+                            <a href="../services/group-classes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Group Classes</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Membership Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Membership
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="../membership/membership-rates.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Rates</a>
+                            <a href="../membership/schedule-bookings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Schedule</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-green flex items-center">
+                            Community
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+                            <a href="blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blog</a>
+                        </div>
+                    </div>
+                    
+                    <a href="../contact.html" class="text-gray-700 hover:text-primary-green">Contact</a>
+                    <a href="../faq.html" class="text-gray-700 hover:text-primary-green">FAQ</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative text-white py-20 overflow-hidden" style="background: #f8fafc !important;">
+        <div class="container text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Member Success Stories</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Real results from real people in our West Chester community</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="section bg-white">
+        <div class="container">
+            <div id="testimonial-carousel" class="relative" data-carousel="slide">
+                <div class="overflow-hidden relative h-96 rounded-lg">
+                    <!-- Testimonial 1 - Tom -->
+                    <div class="duration-700 ease-in-out" data-carousel-item>
+                        <div class="card text-center h-full flex flex-col justify-center">
+                            <div class="mb-6">
+                                <svg class="w-16 h-16 text-primary-green mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5V3.5h5.5v7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5z"/>
+                                </svg>
+                            </div>
+                            <blockquote class="text-xl text-gray-700 italic mb-6">
+                                "I had been trying to make gains in exercise over the last 10+ years with only short-term success. In the last 3 months I've become more fit than I have been my entire life. Mike and the trainers at Q-Fitness are top-notch!"
+                            </blockquote>
+                            <div class="text-primary-blue font-semibold text-lg">Tom</div>
+                            <div class="text-gray-500">Personal Training & Group Classes Member</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 - Mary A. -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="card text-center h-full flex flex-col justify-center">
+                            <div class="mb-6">
+                                <svg class="w-16 h-16 text-primary-green mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5V3.5h5.5v7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5z"/>
+                                </svg>
+                            </div>
+                            <blockquote class="text-xl text-gray-700 italic mb-6">
+                                "With the guidance and expertise of Mike and his staff I have been able to lose 15 lbs and 2 dress sizes in the last several months. Every 4 weeks a new fitness program was personally prepared for me."
+                            </blockquote>
+                            <div class="text-primary-blue font-semibold text-lg">Mary A.</div>
+                            <div class="text-gray-500">Personal Training Member</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 - Frank -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="card text-center h-full flex flex-col justify-center">
+                            <div class="mb-6">
+                                <svg class="w-16 h-16 text-primary-green mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5V3.5h5.5v7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5z"/>
+                                </svg>
+                            </div>
+                            <blockquote class="text-xl text-gray-700 italic mb-6">
+                                "Q Fitness is an unbelievable gym. It has everything you could want, exclusivity, a low number of people working out at once, great trainers, and 24 hour access. When I started I was benching around 55 pounds and am now able to bench 225 pounds."
+                            </blockquote>
+                            <div class="text-primary-blue font-semibold text-lg">Frank</div>
+                            <div class="text-gray-500">Strength Training Member</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button type="button" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-3" data-carousel-prev>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button type="button" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-3" data-carousel-next>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Story Form -->
+    <section class="section">
+        <div class="container">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-primary-blue mb-6">Share Your Story</h2>
+                    <p class="text-xl text-gray-600">Help inspire others by sharing your Q Fitness success story</p>
+                </div>
+                
+                <div class="card">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-green focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-green focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label for="testimonial" class="block text-sm font-medium text-gray-700 mb-2">Your Success Story</label>
+                            <textarea id="testimonial" name="testimonial" rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-green focus:border-transparent" placeholder="Tell us about your fitness journey, results achieved, and how Q Fitness helped you reach your goals..." required></textarea>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="bg-primary-green hover:bg-primary-green-dark text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                                Share Your Story
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Q Fitness</h3>
+                    <p class="text-gray-300 mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../about/the-gym.html" class="text-gray-300 hover:text-primary-green transition duration-300">About Us</a></li>
+                        <li><a href="../services/personal-training.html" class="text-gray-300 hover:text-primary-green transition duration-300">Services</a></li>
+                        <li><a href="../membership/membership-rates.html" class="text-gray-300 hover:text-primary-green transition duration-300">Membership</a></li>
+                        <li><a href="../contact.html" class="text-gray-300 hover:text-primary-green transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>1306 Wilmington Pike</p>
+                        <p>West Chester, PA 19380</p>
+                        <p>Phone: (610) 918-9200</p>
+                        <p>Email: info@qfitness.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Q Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+</body>
+</html>

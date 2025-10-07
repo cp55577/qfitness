@@ -2400,6 +2400,17 @@ html {
   transition: all 0.2s ease !important;
 }
 
+/* Fix navigation links - override white text rules */
+.scheme-ocean .navbar a:not(.navbar-brand a),
+.scheme-ocean .navbar button:not(.navbar-brand button) {
+  color: #374151 !important; /* text-gray-700 equivalent */
+}
+
+.scheme-ocean .navbar a:not(.navbar-brand a):hover,
+.scheme-ocean .navbar button:not(.navbar-brand button):hover {
+  color: #1E3A8A !important; /* primary-blue hover */
+}
+
 .scheme-ocean .text-primary {
   color: #0C2340 !important;
 }

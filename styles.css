@@ -2433,6 +2433,30 @@ html {
   color: #1E3A8A !important;
 }
 
+/* Fix dropdown menu items - they're in a different container */
+.scheme-ocean .navbar .absolute a,
+.scheme-ocean .navbar .absolute a.text-gray-700 {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar .absolute a:hover,
+.scheme-ocean .navbar .absolute a.text-gray-700:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important; /* hover:bg-gray-100 equivalent */
+}
+
+/* Target dropdown menu items specifically */
+.scheme-ocean .navbar [role="menu"] a,
+.scheme-ocean .navbar [role="menuitem"] {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar [role="menu"] a:hover,
+.scheme-ocean .navbar [role="menuitem"]:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important;
+}
+
 .scheme-ocean .text-primary {
   color: #0C2340 !important;
 }

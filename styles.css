@@ -2488,6 +2488,36 @@ body.scheme-ocean .navbar div a:hover {
   background-color: #f3f4f6 !important;
 }
 
+/* OVERRIDE THE WHITE TEXT RULES THAT ARE CAUSING THE PROBLEM */
+.scheme-ocean .navbar a span,
+.scheme-ocean .navbar span:not(.navbar-brand span),
+.scheme-ocean .navbar div a span,
+.scheme-ocean .navbar div span {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar a span:hover,
+.scheme-ocean .navbar span:not(.navbar-brand span):hover,
+.scheme-ocean .navbar div a span:hover,
+.scheme-ocean .navbar div span:hover {
+  color: #1E3A8A !important;
+}
+
+/* ULTIMATE OVERRIDE - Target the specific white text rules */
+.scheme-ocean .navbar a span.text-gray-700,
+.scheme-ocean .navbar span.text-gray-700,
+.scheme-ocean .navbar div a span.text-gray-700,
+.scheme-ocean .navbar div span.text-gray-700 {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar a span.text-gray-700:hover,
+.scheme-ocean .navbar span.text-gray-700:hover,
+.scheme-ocean .navbar div a span.text-gray-700:hover,
+.scheme-ocean .navbar div span.text-gray-700:hover {
+  color: #1E3A8A !important;
+}
+
 .scheme-ocean .text-primary {
   color: #0C2340 !important;
 }

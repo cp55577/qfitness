@@ -2193,7 +2193,6 @@ html {
 .scheme-ocean .navbar {
   background: linear-gradient(135deg, #0C2340 0%, #0C2340 100%) !important;
   border-bottom: 6px solid #C4CED4 !important;
-  color: #ffffff !important;
   box-shadow: 0 6px 25px rgba(12, 35, 64, 0.5) !important;
   position: relative !important;
   z-index: 20 !important;

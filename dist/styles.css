@@ -2193,7 +2193,6 @@ html {
 .scheme-ocean .navbar {
   background: linear-gradient(135deg, #0C2340 0%, #0C2340 100%) !important;
   border-bottom: 6px solid #C4CED4 !important;
-  color: #ffffff !important;
   box-shadow: 0 6px 25px rgba(12, 35, 64, 0.5) !important;
   position: relative !important;
   z-index: 20 !important;
@@ -2399,6 +2398,157 @@ html {
 .scheme-ocean .navbar a,
 .scheme-ocean .navbar button {
   transition: all 0.2s ease !important;
+}
+
+/* Fix navigation links - override white text rules */
+.scheme-ocean .navbar a:not(.navbar-brand a),
+.scheme-ocean .navbar button:not(.navbar-brand button) {
+  color: #374151 !important; /* text-gray-700 equivalent */
+}
+
+.scheme-ocean .navbar a:not(.navbar-brand a):hover,
+.scheme-ocean .navbar button:not(.navbar-brand button):hover {
+  color: #1E3A8A !important; /* primary-blue hover */
+}
+
+/* NUCLEAR OPTION - Force navigation text to be dark */
+.scheme-ocean .navbar button,
+.scheme-ocean .navbar a {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar button:hover,
+.scheme-ocean .navbar a:hover {
+  color: #1E3A8A !important;
+}
+
+/* Override any white text rules for navigation */
+.scheme-ocean .navbar button.text-gray-700,
+.scheme-ocean .navbar a.text-gray-700 {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar button.text-gray-700:hover,
+.scheme-ocean .navbar a.text-gray-700:hover {
+  color: #1E3A8A !important;
+}
+
+/* Fix dropdown menu items - they're in a different container */
+.scheme-ocean .navbar .absolute a,
+.scheme-ocean .navbar .absolute a.text-gray-700 {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar .absolute a:hover,
+.scheme-ocean .navbar .absolute a.text-gray-700:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important; /* hover:bg-gray-100 equivalent */
+}
+
+/* Target dropdown menu items specifically */
+.scheme-ocean .navbar [role="menu"] a,
+.scheme-ocean .navbar [role="menuitem"] {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar [role="menu"] a:hover,
+.scheme-ocean .navbar [role="menuitem"]:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* ULTRA NUCLEAR - Force all dropdown items to be dark */
+.scheme-ocean .navbar div a,
+.scheme-ocean .navbar div a:hover,
+.scheme-ocean .navbar .block,
+.scheme-ocean .navbar .block:hover,
+.scheme-ocean .navbar a.block,
+.scheme-ocean .navbar a.block:hover {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar div a:hover,
+.scheme-ocean .navbar .block:hover,
+.scheme-ocean .navbar a.block:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* FINAL NUCLEAR - Override everything for dropdown items */
+body.scheme-ocean .navbar a,
+body.scheme-ocean .navbar a:hover,
+body.scheme-ocean .navbar div a,
+body.scheme-ocean .navbar div a:hover {
+  color: #374151 !important;
+}
+
+body.scheme-ocean .navbar a:hover,
+body.scheme-ocean .navbar div a:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* OVERRIDE THE WHITE TEXT RULES THAT ARE CAUSING THE PROBLEM */
+.scheme-ocean .navbar a span,
+.scheme-ocean .navbar span:not(.navbar-brand span),
+.scheme-ocean .navbar div a span,
+.scheme-ocean .navbar div span {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar a span:hover,
+.scheme-ocean .navbar span:not(.navbar-brand span):hover,
+.scheme-ocean .navbar div a span:hover,
+.scheme-ocean .navbar div span:hover {
+  color: #1E3A8A !important;
+}
+
+/* ULTIMATE OVERRIDE - Target the specific white text rules */
+.scheme-ocean .navbar a span.text-gray-700,
+.scheme-ocean .navbar span.text-gray-700,
+.scheme-ocean .navbar div a span.text-gray-700,
+.scheme-ocean .navbar div span.text-gray-700 {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar a span.text-gray-700:hover,
+.scheme-ocean .navbar span.text-gray-700:hover,
+.scheme-ocean .navbar div a span.text-gray-700:hover,
+.scheme-ocean .navbar div span.text-gray-700:hover {
+  color: #1E3A8A !important;
+}
+
+/* FINAL FINAL NUCLEAR - Override everything with maximum specificity */
+html body.scheme-ocean .navbar a,
+html body.scheme-ocean .navbar a:hover,
+html body.scheme-ocean .navbar div a,
+html body.scheme-ocean .navbar div a:hover,
+html body.scheme-ocean .navbar .block,
+html body.scheme-ocean .navbar .block:hover,
+html body.scheme-ocean .navbar [role="menuitem"],
+html body.scheme-ocean .navbar [role="menuitem"]:hover {
+  color: #374151 !important;
+}
+
+html body.scheme-ocean .navbar a:hover,
+html body.scheme-ocean .navbar div a:hover,
+html body.scheme-ocean .navbar .block:hover,
+html body.scheme-ocean .navbar [role="menuitem"]:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* Override any remaining white text rules with maximum specificity */
+html body.scheme-ocean .navbar a span,
+html body.scheme-ocean .navbar div a span,
+html body.scheme-ocean .navbar span:not(.navbar-brand span) {
+  color: #374151 !important;
+}
+
+html body.scheme-ocean .navbar a span:hover,
+html body.scheme-ocean .navbar div a span:hover,
+html body.scheme-ocean .navbar span:not(.navbar-brand span):hover {
+  color: #1E3A8A !important;
 }
 
 .scheme-ocean .text-primary {

@@ -48,8 +48,6 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../load-navbar.js"></script>
-    
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
     
@@ -77,94 +75,14 @@
     </script>
 </head>
 <body class="scheme-ocean">
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="flex justify-between items-center">
-                <a href="../index.html" class="navbar-brand flex items-center p-0">
-                    <img src="../images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
-                </a>
-                <span style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="../index.html" class="text-gray-700 hover:text-primary-green">Home</a>
-                    
-                    <!-- About Us Dropdown -->
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-primary-green flex items-center">
-                            About Us
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 about-dropdown">
-                            <a href="../about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link">Michael Quarto</a>
-                            <a href="../about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link">The Gym</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Services Dropdown -->
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-primary-green flex items-center">
-                            Services
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <a href="personal-training.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Personal Training</a>
-                            <a href="group-classes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Group Classes</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Membership Dropdown -->
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-primary-green flex items-center">
-                            Membership
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <a href="../membership/membership-rates.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Rates</a>
-                            <a href="../membership/schedule-bookings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Schedule</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Community Dropdown -->
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-primary-green flex items-center">
-                            Community
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <a href="../community/testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
-                            <a href="../community/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blog</a>
-                        </div>
-                    </div>
-                    
-                    <a href="../contact.html" class="text-gray-700 hover:text-primary-green">Contact</a>
-                    <a href="../faq.html" class="text-gray-700 hover:text-primary-green">FAQ</a>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+        <!-- Navbar will be loaded by JavaScript -->
+    <nav class="navbar"></nav>
 
     <!-- Hero Section -->
-    <section class="hero-section relative text-white py-20 overflow-hidden" style="background: #f8fafc !important;">
+    <section class="relative text-white py-20 overflow-hidden" style="background: #0C2340; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/small_group2.png') !important; background-size: contain !important; background-position: center !important; background-repeat: no-repeat !important; min-height: 60vh !important; width: 100% !important;">
         <div class="container text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Small Group Training</h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Take your workout to the next level at a fraction of the cost of personal training</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white" style="color: #ffffff !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; -webkit-text-fill-color: #ffffff !important;">Small Group Training</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-white" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;">Take your workout to the next level at a fraction of the cost of personal training</p>
         </div>
     </section>
 
@@ -236,49 +154,49 @@
                     <h3 class="text-2xl font-bold text-primary-blue mb-6">What You'll Achieve</h3>
                     <div class="space-y-4">
                         <div class="flex items-center">
-                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));">
+                                    <path d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
                             <span class="text-gray-700">Lose weight and burn fat & calories</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));">
+                                    <path d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
                             <span class="text-gray-700">Build strength and muscle</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));">
+                                    <path d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
                             <span class="text-gray-700">Boost your metabolism</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));">
+                                    <path d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
                             <span class="text-gray-700">Improve endurance</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));">
+                                    <path d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
                             <span class="text-gray-700">Increase flexibility</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center mr-3">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-3 h-3 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));">
+                                    <path d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
                             <span class="text-gray-700">Have fun while getting fit!</span>
@@ -345,42 +263,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Q Fitness</h3>
-                    <p class="text-gray-300 mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="../about/the-gym.html" class="text-gray-300 hover:text-primary-green transition duration-300">About Us</a></li>
-                        <li><a href="group-classes.html" class="text-gray-300 hover:text-primary-green transition duration-300">Services</a></li>
-                        <li><a href="../membership/membership-rates.html" class="text-gray-300 hover:text-primary-green transition duration-300">Membership</a></li>
-                        <li><a href="../contact.html" class="text-gray-300 hover:text-primary-green transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p>1306 Wilmington Pike</p>
-                        <p>West Chester, PA 19380</p>
-                        <p>Phone: (610) 918-9200</p>
-                        <p>Email: info@qfitness.com</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 Q Fitness. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        <!-- Footer will be loaded by JavaScript -->
+    <footer></footer>
 
+        <!-- Components JS -->
+    <script src="../js/components.js"></script>
+    
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
 </body>

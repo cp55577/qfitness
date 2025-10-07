@@ -8,8 +8,6 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../load-navbar.js"></script>
-    
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
     
@@ -37,111 +35,8 @@
     </script>
 </head>
 <body class="scheme-ocean">
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="flex justify-between items-center">
-                <a href="../index.html" class="navbar-brand flex items-center p-0">
-                    <img src="../images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
-                </a>
-                <span style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
-                    <!-- About Us Dropdown -->
-                    <div class="relative group">
-                        <button 
-                            class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-controls="about-menu"
-                            id="about-button"
-                        >
-                            About Us
-                        </button>
-                        <div 
-                            id="about-menu"
-                            class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                            role="menu"
-                            aria-labelledby="about-button"
-                        >
-                            <a href="michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link" role="menuitem">Michael Quarto</a>
-                            <a href="the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link" role="menuitem">The Gym</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Services Dropdown -->
-                    <div class="relative group">
-                        <button 
-                            class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-controls="services-menu"
-                            id="services-button"
-                        >
-                            Services
-                        </button>
-                        <div 
-                            id="services-menu"
-                            class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                            role="menu"
-                            aria-labelledby="services-button"
-                        >
-                            <a href="../services/personal-training.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Personal Training</a>
-                            <a href="../services/group-classes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Group Classes</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Membership Dropdown -->
-                    <div class="relative group">
-                        <button 
-                            class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-controls="membership-menu"
-                            id="membership-button"
-                        >
-                            Membership
-                        </button>
-                        <div 
-                            id="membership-menu"
-                            class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                            role="menu"
-                            aria-labelledby="membership-button"
-                        >
-                            <a href="../membership/membership-rates.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Rates</a>
-                            <a href="../membership/schedule-bookings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Schedule</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Community Dropdown -->
-                    <div class="relative group">
-                        <button 
-                            class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-controls="community-menu"
-                            id="community-button"
-                        >
-                            Community
-                        </button>
-                        <div 
-                            id="community-menu"
-                            class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                            role="menu"
-                            aria-labelledby="community-button"
-                        >
-                            <a href="../community/testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Testimonials</a>
-                            <a href="../community/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Blog</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact -->
-                    <a href="../contact.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Contact</a>
-                    
-                    <!-- FAQ -->
-                    <a href="../faq.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">FAQ</a>
-                </nav>
+        <!-- Navbar will be loaded by JavaScript -->
+    <nav class="navbar"></nav>
                 
                 <!-- Mobile menu button -->
                 <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
@@ -154,17 +49,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section relative text-white py-20 overflow-hidden" style="background: #f8fafc !important;">
-          <!-- Background Image -->
-          <div class="absolute inset-0 bg-no-repeat bg-cover bg-center opacity-30" style="background-image: url('../images/7.jpg');"></div>
-        
-        <!-- Dark Overlay for Text Readability -->
-        <div class="absolute inset-0" style="background: rgba(196, 206, 212, 0.4);"></div>
+    <section class="relative text-white py-20 overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../images/7.jpg') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; min-height: 60vh !important;">
         
         <!-- Content -->
         <div class="relative z-10 container text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Our State-of-the-Art Facility</h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Experience West Chester's premier 24/7 fitness destination with cutting-edge equipment and expert guidance</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white" style="color: #ffffff !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; -webkit-text-fill-color: #ffffff !important;">Our State-of-the-Art Facility</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-white">Experience West Chester's premier 24/7 fitness destination with cutting-edge equipment and expert guidance</p>
         </div>
     </section>
 
@@ -230,13 +120,17 @@
                 <!-- Map Placeholder Card -->
                 <div class="card">
                     <h3 class="text-2xl font-bold text-primary-blue mb-4">Location</h3>
-                    <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
-                        <div class="text-center">
-                            <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <p class="text-gray-500">Map Coming Soon</p>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-4">
+                        <div class="h-64 w-full">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.1234567890!2d-75.6123456!3d39.9876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a1234567890%3A0xabcdef1234567890!2s1306%20Wilmington%20Pike%2C%20West%20Chester%2C%20PA%2019380!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                     <div class="text-center">
@@ -260,9 +154,9 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="card text-center">
-                    <div class="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto shadow-lg">
+                        <svg class="w-10 h-10 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-primary-blue mb-4">24/7 Access</h3>
@@ -280,9 +174,9 @@
                 </div>
                 
                 <div class="card text-center">
-                    <div class="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto shadow-lg">
+                        <svg class="w-10 h-10 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-primary-blue mb-4">Expert Guidance</h3>
@@ -292,42 +186,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Q Fitness</h3>
-                    <p class="text-gray-300 mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="the-gym.html" class="text-gray-300 hover:text-primary-green transition duration-300">About Us</a></li>
-                        <li><a href="../services/personal-training.html" class="text-gray-300 hover:text-primary-green transition duration-300">Services</a></li>
-                        <li><a href="../membership/membership-rates.html" class="text-gray-300 hover:text-primary-green transition duration-300">Membership</a></li>
-                        <li><a href="../contact.html" class="text-gray-300 hover:text-primary-green transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p>1306 Wilmington Pike</p>
-                        <p>West Chester, PA 19380</p>
-                        <p>Phone: (610) 918-9200</p>
-                        <p>Email: info@qfitness.com</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 Q Fitness. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        <!-- Footer will be loaded by JavaScript -->
+    <footer></footer>
 
+        <!-- Components JS -->
+    <script src="../js/components.js"></script>
+    
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
 </body>

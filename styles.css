@@ -2518,6 +2518,39 @@ body.scheme-ocean .navbar div a:hover {
   color: #1E3A8A !important;
 }
 
+/* FINAL FINAL NUCLEAR - Override everything with maximum specificity */
+html body.scheme-ocean .navbar a,
+html body.scheme-ocean .navbar a:hover,
+html body.scheme-ocean .navbar div a,
+html body.scheme-ocean .navbar div a:hover,
+html body.scheme-ocean .navbar .block,
+html body.scheme-ocean .navbar .block:hover,
+html body.scheme-ocean .navbar [role="menuitem"],
+html body.scheme-ocean .navbar [role="menuitem"]:hover {
+  color: #374151 !important;
+}
+
+html body.scheme-ocean .navbar a:hover,
+html body.scheme-ocean .navbar div a:hover,
+html body.scheme-ocean .navbar .block:hover,
+html body.scheme-ocean .navbar [role="menuitem"]:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* Override any remaining white text rules with maximum specificity */
+html body.scheme-ocean .navbar a span,
+html body.scheme-ocean .navbar div a span,
+html body.scheme-ocean .navbar span:not(.navbar-brand span) {
+  color: #374151 !important;
+}
+
+html body.scheme-ocean .navbar a span:hover,
+html body.scheme-ocean .navbar div a span:hover,
+html body.scheme-ocean .navbar span:not(.navbar-brand span):hover {
+  color: #1E3A8A !important;
+}
+
 .scheme-ocean .text-primary {
   color: #0C2340 !important;
 }

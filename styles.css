@@ -2457,6 +2457,37 @@ html {
   background-color: #f3f4f6 !important;
 }
 
+/* ULTRA NUCLEAR - Force all dropdown items to be dark */
+.scheme-ocean .navbar div a,
+.scheme-ocean .navbar div a:hover,
+.scheme-ocean .navbar .block,
+.scheme-ocean .navbar .block:hover,
+.scheme-ocean .navbar a.block,
+.scheme-ocean .navbar a.block:hover {
+  color: #374151 !important;
+}
+
+.scheme-ocean .navbar div a:hover,
+.scheme-ocean .navbar .block:hover,
+.scheme-ocean .navbar a.block:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* FINAL NUCLEAR - Override everything for dropdown items */
+body.scheme-ocean .navbar a,
+body.scheme-ocean .navbar a:hover,
+body.scheme-ocean .navbar div a,
+body.scheme-ocean .navbar div a:hover {
+  color: #374151 !important;
+}
+
+body.scheme-ocean .navbar a:hover,
+body.scheme-ocean .navbar div a:hover {
+  color: #1E3A8A !important;
+  background-color: #f3f4f6 !important;
+}
+
 .scheme-ocean .text-primary {
   color: #0C2340 !important;
 }

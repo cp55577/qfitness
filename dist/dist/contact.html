@@ -8,9 +8,6 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="load-navbar.js"></script>
-    <script src="../load-navbar.js"></script>
-    
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
     
@@ -38,127 +35,14 @@
     </script>
 </head>
 <body class="scheme-ocean">
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="navbar-brand flex items-center p-0">
-                    <img src="images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
-                </a>
-                <span style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
-                    <!-- About Us Dropdown -->
-                    <div class="relative group">
-                        <button 
-                            class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-controls="about-menu"
-                            id="about-button"
-                        >
-                            About Us
-                        </button>
-                        <div 
-                            id="about-menu"
-                            class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                            role="menu"
-                            aria-labelledby="about-button"
-                        >
-                            <a href="about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link" role="menuitem">Michael Quarto</a>
-                            <a href="about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link" role="menuitem">The Gym</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Services Dropdown -->
-                    <div class="relative group">
-                        <button 
-                            class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-controls="services-menu"
-                            id="services-button"
-                        >
-                            Services
-                        </button>
-                        <div 
-                            id="services-menu"
-                            class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                            role="menu"
-                            aria-labelledby="services-button"
-                        >
-                            <a href="services/personal-training.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Personal Training</a>
-                            <a href="services/group-classes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Group Classes</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Membership Dropdown -->
-                    <div class="relative group">
-                        <button 
-                            class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-controls="membership-menu"
-                            id="membership-button"
-                        >
-                            Membership
-                        </button>
-                        <div 
-                            id="membership-menu"
-                            class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                            role="menu"
-                            aria-labelledby="membership-button"
-                        >
-                            <a href="membership/membership-rates.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Rates</a>
-                            <a href="membership/schedule-bookings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Schedule</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Community Dropdown -->
-                    <div class="relative group">
-                        <button 
-                            class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-controls="community-menu"
-                            id="community-button"
-                        >
-                            Community
-                        </button>
-                        <div 
-                            id="community-menu"
-                            class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                            role="menu"
-                            aria-labelledby="community-button"
-                        >
-                            <a href="community/testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Testimonials</a>
-                            <a href="community/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Blog</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact -->
-                    <a href="contact.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Contact</a>
-                    
-                    <!-- FAQ -->
-                    <a href="faq.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">FAQ</a>
-                </nav>
-                
-                <!-- Mobile menu button -->
-                <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar will be loaded by JavaScript -->
+    <nav class="navbar"></nav>
 
     <!-- Hero Section -->
-    <section class="hero-section relative text-white py-20 overflow-hidden" style="background: #f8fafc !important;">
+    <section class="hero-section relative text-white py-20 overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/3.png') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; min-height: 60vh !important;">
         <div class="container text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Ready to start your fitness journey? We're here to help you reach your goals</p>
+            <h1 class="text-6xl md:text-7xl font-black tracking-tight leading-tight mb-6 text-white" style="color: #ffffff !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; -webkit-text-fill-color: #ffffff !important;">Get in Touch</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-white" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;">Ready to start your fitness journey? We're here to help you reach your goals</p>
         </div>
     </section>
 
@@ -168,7 +52,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Contact Form -->
                 <div class="card">
-                    <h2 class="text-3xl font-bold text-primary-blue mb-6">Send Us a Message</h2>
+                    <h2 class="text-4xl font-black tracking-tight text-primary-blue mb-6">Send Us a Message</h2>
                     <form class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
@@ -200,40 +84,40 @@
 
                 <!-- Contact Information -->
                 <div class="card">
-                    <h3 class="text-2xl font-bold text-primary-blue mb-6">Contact Information</h3>
+                    <h3 class="text-3xl font-black tracking-tight text-primary-blue mb-6">Contact Information</h3>
                     
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center mr-4 mt-1">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-6 h-6 text-primary-green" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));">
+                                    <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="text-lg font-semibold text-primary-blue mb-2">Phone</h4>
                                 <p class="text-lg text-gray-700">(610) 918-9200</p>
-                                <p class="text-gray-600">Call us to schedule your first session</p>
+                                <p class="text-gray-700 font-light leading-relaxed">Call us to schedule your first session</p>
                             </div>
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mr-4 mt-1">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-6 h-6 text-primary-blue" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));">
+                                    <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="text-lg font-semibold text-primary-blue mb-2">Email</h4>
                                 <p class="text-lg text-gray-700">info@qfitness.com</p>
-                                <p class="text-gray-600">Send us your questions anytime</p>
+                                <p class="text-gray-700 font-light leading-relaxed">Send us your questions anytime</p>
                             </div>
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center mr-4 mt-1">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-6 h-6 text-primary-green" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));">
+                                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
                             </div>
                             <div>
@@ -247,13 +131,17 @@
                     <!-- Map Placeholder -->
                     <div class="mt-8">
                         <h4 class="text-lg font-semibold text-primary-blue mb-4">Find Us</h4>
-                        <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                            <div class="text-center">
-                                <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
-                                <p class="text-gray-500">Interactive Map Coming Soon</p>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="h-64 w-full">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.1234567890!2d-75.6123456!3d39.9876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a1234567890%3A0xabcdef1234567890!2s1306%20Wilmington%20Pike%2C%20West%20Chester%2C%20PA%2019380!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
                             </div>
                         </div>
                     </div>
@@ -265,64 +153,34 @@
     <!-- Hours Section -->
     <section class="section">
         <div class="container">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-primary-blue mb-6">Gym Hours</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">24/7 access for members - work out on your schedule</p>
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black tracking-tight text-primary-blue mb-6">Gym Hours</h2>
+                <p class="text-2xl text-gray-700 font-light leading-relaxed max-w-3xl mx-auto">24/7 access for members - work out on your schedule</p>
             </div>
             
             <div class="max-w-2xl mx-auto">
                 <div class="card text-center">
                     <div class="flex items-center justify-center mb-6">
-                        <div class="w-16 h-16 bg-primary-green rounded-full flex items-center justify-center mr-4">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4 shadow-lg">
+                            <svg class="w-8 h-8 text-primary-green" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-primary-blue">24/7 Member Access</h3>
+                        <h3 class="text-3xl font-black tracking-tight text-primary-blue">24/7 Member Access</h3>
                     </div>
-                    <p class="text-lg text-gray-600 mb-4">Members can access the gym anytime with their secure key card</p>
+                    <p class="text-xl text-gray-700 font-light leading-relaxed mb-4">Members can access the gym anytime with their secure key card</p>
                     <p class="text-gray-500">Staff available for personal training and group classes by appointment</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Q Fitness</h3>
-                    <p class="text-gray-300 mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about/the-gym.html" class="text-gray-300 hover:text-primary-green transition duration-300">About Us</a></li>
-                        <li><a href="services/personal-training.html" class="text-gray-300 hover:text-primary-green transition duration-300">Services</a></li>
-                        <li><a href="membership/membership-rates.html" class="text-gray-300 hover:text-primary-green transition duration-300">Membership</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-primary-green transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p>1306 Wilmington Pike</p>
-                        <p>West Chester, PA 19380</p>
-                        <p>Phone: (610) 918-9200</p>
-                        <p>Email: info@qfitness.com</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 Q Fitness. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        <!-- Footer will be loaded by JavaScript -->
+    <footer></footer>
 
+        <!-- Components JS -->
+    <script src="js/components.js"></script>
+    
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
 </body>

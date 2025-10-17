@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Q Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body class="scheme-ocean">
+    <!-- Navbar will be loaded by JavaScript -->
+    <nav class="navbar"></nav>
+
+    <div class="container py-8">
+        <h1 class="text-3xl font-bold mb-6">Debug Information</h1>
+        
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4">Page Information</h2>
+            <div id="debug-info">
+                <p><strong>Current URL:</strong> <span id="current-url"></span></p>
+                <p><strong>Path:</strong> <span id="current-path"></span></p>
+                <p><strong>Path Prefix:</strong> <span id="path-prefix"></span></p>
+                <p><strong>Navbar Container:</strong> <span id="navbar-status"></span></p>
+                <p><strong>Footer Container:</strong> <span id="footer-status"></span></p>
+            </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow mt-6">
+            <h2 class="text-xl font-semibold mb-4">Navigation Links</h2>
+            <div class="space-y-2">
+                <a href="index.html" class="block text-blue-600 hover:underline">Home</a>
+                <a href="about/michael-quarto.html" class="block text-blue-600 hover:underline">About - Michael Quarto</a>
+                <a href="about/the-gym.html" class="block text-blue-600 hover:underline">About - The Gym</a>
+                <a href="contact.html" class="block text-blue-600 hover:underline">Contact</a>
+                <a href="services/personal-training.html" class="block text-blue-600 hover:underline">Services - Personal Training</a>
+                <a href="services/group-classes.html" class="block text-blue-600 hover:underline">Services - Group Classes</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer will be loaded by JavaScript -->
+    <footer></footer>
+
+    <!-- Components JS -->
+    <script src="js/components.js"></script>
+    
+    <script>
+        // Debug information
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-url').textContent = window.location.href;
+            document.getElementById('current-path').textContent = window.location.pathname;
+            
+            // Test path prefix function
+            function getPathPrefix() {
+                const path = window.location.pathname;
+                if (path.includes('/about/') || path.includes('/services/') || path.includes('/membership/') || path.includes('/community/')) {
+                    return '../';
+                }
+                return '';
+            }
+            
+            const pathPrefix = getPathPrefix();
+            document.getElementById('path-prefix').textContent = `"${pathPrefix}"`;
+            
+            // Check if containers exist
+            const navbarContainer = document.querySelector('nav');
+            const footerContainer = document.querySelector('footer');
+            
+            document.getElementById('navbar-status').textContent = navbarContainer ? 'Found' : 'Not found';
+            document.getElementById('footer-status').textContent = footerContainer ? 'Found' : 'Not found';
+            
+            console.log('Debug page loaded');
+            console.log('Current path:', window.location.pathname);
+            console.log('Path prefix:', pathPrefix);
+            console.log('Navbar container:', navbarContainer);
+            console.log('Footer container:', footerContainer);
+        });
+    </script>
+</body>
+</html>

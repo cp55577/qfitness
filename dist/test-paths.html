@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Test</title>
+</head>
+<body>
+    <h1>Path Detection Test</h1>
+    <div id="path-info"></div>
+    
+    <script>
+        function getPathPrefix() {
+            const path = window.location.pathname;
+            console.log('Current path:', path);
+            if (path.includes('/about/') || path.includes('/services/') || path.includes('/membership/') || path.includes('/community/')) {
+                return '../';
+            }
+            return '';
+        }
+        
+        const pathPrefix = getPathPrefix();
+        document.getElementById('path-info').innerHTML = `
+            <p><strong>Current path:</strong> ${window.location.pathname}</p>
+            <p><strong>Path prefix:</strong> "${pathPrefix}"</p>
+            <p><strong>Index link would be:</strong> ${pathPrefix}index.html</p>
+        `;
+    </script>
+</body>
+</html>

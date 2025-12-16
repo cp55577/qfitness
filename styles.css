@@ -1112,7 +1112,7 @@ h3 {
 
 /* 🌟 PREMIUM SECTIONS */
 .section {
-  padding: var(--space-2xl) 0;
+  padding: 5rem 0; /* Increased from var(--space-2xl) which is 3rem */
   position: relative;
 }
 

@@ -99,6 +99,11 @@ const navbar = `
                 
                 <!-- Store -->
                 <a href="https://www.customcreationsnow.com/search?type=product%2Ccollection&q=Q+fitness" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Store</a>
+                
+                <!-- Join Now CTA -->
+                <a href="${pathPrefix}membership/membership-rates.html" class="btn-primary-green ml-4">
+                    Join Now
+                </a>
             </nav>
             
             <!-- Mobile menu button -->
@@ -137,9 +142,9 @@ const footer = `
             <div>
                 <h4 class="text-lg font-semibold mb-4" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important; -webkit-text-fill-color: #ffffff !important;">Contact Info</h4>
                 <div class="space-y-2 text-white mb-4">
-                    <p>1306 Wilmington Pike</p>
-                    <p>West Chester, PA 19382</p>
-                    <p>Phone: 610-574-2300</p>
+                    <p><a href="https://www.google.com/maps/search/?api=1&query=1306+Wilmington+Pike+West+Chester+PA+19382" target="_blank" rel="noopener noreferrer" class="text-white hover:text-primary-green transition duration-300 underline">1306 Wilmington Pike</a></p>
+                    <p><a href="https://www.google.com/maps/search/?api=1&query=1306+Wilmington+Pike+West+Chester+PA+19382" target="_blank" rel="noopener noreferrer" class="text-white hover:text-primary-green transition duration-300 underline">West Chester, PA 19382</a></p>
+                    <p>Phone: <a href="tel:610-574-2300" class="text-white hover:text-primary-green transition duration-300 underline">610-574-2300</a></p>
                     <p>Call or Text</p>
                 </div>
                 <div class="mt-4">

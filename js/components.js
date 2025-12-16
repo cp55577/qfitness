@@ -96,6 +96,9 @@ const navbar = `
                 
                 <!-- FAQ -->
                 <a href="${pathPrefix}faq.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">FAQ</a>
+                
+                <!-- Store -->
+                <a href="https://www.customcreationsnow.com/search?type=product%2Ccollection&q=Q+fitness" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Store</a>
             </nav>
             
             <!-- Mobile menu button -->

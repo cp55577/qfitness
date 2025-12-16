@@ -753,23 +753,44 @@ footer {
 
 /* ===== 🎯 DROPDOWN MENU THEME OVERRIDES ===== */
 
-/* Dropdown menus inherit theme colors */
-.absolute {
-  background: var(--background-secondary) !important;
-  border: 1px solid var(--primary) !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 20px var(--shadow-glow) !important;
+/* Dropdown menus - Professional white background with dark text */
+.navbar .absolute,
+.navbar [role="menu"],
+.navbar .group .absolute {
+  background: #ffffff !important; /* White background for contrast */
+  border: 1px solid #e5e7eb !important; /* Light gray border */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 0.5rem !important;
 }
 
-.absolute a {
-  color: var(--text-primary) !important;
-  background: transparent !important;
+/* Dropdown links - Dark text on white background */
+.navbar .absolute a,
+.navbar [role="menu"] a,
+.navbar [role="menuitem"],
+.navbar .group .absolute a {
+  color: #374151 !important; /* gray-700 - dark text for readability */
+  background: #ffffff !important; /* white background */
   border: none !important;
 }
 
-.absolute a:hover {
-  color: var(--accent) !important;
-  background: var(--accent-gradient) !important;
-  opacity: 0.1;
+.navbar .absolute a:hover,
+.navbar [role="menu"] a:hover,
+.navbar [role="menuitem"]:hover,
+.navbar .group .absolute a:hover {
+  color: #0C2340 !important; /* primary-blue - darker on hover */
+  background: #f3f4f6 !important; /* gray-100 - light gray hover background */
+  opacity: 1 !important; /* Full opacity on hover */
+}
+
+/* Override any global rules that might affect dropdown text color */
+.navbar .absolute *,
+.navbar [role="menu"] * {
+  color: #374151 !important; /* Force dark text */
+}
+
+.navbar .absolute a *,
+.navbar [role="menu"] a * {
+  color: inherit !important; /* Inherit from parent */
 }
 
 /* ===== 🎯 SPECIFIC ELEMENT OVERRIDES ===== */
@@ -2569,26 +2590,32 @@ html {
 
 /* Fix dropdown menu items - they're in a different container */
 .scheme-ocean .navbar .absolute a,
-.scheme-ocean .navbar .absolute a.text-gray-700 {
-  color: #374151 !important;
+.scheme-ocean .navbar .absolute a.text-gray-700,
+.scheme-ocean .navbar [role="menu"] a,
+.scheme-ocean .navbar [role="menuitem"] {
+  color: #374151 !important; /* gray-700 - dark text on white */
+  background: #ffffff !important; /* white background */
 }
 
 .scheme-ocean .navbar .absolute a:hover,
-.scheme-ocean .navbar .absolute a.text-gray-700:hover {
-  color: #1E3A8A !important;
-  background-color: #f3f4f6 !important; /* hover:bg-gray-100 equivalent */
+.scheme-ocean .navbar .absolute a.text-gray-700:hover,
+.scheme-ocean .navbar [role="menu"] a:hover,
+.scheme-ocean .navbar [role="menuitem"]:hover {
+  color: #0C2340 !important; /* primary-blue - darker on hover */
+  background-color: #f3f4f6 !important; /* gray-100 - light gray hover */
 }
 
-/* Target dropdown menu items specifically */
+/* Target dropdown menu items specifically - Already handled above, but ensure consistency */
 .scheme-ocean .navbar [role="menu"] a,
 .scheme-ocean .navbar [role="menuitem"] {
-  color: #374151 !important;
+  color: #374151 !important; /* gray-700 - dark text */
+  background: #ffffff !important; /* white background */
 }
 
 .scheme-ocean .navbar [role="menu"] a:hover,
 .scheme-ocean .navbar [role="menuitem"]:hover {
-  color: #1E3A8A !important;
-  background-color: #f3f4f6 !important;
+  color: #0C2340 !important; /* primary-blue - darker on hover */
+  background-color: #f3f4f6 !important; /* gray-100 - light gray hover */
 }
 
 /* ULTRA NUCLEAR - Force all dropdown items to be dark */
@@ -2989,25 +3016,31 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   }
 }
 
-/* STANDARDIZED NAVBAR STYLES - Using CSS Variables */
+/* ===== 🎯 PROFESSIONAL NAVBAR STYLES ===== */
 .navbar {
   background: #0C2340 !important; /* Navy blue background */
-  padding: 1rem 0 !important;
-  box-shadow: 0 2px 10px rgba(12, 35, 64, 0.2) !important;
+  padding: 1.25rem 0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
   position: relative !important;
   z-index: 50 !important;
-  min-height: 80px !important;
+  min-height: 90px !important;
+  border-bottom: 2px solid rgba(196, 206, 212, 0.3) !important; /* Subtle silver border */
 }
 
 .navbar-brand img {
   height: 6rem !important;
   width: 6rem !important;
   padding: 0 !important;
+  transition: transform 0.2s ease !important;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05) !important;
 }
 
 .navbar .est-text {
   color: #ffffff !important;
-  font-size: 16px !important;
+  font-size: 15px !important;
   font-weight: normal !important;
   position: absolute !important;
   left: 150px !important;
@@ -3015,7 +3048,99 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   transform: translateY(-50%) !important;
   font-family: 'Times New Roman', serif !important;
   font-style: italic !important;
-  letter-spacing: 1px !important;
+  letter-spacing: 1.5px !important;
+  opacity: 0.9 !important;
+}
+
+/* Professional Navigation Links */
+.navbar nav[role="navigation"] {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.navbar nav[role="navigation"] > * {
+  position: relative !important;
+}
+
+/* Navigation Link Buttons - Professional Style */
+.navbar nav[role="navigation"] button,
+.navbar nav[role="navigation"] a {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  padding: 0.625rem 1rem !important;
+  border-radius: 0.375rem !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  letter-spacing: 0.025em !important;
+}
+
+.navbar nav[role="navigation"] button:hover,
+.navbar nav[role="navigation"] a:hover {
+  color: #10B981 !important; /* primary-green */
+  background: rgba(16, 185, 129, 0.1) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Professional Dropdown Menus - Ensure Proper Contrast */
+.navbar [role="menu"],
+.navbar .absolute[role="menu"] {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important; /* gray-200 */
+  border-radius: 0.5rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  padding: 0.5rem 0 !important;
+  margin-top: 0.5rem !important;
+  min-width: 12rem !important;
+  z-index: 1000 !important;
+}
+
+/* Dropdown Menu Items - Dark Text on White Background */
+.navbar [role="menu"] a,
+.navbar [role="menuitem"],
+.navbar .absolute[role="menu"] a,
+.navbar .absolute[role="menuitem"] {
+  color: #374151 !important; /* gray-700 - dark text */
+  background: #ffffff !important; /* white background */
+  padding: 0.75rem 1rem !important;
+  display: block !important;
+  text-decoration: none !important;
+  transition: all 0.15s ease !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.navbar [role="menu"] a:hover,
+.navbar [role="menuitem"]:hover,
+.navbar .absolute[role="menu"] a:hover,
+.navbar .absolute[role="menuitem"]:hover {
+  color: #0C2340 !important; /* primary-blue - darker on hover */
+  background: #f3f4f6 !important; /* gray-100 - light gray hover */
+  padding-left: 1.25rem !important; /* Slight indent on hover */
+}
+
+/* Ensure dropdown items are visible and have proper contrast */
+.navbar .group:hover [role="menu"],
+.navbar .group:hover .absolute[role="menu"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Override any global rules that might affect dropdown contrast */
+.navbar [role="menu"] *,
+.navbar .absolute[role="menu"] * {
+  color: #374151 !important; /* Force dark text */
+}
+
+.navbar [role="menu"] a *,
+.navbar [role="menuitem"] * {
+  color: inherit !important;
 }
 
 /* Force all footer text to be white - more specific rules */

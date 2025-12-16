@@ -20,22 +20,73 @@
     <link href="../styles.css" rel="stylesheet" />
     <!-- Override styles.css for testimonials -->
     <style>
-        /* Override aggressive .section * rule from styles.css */
-        .testimonials-section .bg-white blockquote,
-        .testimonials-section .bg-white .text-primary-blue,
-        .testimonials-section .bg-white .text-gray-500,
-        .testimonials-section .bg-white .text-gray-700 {
+        /* Override aggressive .section * rule from styles.css with maximum specificity */
+        /* Use body class for even higher specificity */
+        body.scheme-ocean .testimonials-section .bg-white,
+        body.scheme-ocean .testimonials-section .bg-white *,
+        body.scheme-ocean .testimonials-section .bg-white blockquote,
+        body.scheme-ocean .testimonials-section .bg-white p,
+        body.scheme-ocean .testimonials-section .bg-white div,
+        body.scheme-ocean .testimonials-section .bg-white span,
+        body.scheme-ocean .testimonials-section .bg-white h1,
+        body.scheme-ocean .testimonials-section .bg-white h2,
+        body.scheme-ocean .testimonials-section .bg-white h3,
+        body.scheme-ocean .testimonials-section .bg-white h4,
+        body.scheme-ocean .testimonials-section .bg-white h5,
+        body.scheme-ocean .testimonials-section .bg-white h6,
+        body.scheme-ocean .testimonials-section .bg-white strong,
+        body.scheme-ocean .testimonials-section .bg-white em,
+        body.scheme-ocean .testimonials-section .bg-white b,
+        body.scheme-ocean .testimonials-section .bg-white i,
+        body.scheme-ocean .testimonials-section .bg-white li,
+        body.scheme-ocean .testimonials-section .bg-white td,
+        body.scheme-ocean .testimonials-section .bg-white th {
             color: #1f2937 !important;
+            -webkit-text-fill-color: #1f2937 !important;
         }
-        .testimonials-section .bg-white .text-primary-blue {
+        body.scheme-ocean .testimonials-section .bg-white .text-primary-blue,
+        body.scheme-ocean .testimonials-section .bg-white .font-bold {
             color: #0C2340 !important;
+            -webkit-text-fill-color: #0C2340 !important;
         }
-        .testimonials-section .bg-white .text-gray-500 {
+        body.scheme-ocean .testimonials-section .bg-white .text-gray-500,
+        body.scheme-ocean .testimonials-section .bg-white .text-sm {
             color: #6b7280 !important;
+            -webkit-text-fill-color: #6b7280 !important;
         }
-        .testimonials-section .bg-gradient-to-br blockquote,
-        .testimonials-section .bg-gradient-to-br .text-white {
-            color: #ffffff !important;
+        body.scheme-ocean .testimonials-section .bg-white .text-gray-700 {
+            color: #374151 !important;
+            -webkit-text-fill-color: #374151 !important;
+        }
+        /* Remove gradient text effects on white cards */
+        body.scheme-ocean .testimonials-section .bg-white h1,
+        body.scheme-ocean .testimonials-section .bg-white h2,
+        body.scheme-ocean .testimonials-section .bg-white h3,
+        body.scheme-ocean .testimonials-section .bg-white h4,
+        body.scheme-ocean .testimonials-section .bg-white h5,
+        body.scheme-ocean .testimonials-section .bg-white h6 {
+            background: none !important;
+            -webkit-background-clip: initial !important;
+            -webkit-text-fill-color: #1f2937 !important;
+            background-clip: initial !important;
+        }
+        /* Ensure SVG icons have proper colors */
+        body.scheme-ocean .testimonials-section .bg-white svg,
+        body.scheme-ocean .testimonials-section .bg-white svg path {
+            fill: #10B981 !important;
+            stroke: #10B981 !important;
+        }
+        /* Direct targeting of card divs with all classes */
+        body.scheme-ocean .testimonials-section div.bg-white.rounded-2xl *,
+        body.scheme-ocean .testimonials-section div.bg-white.shadow-lg *,
+        body.scheme-ocean .testimonials-section div.bg-white.p-8 * {
+            color: #1f2937 !important;
+            -webkit-text-fill-color: #1f2937 !important;
+        }
+        /* Add padding to blockquote to space text away from vertical bar */
+        body.scheme-ocean .testimonials-section blockquote {
+            padding-right: 1.5rem !important;
+            padding-left: 1rem !important;
         }
     </style>
     
@@ -83,7 +134,7 @@
                         </svg>
                     </div>
                     <blockquote class="text-lg text-gray-700 italic mb-6 leading-relaxed" style="color: #1f2937 !important;">
-                        "I had been trying to make gains in exercise over the last 10+ years with only short-term success. In the last 3 months I've become more fit than I have been my entire life. Mike and the trainers at Q-Fitness are top-notch!"
+                        "I had been trying to make gains in exercise over the last 10+ years with only short-term success. In the last 3 months I've become more fit than I have been my entire life. Mike and the trainers at Q-Fitness are top-notch! They know I can go further and push harder than I believe, and help me go beyond my perceived limits. Knowing I can do more than I think, and seeing and feeling the gains I've made, has helped me in all areas of my life. I'm so grateful for the personal trainer sessions and try never to miss a class! I can't wait to see how far I'll be in 3 more months."
                     </blockquote>
                     <div class="border-t border-gray-200 pt-4">
                         <div class="text-primary-blue font-bold text-lg" style="color: #0C2340 !important;">Tom</div>
@@ -91,7 +142,7 @@
                     </div>
                 </div>
 
-                <!-- Testimonial 2 - Mary A. -->
+                <!-- Testimonial 2 - Andrea -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                     <div class="mb-6">
                         <svg class="w-12 h-12 text-primary-green mx-auto" fill="currentColor" viewBox="0 0 24 24">
@@ -99,7 +150,23 @@
                         </svg>
                     </div>
                     <blockquote class="text-lg text-gray-700 italic mb-6 leading-relaxed" style="color: #1f2937 !important;">
-                        "With the guidance and expertise of Mike and his staff I have been able to lose 15 lbs and 2 dress sizes in the last several months. Every 4 weeks a new fitness program was personally prepared for me."
+                        "Since beginning group training I have made consistent, measurable progress. I am so grateful for the smart and creative trainers at Q Fitness!"
+                    </blockquote>
+                    <div class="border-t border-gray-200 pt-4">
+                        <div class="text-primary-blue font-bold text-lg" style="color: #0C2340 !important;">Andrea</div>
+                        <div class="text-gray-500 text-sm" style="color: #6b7280 !important;">Q Fitness Member</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 - Mary A. -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-primary-green mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5V3.5h5.5v7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5z"/>
+                        </svg>
+                    </div>
+                    <blockquote class="text-lg text-gray-700 italic mb-6 leading-relaxed" style="color: #1f2937 !important;">
+                        "With the guidance and expertise of Mike and his staff I have been able to lose 15 lbs and 2 dress sizes in the last several months. Every 4 weeks a new fitness program was personally prepared for me and I was able to tone my figure and lose inches."
                     </blockquote>
                     <div class="border-t border-gray-200 pt-4">
                         <div class="text-primary-blue font-bold text-lg" style="color: #0C2340 !important;">Mary A.</div>
@@ -107,7 +174,7 @@
                     </div>
                 </div>
 
-                <!-- Testimonial 3 - Frank -->
+                <!-- Testimonial 4 - Sarah -->
                 <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                     <div class="mb-6">
                         <svg class="w-12 h-12 text-primary-green mx-auto" fill="currentColor" viewBox="0 0 24 24">
@@ -115,43 +182,27 @@
                         </svg>
                     </div>
                     <blockquote class="text-lg text-gray-700 italic mb-6 leading-relaxed" style="color: #1f2937 !important;">
-                        "Q Fitness is an unbelievable gym. It has everything you could want, exclusivity, a low number of people working out at once, great trainers, and 24 hour access. When I started I was benching around 55 pounds and am now able to bench 225 pounds."
+                        "I am a serious high school athlete and I wanted to compete at the next level so I came to see Mike at Q Fitness. Mike does an excellent job keeping me motivated, focused, and making the workout seem fun. However, the best thing is that I can feel the difference when I compete. I can feel all the hard work paying off and I'm reminded that I am a better athlete thanks to Mike and Q Fitness."
+                    </blockquote>
+                    <div class="border-t border-gray-200 pt-4">
+                        <div class="text-primary-blue font-bold text-lg" style="color: #0C2340 !important;">Sarah</div>
+                        <div class="text-gray-500 text-sm" style="color: #6b7280 !important;">Q Fitness Member</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 - Frank -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 md:col-span-2 lg:col-span-1">
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-primary-green mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5V3.5h5.5v7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5z"/>
+                        </svg>
+                    </div>
+                    <blockquote class="text-lg text-gray-700 italic mb-6 leading-relaxed" style="color: #1f2937 !important;">
+                        "Q Fitness is an unbelievable gym. It has everything you could want, exclusivity, a low number of people working out at once, great trainers, and 24 hour access. When I started working out at Q Fitness I was benching around 55 pounds and am now able to bench 225 pounds. That is almost completely due to Mike's training sessions and ability to motivate his clients."
                     </blockquote>
                     <div class="border-t border-gray-200 pt-4">
                         <div class="text-primary-blue font-bold text-lg" style="color: #0C2340 !important;">Frank</div>
                         <div class="text-gray-500 text-sm" style="color: #6b7280 !important;">Strength Training Member</div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 4 - Andrea -->
-                <div class="bg-gradient-to-br from-primary-blue to-primary-green text-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="mb-6">
-                        <svg class="w-12 h-12 text-white mx-auto opacity-90" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5V3.5h5.5v7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5z"/>
-                        </svg>
-                    </div>
-                    <blockquote class="text-lg text-white mb-6 leading-relaxed italic" style="color: #ffffff !important;">
-                        "Since beginning group training I have made consistent, measurable progress. I am so grateful for the smart and creative trainers at Q Fitness!"
-                    </blockquote>
-                    <div class="border-t border-white border-opacity-30 pt-4">
-                        <div class="text-white font-bold text-lg" style="color: #ffffff !important;">Andrea</div>
-                        <div class="text-white text-sm opacity-90" style="color: #ffffff !important;">Q Fitness Member</div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 5 - Sarah -->
-                <div class="bg-gradient-to-br from-primary-green to-primary-blue text-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:col-span-2 lg:col-span-1">
-                    <div class="mb-6">
-                        <svg class="w-12 h-12 text-white mx-auto opacity-90" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5V3.5h5.5v7.391c0-5.568 3.5-8.609 8.5-8.609V3.5c-5.5 0-8.5 3.041-8.5 8.609V21h-5.5z"/>
-                        </svg>
-                    </div>
-                    <blockquote class="text-lg text-white mb-6 leading-relaxed italic" style="color: #ffffff !important;">
-                        "I am a serious high school athlete and I wanted to compete at the next level so I came to see Mike at Q Fitness. Mike does an excellent job keeping me motivated, focused, and making the workout seem fun. However, the best thing is that I can feel the difference when I compete. I can feel all the hard work paying off and I'm reminded that I am a better athlete thanks to Mike and Q Fitness."
-                    </blockquote>
-                    <div class="border-t border-white border-opacity-30 pt-4">
-                        <div class="text-white font-bold text-lg" style="color: #ffffff !important;">Sarah</div>
-                        <div class="text-white text-sm opacity-90" style="color: #ffffff !important;">Q Fitness Member</div>
                     </div>
                 </div>
             </div>

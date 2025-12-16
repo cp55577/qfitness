@@ -1,0 +1,10 @@
+{
+  "git.worktrees.enabled": false,
+  "git.worktrees.autoDetect": false,
+  "git.worktrees.autoCreate": false,
+  "worktrees.enabled": false,
+  "worktrees.autoDetect": false,
+  "worktrees.autoCreate": false,
+  "alwaysUseMainRepository": true,
+  "mainRepositoryPath": "/Users/admin/dev/qfitness"
+}

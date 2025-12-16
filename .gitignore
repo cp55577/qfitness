@@ -5,7 +5,10 @@ node_modules/
 dist/
 
 # editor/IDE metadata
-.cursor/
+# Allow worktree prevention config files
+.cursor/*
+!.cursor/worktrees.json
+!.cursor/settings.json
 .vscode/
 
 # Vercel metadata

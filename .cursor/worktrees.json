@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "preventAutoCreation": true,
+  "alwaysUseMainRepository": true,
+  "mainRepositoryPath": "/Users/admin/dev/qfitness",
+  "blockWorktreeCreation": true
+}

@@ -1,0 +1,9 @@
+{
+  "git.autoRepositoryDetection": false,
+  "git.detectSubmodules": false,
+  "git.worktrees.enabled": false,
+  "git.worktrees.autoDetect": false,
+  "files.watcherExclude": {
+    "**/.cursor/worktrees/**": true
+  }
+}

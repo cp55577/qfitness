@@ -41,14 +41,16 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Please provide a valid email address' });
     }
 
-    // Verify Turnstile token
-    if (!turnstileToken) {
-      return res.status(400).json({ error: 'Security verification required. Please refresh the page and try again.' });
+    // Verify Turnstile token only if secret key is configured
+    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+    if (turnstileSecret && turnstileSecret !== 'your_secret_key_here') {
+      if (!turnstileToken) {
+        return res.status(400).json({ error: 'Security verification required. Please refresh the page and try again.' });
+      }
     }
 
-    // Verify with Cloudflare Turnstile
-    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
-    if (turnstileSecret) {
+    // Verify with Cloudflare Turnstile only if secret key is configured
+    if (turnstileSecret && turnstileSecret !== 'your_secret_key_here' && turnstileToken) {
       try {
         const verifyResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
           method: 'POST',

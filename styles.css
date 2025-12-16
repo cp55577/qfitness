@@ -3576,11 +3576,14 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
   padding: 0.75rem 0 !important; /* More padding */
   margin-top: 0.75rem !important;
-  min-width: 14rem !important; /* Wider for better readability */
+  width: 12rem !important; /* Fixed width - matches w-48 in HTML */
+  max-width: 12rem !important; /* Prevent extending too wide */
+  min-width: 12rem !important; /* Ensure consistent width */
   z-index: 1000 !important;
   backdrop-filter: blur(10px) !important; /* Modern glass effect */
   animation: dropdownFadeIn 0.2s ease-out !important;
-  overflow: visible !important; /* Ensure dropdowns are visible */
+  overflow: hidden !important; /* Prevent content from extending */
+  box-sizing: border-box !important; /* Include border in width calculation */
 }
 
 @keyframes dropdownFadeIn {

@@ -18,6 +18,27 @@
     
     <!-- Custom Styles -->
     <link href="../styles.css" rel="stylesheet" />
+    <!-- Override styles.css for testimonials -->
+    <style>
+        /* Override aggressive .section * rule from styles.css */
+        .testimonials-section .bg-white blockquote,
+        .testimonials-section .bg-white .text-primary-blue,
+        .testimonials-section .bg-white .text-gray-500,
+        .testimonials-section .bg-white .text-gray-700 {
+            color: #1f2937 !important;
+        }
+        .testimonials-section .bg-white .text-primary-blue {
+            color: #0C2340 !important;
+        }
+        .testimonials-section .bg-white .text-gray-500 {
+            color: #6b7280 !important;
+        }
+        .testimonials-section .bg-gradient-to-br blockquote,
+        .testimonials-section .bg-gradient-to-br .text-white {
+            color: #ffffff !important;
+        }
+    </style>
+    
     
     <!-- Custom Tailwind Config -->
     <script>
@@ -46,7 +67,7 @@
         </div>
     </section>
     <!-- Testimonials Section -->
-    <section class="section bg-gradient-to-b from-white to-gray-50 py-16">
+    <section class="section testimonials-section bg-gradient-to-b from-white to-gray-50 py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-4xl md:text-5xl font-black tracking-tight text-primary-blue mb-4">What Our Members Say</h2>

@@ -20,7 +20,15 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, phone, message, formType = 'contact' } = req.body;
+    // Parse request body - handle both JSON and form data
+    let body;
+    if (typeof req.body === 'string') {
+      body = JSON.parse(req.body);
+    } else {
+      body = req.body;
+    }
+    
+    const { name, phone, message, formType = 'contact' } = body;
 
     // Validate required fields
     if (!name || !message) {
@@ -30,8 +38,10 @@ export default async function handler(req, res) {
     // Check if Resend API key is configured
     if (!process.env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY is not configured');
+      console.error('Available env vars:', Object.keys(process.env).filter(k => k.includes('RESEND')));
       return res.status(500).json({ 
-        error: 'Email service is not configured. Please contact support directly at 610-574-2300.' 
+        error: 'Email service is not configured. Please contact support directly at 610-574-2300.',
+        debug: process.env.NODE_ENV === 'development' ? 'RESEND_API_KEY not found in environment' : undefined
       });
     }
 
@@ -65,7 +75,21 @@ export default async function handler(req, res) {
 
     if (error) {
       console.error('Resend error:', error);
-      return res.status(500).json({ error: 'Failed to send email', details: error });
+      
+      // Provide user-friendly error messages
+      let errorMessage = 'Failed to send email. Please try again or call us at 610-574-2300.';
+      
+      if (error.message && error.message.includes('domain is not verified')) {
+        errorMessage = 'Email service is being configured. Please call us at 610-574-2300 or try again later.';
+        console.error('Domain verification required in Resend dashboard');
+      } else if (error.message) {
+        errorMessage = `Email error: ${error.message}`;
+      }
+      
+      return res.status(500).json({ 
+        error: errorMessage,
+        details: process.env.NODE_ENV === 'development' ? error : undefined
+      });
     }
 
     return res.status(200).json({ 
@@ -78,9 +102,11 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Contact form error:', error);
+    console.error('Error stack:', error.stack);
     return res.status(500).json({ 
       error: 'An error occurred while processing your request',
-      details: error.message 
+      details: process.env.NODE_ENV === 'development' ? error.message : 'Please try again or call us at 610-574-2300',
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
     });
   }
 }

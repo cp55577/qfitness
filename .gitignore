@@ -16,3 +16,11 @@ dist/
 
 # macOS
 .DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Test files
+test-resend.js

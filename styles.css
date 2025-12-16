@@ -3311,6 +3311,37 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     overflow-x: hidden !important;
     max-width: 100% !important;
   }
+  
+  /* Ensure mobile menu button is visible */
+  .navbar .mobile-menu-button,
+  .navbar button.md\:hidden,
+  .navbar button[data-drawer-target] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 100 !important;
+    color: #ffffff !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0.5rem !important;
+    margin: 0 !important;
+  }
+  
+  .navbar .mobile-menu-button svg,
+  .navbar button.md\:hidden svg,
+  .navbar button[data-drawer-target] svg {
+    stroke: #ffffff !important;
+    color: #ffffff !important;
+    fill: none !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+  
+  /* Override any navbar button rules that might hide it */
+  .navbar button.md\:hidden:hover {
+    color: #10B981 !important;
+    background: rgba(16, 185, 129, 0.1) !important;
+  }
 }
 
 /* Modern Navigation Links */

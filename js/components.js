@@ -107,8 +107,8 @@ const navbar = `
             </nav>
             
             <!-- Mobile menu button -->
-            <button type="button" class="md:hidden text-white hover:text-primary-green transition duration-200" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-label="Toggle mobile menu" style="color: #ffffff !important;">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke: #ffffff !important;">
+            <button type="button" class="md:hidden mobile-menu-button flex items-center justify-center p-2 rounded-md hover:bg-gray-800 transition duration-200" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-label="Toggle mobile menu" style="color: #ffffff !important; background: transparent !important;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke: #ffffff !important; color: #ffffff !important;">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>

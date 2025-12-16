@@ -107,14 +107,112 @@ const navbar = `
             </nav>
             
             <!-- Mobile menu button -->
-            <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button type="button" class="md:hidden text-white hover:text-primary-green transition duration-200" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-label="Toggle mobile menu" style="color: #ffffff !important;">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke: #ffffff !important;">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
     </div>
 </nav>
+
+<!-- Mobile Navigation Drawer -->
+<div id="drawer-navigation" class="fixed top-0 left-0 z-50 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 shadow-xl" tabindex="-1" aria-labelledby="drawer-navigation-label">
+    <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase mb-4">Menu</h5>
+    <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+    <div class="py-4 overflow-y-auto">
+        <ul class="space-y-2">
+            <!-- About Us -->
+            <li>
+                <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100" aria-controls="mobile-about-menu" data-collapse-toggle="mobile-about-menu">
+                    <span>About Us</span>
+                    <svg class="w-3 h-3 ml-auto" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="mobile-about-menu" class="hidden py-2 space-y-2 pl-4">
+                    <li>
+                        <a href="${pathPrefix}about/michael-quarto.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Michael (Founder)</a>
+                    </li>
+                    <li>
+                        <a href="${pathPrefix}about/andrew.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Andrew (Trainer)</a>
+                    </li>
+                    <li>
+                        <a href="${pathPrefix}about/the-gym.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">The Gym</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Services -->
+            <li>
+                <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100" aria-controls="mobile-services-menu" data-collapse-toggle="mobile-services-menu">
+                    <span>Services</span>
+                    <svg class="w-3 h-3 ml-auto" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="mobile-services-menu" class="hidden py-2 space-y-2 pl-4">
+                    <li>
+                        <a href="${pathPrefix}services/personal-training.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Personal Training</a>
+                    </li>
+                    <li>
+                        <a href="${pathPrefix}services/group-classes.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Group Classes</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Membership -->
+            <li>
+                <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100" aria-controls="mobile-membership-menu" data-collapse-toggle="mobile-membership-menu">
+                    <span>Membership</span>
+                    <svg class="w-3 h-3 ml-auto" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="mobile-membership-menu" class="hidden py-2 space-y-2 pl-4">
+                    <li>
+                        <a href="${pathPrefix}membership/membership-rates.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Rates</a>
+                    </li>
+                    <li>
+                        <a href="${pathPrefix}membership/schedule-bookings.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Schedule</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- Testimonials -->
+            <li>
+                <a href="${pathPrefix}community/testimonials.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Testimonials</a>
+            </li>
+            
+            <!-- Contact -->
+            <li>
+                <a href="${pathPrefix}contact.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Contact</a>
+            </li>
+            
+            <!-- FAQ -->
+            <li>
+                <a href="${pathPrefix}faq.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">FAQ</a>
+            </li>
+            
+            <!-- Store -->
+            <li>
+                <a href="https://www.customcreationsnow.com/search?type=product%2Ccollection&q=Q+fitness" target="_blank" rel="noopener noreferrer" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">Store</a>
+            </li>
+            
+            <!-- Join Now CTA -->
+            <li class="pt-4 border-t border-gray-200">
+                <a href="${pathPrefix}membership/membership-rates.html" class="btn-primary-green w-full text-center block">
+                    Join Now
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 `;
 
 const footer = `

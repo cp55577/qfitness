@@ -3312,6 +3312,18 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     max-width: 100% !important;
   }
   
+  /* Completely hide desktop navigation on mobile */
+  .navbar nav[role="navigation"],
+  .navbar nav[role="navigation"] *,
+  .navbar .hidden.md\:flex {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  
   /* Ensure mobile menu button is visible */
   .navbar .mobile-menu-button,
   .navbar button.md\:hidden,
@@ -3325,6 +3337,7 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     border: none !important;
     padding: 0.5rem !important;
     margin: 0 !important;
+    flex-shrink: 0 !important;
   }
   
   .navbar .mobile-menu-button svg,
@@ -3341,6 +3354,30 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   .navbar button.md\:hidden:hover {
     color: #10B981 !important;
     background: rgba(16, 185, 129, 0.1) !important;
+  }
+  
+  /* Make navbar flex container show only logo and hamburger */
+  .navbar .flex.justify-between {
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+  
+  /* Ensure logo doesn't take too much space */
+  .navbar .navbar-brand {
+    flex-shrink: 0 !important;
+    max-width: calc(100% - 60px) !important;
+  }
+  
+  .navbar .navbar-brand img {
+    width: 4rem !important; /* Smaller logo on mobile */
+    height: 4rem !important;
+    max-width: 4rem !important;
+    max-height: 4rem !important;
+  }
+  
+  /* Ensure hamburger button is on the right */
+  .navbar .mobile-menu-button {
+    margin-left: auto !important;
   }
 }
 

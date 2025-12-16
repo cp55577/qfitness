@@ -1,0 +1,229 @@
+{
+    "businessInfo": {
+      "name": "Q Fitness",
+      "tagline": "24 HOUR GYM & PERSONAL TRAINING",
+      "established": "Est. 1994",
+      "type": "24-hour gym and personal training",
+      "description": "Q Fitness is a 24-hour gym in West Chester, PA. Our West Chester gym is open to members only, so you can exercise anytime.",
+      "history": "Q Fitness was the first 24-hour gym in the Tri-State area since its 1999 small pilot training center in Newtown Square. Since then, Q Fitness's owner, Michael Quarto, has developed ten gyms from Delaware County to Chester County in less than eight years—not bad for starting as a shoestring business!",
+      "motto": "A Real American Gym!"
+    },
+    "contact": {
+      "phone": "610-574-2300",
+      "phoneType": "Call or Text",
+      "address": {
+        "street": "1306 Wilmington Pike",
+        "city": "West Chester",
+        "state": "PA",
+        "zip": "19382"
+      },
+      "website": "https://www.qfitness.com",
+      "googlePlus": "https://plus.google.com/104223144404778117472",
+      "facebook": "https://www.facebook.com/pages/Q-FITNESS-24-HOUR-GYM/134716939884246",
+      "youtube": "www.youtube.com/@QFITNESS24HRGYM"
+    },
+    "servingCommunities": [
+      "Westtown, PA",
+      "Thornbury, PA",
+      "Greenville, DE",
+      "Downingtown, PA",
+      "Wilmington, DE",
+      "West Chester, PA",
+      "Glen Mills, PA",
+      "East Goshen, PA"
+    ],
+    "features": {
+      "membershipType": "Private Month-to-Month Membership",
+      "exclusivity": "Limited Memberships=NO CROWDS",
+      "access": "Exclusive 24-hour Gym",
+      "security": [
+        "24 Hour Secured Access",
+        "24 Hour Video Surveillance",
+        "Secured Private Lockers"
+      ]
+    },
+    "services": {
+      "personalTraining": {
+        "description": "Working one-on-one with an experienced fitness professional is the most effective way to reach your fitness goals quickly and safely. Proper form and technique are constantly monitored during your workout which helps avoid injury and maximize results.",
+        "specialties": [
+          "Fitness Training",
+          "Physical Therapy",
+          "Geriatric Rehabilitation",
+          "Sports Training",
+          "Senior Fitness Training",
+          "Maternity Training",
+          "Post Physical Therapy Training"
+        ],
+        "experience": "OVER 100,000 DOCUMENTED TRAINING HOURS SINCE 1994",
+        "approach": "Motivation, Accountability, and Experienced/Applied Knowledge"
+      },
+      "smallGroupTraining": {
+        "description": "Q Fitness offers small group training for individuals who want to take their workout to the next level at a fraction of the cost of personal training.",
+        "classSize": "3-5 people",
+        "duration": "One hour long",
+        "schedule": "Morning and evening throughout the week",
+        "dropInFee": "$30",
+        "membershipRequired": true,
+        "benefits": [
+          "Lose weight",
+          "Burn fat & calories",
+          "Build strength and muscle",
+          "Boost metabolism",
+          "Improve endurance",
+          "Increase flexibility"
+        ]
+      },
+      "eliteSportsTraining": {
+        "description": "Q fitness offers Individual and Team Sports Training. Team programs are customized to meet specific needs and budgets. Improve Speed, Agility, Strength and Conditioning: Maximize your full athletic potential with Sports Training!",
+        "sports": [
+          "Baseball (SPECIALTY)",
+          "Football",
+          "Hockey",
+          "Lacrosse",
+          "Soccer",
+          "Pickleball",
+          "Volleyball",
+          "Swimmers",
+          "Power Lifters (SPECIALTY)",
+          "Race Car Drivers",
+          "Cheerleaders",
+          "Dancers",
+          "Gymnasts"
+        ]
+      }
+    },
+    "equipment": {
+      "cardio": {
+        "count": "20 pieces",
+        "varieties": 11,
+        "equipment": [
+          "Ellipticals",
+          "Treadmills",
+          "Motorless treadmill",
+          "Recumbent bicycles",
+          "Upright spin/road bicycle",
+          "Stepper",
+          "Stairmaster Step Mill",
+          "Cybex ARC trainer",
+          "WaterRower",
+          "SCI-Fit Isokinetic Arm bike"
+        ]
+      },
+      "strength": {
+        "machines": "40 Custom Weight Machines to strengthen upper, mid, & lower body",
+        "specialMachines": [
+          "6 machines specifically targeting hamstring and glutes",
+          "10 machines for low back and abdominal strengthening and toning",
+          "4 way neck machine",
+          "Unilateral leg press",
+          "Hip flexion machine"
+        ],
+        "smithMachines": "(2) Cable Crossovers, Dual Smith Machine for safe bench/deadlift/squat"
+      },
+      "freeWeights": {
+        "dumbbells": "3 pounds to 100 pounds",
+        "bars": [
+          "Apollos axel",
+          "Cambered bar",
+          "5ft bar"
+        ],
+        "benches": "5 different Benches"
+      },
+      "functional": [
+        "300 lb Heavy Bag",
+        "Professional Speed Bag",
+        "Slam Ropes",
+        "300lb Tire for flipping",
+        "4 TRXs",
+        "Jump stretch bands",
+        "Chains",
+        "Pull up bar",
+        "Kettle Bells",
+        "Body Bars",
+        "Medicine Balls",
+        "Slam Balls",
+        "Stability Balls",
+        "Bosu Balls",
+        "Resistance Bands",
+        "Plyometric boxes",
+        "Speed ladders"
+      ],
+      "outdoor": "Outdoor Fitness Area"
+    },
+    "founder": {
+      "name": "Michael Quarto",
+      "credentials": "PTA (Physical Therapist Assistant)",
+      "title": "Owner Of Q Fitness",
+      "specialties": [
+        "Physical Therapist Assistant",
+        "Sports Therapist",
+        "Powerlifting National Record Holder"
+      ],
+      "experience": "OVER 100,000 DOCUMENTED TRAINING HOURS SINCE 1994",
+      "achievements": {
+        "businessDevelopment": "Built, designed, staffed, and owned ten Training Centers",
+        "innovation": "Pioneered one of the first 24 hour gyms",
+        "clientele": "Helped thousands of people from fitness beginners to athletes in MLB, NHL and the NFL"
+      },
+      "powerliftingRecords": {
+        "nationalRecords": [
+          {
+            "organization": "USSSA (United States Strength Sports Association)",
+            "lift": "Standing Power Curl",
+            "date": "Since 11/2/02"
+          }
+        ],
+        "stateRecords": [
+          {
+            "organization": "USSSA",
+            "state": "Pennsylvania",
+            "lift": "Standing Power Curl",
+            "date": "Since 6/16/99"
+          }
+        ],
+        "personalBests": [
+          "623lb Deadlift",
+          "500lb Squat",
+          "375lb Bench",
+          "195lb Standing Power Curl",
+          "Bench Pressed 225lb 49 times"
+        ]
+      },
+      "currentLocation": "Currently Training In West Chester, PA"
+    },
+    "testimonials": [
+      {
+        "author": "Tom",
+        "quote": "I had been trying to make gains in exercise over the last 10+ years with only short-term success. In the last 3 months I've become more fit than I have been my entire life. Mike and the trainers at Q-Fitness are top-notch! They know I can go further and push harder than I believe, and help me go beyond my perceived limits. Knowing I can do more than I think, and seeing and feeling the gains I've made, has helped me in all areas of my life. I'm so grateful for the personal trainer sessions and try never to miss a class! I can't wait to see how far I'll be in 3 more months."
+      },
+      {
+        "author": "Andrea",
+        "quote": "Since beginning group training I have made consistent, measurable progress. I am so grateful for the smart and creative trainers at Q Fitness!"
+      },
+      {
+        "author": "Mary A.",
+        "quote": "With the guidance and expertise of Mike and his staff I have been able to lose 15 lbs and 2 dress sizes in the last several months. Every 4 weeks a new fitness program was personally prepared for me and I was able to tone my figure and lose inches."
+      },
+      {
+        "author": "Sarah",
+        "quote": "I am a serious high school athlete and I wanted to compete at the next level so I came to see Mike at Q Fitness. Mike does an excellent job keeping me motivated, focused, and making the workout seem fun. However, the best thing is that I can feel the difference when I compete. I can feel all the hard work paying off and I'm reminded that I am a better athlete thanks to Mike and Q Fitness."
+      },
+      {
+        "author": "Frank",
+        "quote": "Q Fitness is an unbelievable gym. It has everything you could want, exclusivity, a low number of people working out at once, great trainers, and 24 hour access. When I started working out at Q Fitness I was benching around 55 pounds and am now able to bench 225 pounds. That is almost completely due to Mike's training sessions and ability to motivate his clients."
+      }
+    ],
+    "navigation": {
+      "mainMenu": [
+        "The Gym",
+        "Personal Training",
+        "Michael Quarto, Founder",
+        "Membership & Rates",
+        "Testimonials",
+        "Contact Us"
+      ],
+      "membershipPortal": "https://qfitness.clubautomation.com/member-portal/online-sales/locations/1/memberships"
+    },
+    "copyright": "© 2015 Q Fitness. All Rights Reserved"
+  }
+  

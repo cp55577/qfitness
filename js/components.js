@@ -132,9 +132,9 @@ const footer = `
                 <h4 class="text-lg font-semibold mb-4" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important; -webkit-text-fill-color: #ffffff !important;">Contact Info</h4>
                 <div class="space-y-2 text-white">
                     <p>1306 Wilmington Pike</p>
-                    <p>West Chester, PA 19380</p>
-                    <p>Phone: (610) 918-9200</p>
-                    <p>Email: info@qfitness.com</p>
+                    <p>West Chester, PA 19382</p>
+                    <p>Phone: 610-574-2300</p>
+                    <p>Call or Text</p>
                 </div>
             </div>
         </div>

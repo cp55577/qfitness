@@ -3103,3 +3103,82 @@ body.page-the-gym .gym-pill {
 body.page-the-gym .gym-number {
   letter-spacing: -0.04em;
 }
+
+/* Carousel styles for gym page */
+body.page-the-gym .carousel-prev,
+body.page-the-gym .carousel-next {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #0C2340 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+body.page-the-gym .carousel-prev:hover,
+body.page-the-gym .carousel-next:hover {
+  background: #ffffff !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.page-the-gym .carousel-dot {
+  cursor: pointer !important;
+  border: none !important;
+  transition: all 0.2s ease !important;
+}
+
+body.page-the-gym .carousel-dot.bg-primary-green {
+  background: #10B981 !important;
+  opacity: 1 !important;
+}
+
+body.page-the-gym .carousel-dot.bg-gray-300 {
+  background: #d1d5db !important;
+  opacity: 0.7 !important;
+}
+
+body.page-the-gym .carousel-dot.bg-gray-300:hover {
+  background: #9ca3af !important;
+  opacity: 1 !important;
+}
+
+/* Carousel track */
+body.page-the-gym .carousel-track {
+  display: flex !important;
+  transition: transform 0.5s ease-in-out !important;
+}
+
+body.page-the-gym .carousel-slide {
+  min-width: 100% !important;
+  flex-shrink: 0 !important;
+}
+
+/* Hero section buttons */
+body.page-the-gym .hero-section a.bg-primary-green {
+  background: #10B981 !important;
+  color: #ffffff !important;
+}
+
+body.page-the-gym .hero-section a.bg-primary-green:hover {
+  background: #0F766E !important;
+}
+
+body.page-the-gym .hero-section a.bg-white\/10 {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+body.page-the-gym .hero-section a.bg-white\/10:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Ensure carousel container styling */
+body.page-the-gym #gym-carousel {
+  position: relative !important;
+}
+
+body.page-the-gym #gym-carousel .relative.overflow-hidden {
+  border-radius: 0.5rem !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}

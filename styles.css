@@ -960,6 +960,7 @@ h3 {
   margin: 0 auto;
   padding: 0 var(--space-lg);
   position: relative;
+  overflow: visible !important; /* Allow dropdowns to show */
 }
 
 /* 🌟 ULTIMATE PREMIUM NAVBAR */
@@ -3252,9 +3253,16 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   min-height: 100px !important;
   border-bottom: 1px solid rgba(196, 206, 212, 0.2) !important; /* Subtle border */
   backdrop-filter: blur(10px) !important; /* Modern glass effect */
-  overflow-x: hidden !important; /* Prevent horizontal overflow */
   width: 100% !important;
   max-width: 100% !important;
+  overflow: visible !important; /* Allow dropdowns to show on desktop */
+}
+
+/* Prevent horizontal overflow on mobile only */
+@media (max-width: 767px) {
+  .navbar {
+    overflow-x: hidden !important;
+  }
 }
 
 .navbar::before {
@@ -3293,6 +3301,21 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   letter-spacing: 2px !important;
   opacity: 0.95 !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Desktop: Ensure no horizontal scrollbar and dropdowns are visible */
+@media (min-width: 768px) {
+  body {
+    overflow-x: hidden !important; /* Prevent horizontal scrollbar */
+  }
+  
+  .navbar .container {
+    overflow: visible !important; /* Allow dropdowns to show */
+  }
+  
+  .navbar .flex {
+    overflow: visible !important; /* Allow dropdowns to show */
+  }
 }
 
 /* Hide est. 1994 text on mobile to prevent overflow */
@@ -3445,7 +3468,8 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
 
 /* Modern Professional Dropdown Menus - Ensure Proper Contrast */
 .navbar [role="menu"],
-.navbar .absolute[role="menu"] {
+.navbar .absolute[role="menu"],
+.navbar .group .absolute[role="menu"] {
   background: #ffffff !important;
   border: 1px solid rgba(229, 231, 235, 0.8) !important; /* gray-200 with transparency */
   border-radius: 0.75rem !important; /* More rounded for modern look */
@@ -3456,6 +3480,7 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   z-index: 1000 !important;
   backdrop-filter: blur(10px) !important; /* Modern glass effect */
   animation: dropdownFadeIn 0.2s ease-out !important;
+  overflow: visible !important; /* Ensure dropdowns are visible */
 }
 
 @keyframes dropdownFadeIn {

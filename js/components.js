@@ -11,9 +11,9 @@ function getPathPrefix() {
 const pathPrefix = getPathPrefix();
 
 const navbar = `
-<nav class="navbar overflow-x-hidden">
-    <div class="container overflow-x-hidden">
-        <div class="flex justify-between items-center overflow-x-hidden">
+<nav class="navbar">
+    <div class="container">
+        <div class="flex justify-between items-center">
             <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0">
                 <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
             </a>

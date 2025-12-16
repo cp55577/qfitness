@@ -3372,71 +3372,75 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   }
 }
 
-/* Modern Navigation Links */
-.navbar nav[role="navigation"] {
-  display: flex !important;
-  align-items: center !important;
-  gap: 1rem !important; /* Reduced spacing between items */
+/* Modern Navigation Links - Only apply on desktop */
+@media (min-width: 768px) {
+  .navbar nav[role="navigation"] {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important; /* Reduced spacing between items */
+  }
+  
+  .navbar nav[role="navigation"] > * {
+    position: relative !important;
+  }
 }
 
-.navbar nav[role="navigation"] > * {
-  position: relative !important;
-}
+/* Navigation Link Buttons - Modern Professional Style (Desktop only) */
+@media (min-width: 768px) {
+  .navbar nav[role="navigation"] button,
+  .navbar nav[role="navigation"] a {
+    color: #ffffff !important;
+    font-weight: 600 !important; /* Bolder for modern look */
+    font-size: 1.1rem !important; /* Larger font size */
+    padding: 0.75rem 1.25rem !important; /* More padding */
+    border-radius: 0.5rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Smooth modern transition */
+    text-decoration: none !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    letter-spacing: 0.01em !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
 
-/* Navigation Link Buttons - Modern Professional Style */
-.navbar nav[role="navigation"] button,
-.navbar nav[role="navigation"] a {
-  color: #ffffff !important;
-  font-weight: 600 !important; /* Bolder for modern look */
-  font-size: 1.1rem !important; /* Larger font size */
-  padding: 0.75rem 1.25rem !important; /* More padding */
-  border-radius: 0.5rem !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Smooth modern transition */
-  text-decoration: none !important;
-  background: transparent !important;
-  border: none !important;
-  cursor: pointer !important;
-  letter-spacing: 0.01em !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
+  /* Modern hover effect with underline animation */
+  .navbar nav[role="navigation"] button::after,
+  .navbar nav[role="navigation"] a::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #10B981, transparent);
+    transform: translateX(-50%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-/* Modern hover effect with underline animation */
-.navbar nav[role="navigation"] button::after,
-.navbar nav[role="navigation"] a::after {
-  content: '';
-  position: absolute;
-  bottom: 0.5rem;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #10B981, transparent);
-  transform: translateX(-50%);
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .navbar nav[role="navigation"] button:hover::after,
+  .navbar nav[role="navigation"] a:hover::after {
+    width: 80%;
+  }
 
-.navbar nav[role="navigation"] button:hover::after,
-.navbar nav[role="navigation"] a:hover::after {
-  width: 80%;
-}
+  .navbar nav[role="navigation"] button:hover,
+  .navbar nav[role="navigation"] a:hover {
+    color: #10B981 !important; /* primary-green */
+    background: rgba(16, 185, 129, 0.08) !important; /* Subtle background glow */
+    transform: translateY(-2px) !important;
+    text-shadow: 0 0 8px rgba(16, 185, 129, 0.3) !important; /* Subtle glow effect */
+  }
 
-.navbar nav[role="navigation"] button:hover,
-.navbar nav[role="navigation"] a:hover {
-  color: #10B981 !important; /* primary-green */
-  background: rgba(16, 185, 129, 0.08) !important; /* Subtle background glow */
-  transform: translateY(-2px) !important;
-  text-shadow: 0 0 8px rgba(16, 185, 129, 0.3) !important; /* Subtle glow effect */
-}
+  /* Active state for current page */
+  .navbar nav[role="navigation"] a[aria-current="page"],
+  .navbar nav[role="navigation"] button[aria-current="page"] {
+    color: #10B981 !important;
+  }
 
-/* Active state for current page */
-.navbar nav[role="navigation"] a[aria-current="page"],
-.navbar nav[role="navigation"] button[aria-current="page"] {
-  color: #10B981 !important;
-}
-
-.navbar nav[role="navigation"] a[aria-current="page"]::after,
-.navbar nav[role="navigation"] button[aria-current="page"]::after {
-  width: 80%;
+  .navbar nav[role="navigation"] a[aria-current="page"]::after,
+  .navbar nav[role="navigation"] button[aria-current="page"]::after {
+    width: 80%;
+  }
 }
 
 /* Modern Professional Dropdown Menus - Ensure Proper Contrast */

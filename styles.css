@@ -3335,13 +3335,23 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     max-width: 100% !important;
   }
   
-  /* Desktop navigation is already hidden on mobile via Tailwind's hidden md:flex class */
-  /* No additional CSS needed - Tailwind handles the responsive display */
+  /* FORCE desktop navigation to be hidden on mobile */
+  .navbar nav[role="navigation"],
+  .navbar nav.hidden.md\:flex,
+  .navbar nav[role="navigation"].hidden.md\:flex {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
   
   /* Ensure mobile menu button is visible */
   .navbar .mobile-menu-button,
   .navbar button.md\:hidden,
-  .navbar button[data-drawer-target] {
+  .navbar button[data-drawer-target],
+  .navbar button[class*="md:hidden"] {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -3352,20 +3362,26 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     padding: 0.5rem !important;
     margin: 0 !important;
     flex-shrink: 0 !important;
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
   }
   
   .navbar .mobile-menu-button svg,
   .navbar button.md\:hidden svg,
-  .navbar button[data-drawer-target] svg {
+  .navbar button[data-drawer-target] svg,
+  .navbar button[class*="md:hidden"] svg {
     stroke: #ffffff !important;
     color: #ffffff !important;
     fill: none !important;
     width: 1.5rem !important;
     height: 1.5rem !important;
+    display: block !important;
   }
   
   /* Override any navbar button rules that might hide it */
-  .navbar button.md\:hidden:hover {
+  .navbar button.md\:hidden:hover,
+  .navbar button[class*="md:hidden"]:hover {
     color: #10B981 !important;
     background: rgba(16, 185, 129, 0.1) !important;
   }
@@ -3390,7 +3406,9 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   }
   
   /* Ensure hamburger button is on the right */
-  .navbar .mobile-menu-button {
+  .navbar .mobile-menu-button,
+  .navbar button.md\:hidden,
+  .navbar button[data-drawer-target] {
     margin-left: auto !important;
   }
 }

@@ -3948,3 +3948,106 @@ body.page-the-gym #gym-carousel .relative.overflow-hidden {
   border-radius: 0.5rem !important;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
 }
+
+/* ===== MOBILE DROPDOWN MENU ENHANCEMENTS ===== */
+/* Mobile drawer improvements */
+#drawer-navigation {
+  transition: transform 0.3s ease-in-out !important;
+}
+
+#drawer-navigation ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Mobile dropdown toggle buttons */
+.mobile-dropdown-toggle {
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1) !important;
+  user-select: none !important;
+}
+
+.mobile-dropdown-toggle:active {
+  transform: scale(0.98) !important;
+}
+
+/* Mobile dropdown icon rotation when open */
+.mobile-dropdown-toggle[aria-expanded="true"] .mobile-dropdown-icon,
+.mobile-dropdown-toggle[data-collapse-toggle][aria-expanded="true"] .mobile-dropdown-icon {
+  transform: rotate(180deg) !important;
+}
+
+/* Mobile dropdown menu animations */
+.mobile-dropdown-menu {
+  transition: all 0.3s ease-in-out !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.mobile-dropdown-menu:not(.hidden) {
+  max-height: 500px !important;
+  animation: slideDown 0.3s ease-in-out !important;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+  }
+}
+
+/* Better spacing for mobile menu items */
+#drawer-navigation li {
+  margin-bottom: 0.25rem !important;
+}
+
+#drawer-navigation a,
+#drawer-navigation button {
+  min-height: 3rem !important; /* Touch-friendly size */
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Active state for mobile menu items */
+#drawer-navigation a:active,
+#drawer-navigation button:active {
+  background-color: #e5e7eb !important; /* gray-200 */
+  transform: scale(0.98) !important;
+}
+
+/* Improved hover states for mobile */
+@media (hover: hover) {
+  #drawer-navigation a:hover,
+  #drawer-navigation button:hover {
+    background-color: #f3f4f6 !important; /* gray-100 */
+  }
+}
+
+/* Border accent for dropdown items */
+.mobile-dropdown-menu {
+  border-left-color: #10B981 !important; /* primary-green */
+  margin-left: 0.5rem !important;
+}
+
+/* Better visual hierarchy */
+.mobile-dropdown-menu a {
+  font-size: 0.9375rem !important; /* Slightly smaller than parent */
+  font-weight: 500 !important;
+}
+
+.mobile-dropdown-toggle {
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+
+/* Smooth transitions for all mobile menu interactions */
+#drawer-navigation * {
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
+}

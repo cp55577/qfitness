@@ -115,7 +115,10 @@ const footer = `
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="col-span-1 md:col-span-2">
                 <h3 class="text-2xl font-bold mb-4" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important; -webkit-text-fill-color: #ffffff !important;">Q Fitness</h3>
-                <p class="text-white mb-4">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
+                <p class="text-white mb-6">West Chester's premier 24/7 fitness destination. Join our community and unlock your potential!</p>
+                <a href="${pathPrefix}contact.html" class="btn-primary-green inline-block text-center">
+                    Send Us A Message
+                </a>
             </div>
             
             <div>

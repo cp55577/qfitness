@@ -28,11 +28,55 @@ export default async function handler(req, res) {
       body = req.body;
     }
     
-    const { name, phone, message, formType = 'contact' } = body;
+    const { name, email, phone, message, formType = 'contact', turnstileToken } = body;
 
     // Validate required fields
-    if (!name || !message) {
-      return res.status(400).json({ error: 'Name and message are required' });
+    if (!name || !message || !email) {
+      return res.status(400).json({ error: 'Name, email, and message are required' });
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Please provide a valid email address' });
+    }
+
+    // Verify Turnstile token
+    if (!turnstileToken) {
+      return res.status(400).json({ error: 'Security verification required. Please refresh the page and try again.' });
+    }
+
+    // Verify with Cloudflare Turnstile
+    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+    if (turnstileSecret) {
+      try {
+        const verifyResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            secret: turnstileSecret,
+            response: turnstileToken,
+          }),
+        });
+
+        const verifyData = await verifyResponse.json();
+        
+        if (!verifyData.success) {
+          console.error('Turnstile verification failed:', verifyData);
+          return res.status(400).json({ 
+            error: 'Security verification failed. Please try again.',
+            details: process.env.NODE_ENV === 'development' ? verifyData : undefined
+          });
+        }
+      } catch (verifyError) {
+        console.error('Turnstile verification error:', verifyError);
+        // Continue with email sending even if verification fails (for development)
+        if (process.env.NODE_ENV === 'production') {
+          return res.status(500).json({ error: 'Security verification error. Please try again.' });
+        }
+      }
     }
 
     // Check if Resend API key is configured
@@ -58,17 +102,20 @@ export default async function handler(req, res) {
     const emailBody = `
       <h2>New ${formType === 'testimonial' ? 'Testimonial' : 'Contact'} Form Submission</h2>
       <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
       ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
       <p><strong>Message:</strong></p>
       <p>${message.replace(/\n/g, '<br>')}</p>
       <hr>
       <p><small>Submitted from Q Fitness website</small></p>
+      <p><small>You can reply directly to this email to respond to ${name} at ${email}</small></p>
     `;
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
       from: `Q Fitness <${fromEmail}>`,
       to: [recipientEmail],
+      replyTo: email, // Set reply-to to user's email so you can reply directly
       subject: subject,
       html: emailBody,
     });

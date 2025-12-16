@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# editor/IDE metadata
+.cursor/
+.vscode/
+
+# Vercel metadata
+.vercel/
+
+# macOS
+.DS_Store

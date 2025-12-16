@@ -3312,17 +3312,8 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     max-width: 100% !important;
   }
   
-  /* Completely hide desktop navigation on mobile */
-  .navbar nav[role="navigation"],
-  .navbar nav[role="navigation"] *,
-  .navbar .hidden.md\:flex {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
-  }
+  /* Desktop navigation is already hidden on mobile via Tailwind's hidden md:flex class */
+  /* No additional CSS needed - Tailwind handles the responsive display */
   
   /* Ensure mobile menu button is visible */
   .navbar .mobile-menu-button,

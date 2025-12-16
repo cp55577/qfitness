@@ -464,11 +464,18 @@ footer svg:hover {
 }
 
 /* Social media icons in footer - Force white color with maximum specificity */
+footer .footer-social-link,
+footer .footer-social-link svg,
+footer .footer-social-icon,
+footer .footer-social-link svg path,
+footer a.footer-social-link svg,
+footer a.footer-social-link svg path,
+footer .footer-social-links svg,
+footer .footer-social-links svg path,
 footer a[aria-label="Facebook"] svg,
 footer a[aria-label="YouTube"] svg,
 footer a[href*="facebook"] svg,
 footer a[href*="youtube"] svg,
-footer .flex.gap-4 svg,
 footer a[aria-label="Facebook"] svg path,
 footer a[aria-label="YouTube"] svg path,
 footer a[href*="facebook"] svg path,
@@ -479,6 +486,11 @@ footer a[href*="youtube"] svg path {
   -webkit-text-fill-color: #ffffff !important;
 }
 
+footer .footer-social-link:hover,
+footer .footer-social-link:hover svg,
+footer .footer-social-link:hover svg path,
+footer a.footer-social-link:hover svg,
+footer a.footer-social-link:hover svg path,
 footer a[aria-label="Facebook"]:hover svg,
 footer a[aria-label="YouTube"]:hover svg,
 footer a[href*="facebook"]:hover svg,
@@ -493,16 +505,25 @@ footer a[href*="youtube"]:hover svg path {
   -webkit-text-fill-color: #10B981 !important;
 }
 
-/* Nuclear option - target all SVG paths in footer social links */
-footer div.flex.gap-4 a svg,
-footer div.flex.gap-4 a svg path {
+/* Override any scheme-specific footer SVG rules */
+.scheme-ocean footer .footer-social-link svg,
+.scheme-ocean footer .footer-social-link svg path,
+.scheme-ocean footer .footer-social-icon,
+.scheme-texans footer .footer-social-link svg,
+.scheme-texans footer .footer-social-link svg path,
+body footer .footer-social-link svg,
+body footer .footer-social-link svg path {
   fill: #ffffff !important;
   stroke: #ffffff !important;
   color: #ffffff !important;
 }
 
-footer div.flex.gap-4 a:hover svg,
-footer div.flex.gap-4 a:hover svg path {
+.scheme-ocean footer .footer-social-link:hover svg,
+.scheme-ocean footer .footer-social-link:hover svg path,
+.scheme-texans footer .footer-social-link:hover svg,
+.scheme-texans footer .footer-social-link:hover svg path,
+body footer .footer-social-link:hover svg,
+body footer .footer-social-link:hover svg path {
   fill: #10B981 !important;
   stroke: #10B981 !important;
   color: #10B981 !important;

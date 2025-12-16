@@ -20,7 +20,7 @@ const navbar = `
             <span style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
             
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
+            <nav class="hidden md:flex space-x-3" role="navigation" aria-label="Main navigation">
                 <!-- About Us Dropdown -->
                 <div class="relative group">
                     <button 

@@ -1021,7 +1021,7 @@ h3 {
 
 /* 🎨 PREMIUM NAVIGATION */
 .navbar a,
-.navbar button {
+.navbar button:not(.mobile-menu-button):not([data-drawer-target]):not([aria-label="Toggle mobile menu"]) {
   color: var(--text-primary) !important;
   text-decoration: none;
   transition: all var(--transition-elastic);
@@ -3318,6 +3318,43 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   }
 }
 
+/* Base rule: Mobile menu button should be visible by default on small screens */
+/* NUCLEAR OPTION - Override everything */
+.navbar .mobile-menu-button,
+.navbar #mobile-menu-btn,
+.navbar button[data-drawer-target="drawer-navigation"],
+.navbar button[aria-label="Toggle mobile menu"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 999 !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  min-width: 3rem !important;
+  min-height: 3rem !important;
+  padding: 0.5rem !important;
+  margin: 0 !important;
+  margin-left: auto !important;
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0.375rem !important;
+}
+
+/* Override on desktop - hide mobile button */
+@media (min-width: 768px) {
+  .navbar .mobile-menu-button,
+  .navbar #mobile-menu-btn,
+  .navbar button[data-drawer-target="drawer-navigation"],
+  .navbar button[aria-label="Toggle mobile menu"] {
+    display: none !important;
+  }
+}
+
 /* Hide est. 1994 text on mobile to prevent overflow */
 @media (max-width: 767px) {
   .navbar span[style*="est. 1994"],
@@ -3345,38 +3382,62 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     height: 0 !important;
     width: 0 !important;
     overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
-  /* Ensure mobile menu button is visible */
+  /* Ensure flex container properly shows button */
+  .navbar .flex.justify-between {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  
+  /* Ensure mobile menu button is visible - NUCLEAR OPTION */
   .navbar .mobile-menu-button,
-  .navbar button.md\:hidden,
-  .navbar button[data-drawer-target],
-  .navbar button[class*="md:hidden"] {
+  .navbar #mobile-menu-btn,
+  .navbar button[data-drawer-target="drawer-navigation"],
+  .navbar button[aria-label="Toggle mobile menu"] {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
-    z-index: 100 !important;
+    z-index: 1000 !important;
     color: #ffffff !important;
-    background: transparent !important;
-    border: none !important;
+    background: rgba(255,255,255,0.2) !important;
+    border: 2px solid rgba(255,255,255,0.5) !important;
     padding: 0.5rem !important;
     margin: 0 !important;
+    margin-left: auto !important;
     flex-shrink: 0 !important;
     position: relative !important;
-    width: auto !important;
-    height: auto !important;
+    width: 3rem !important;
+    height: 3rem !important;
+    min-width: 3rem !important;
+    min-height: 3rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 0.375rem !important;
+    cursor: pointer !important;
   }
   
   .navbar .mobile-menu-button svg,
   .navbar button.md\:hidden svg,
   .navbar button[data-drawer-target] svg,
-  .navbar button[class*="md:hidden"] svg {
+  .navbar button[class*="md:hidden"] svg,
+  .navbar button[aria-label="Toggle mobile menu"] svg {
     stroke: #ffffff !important;
     color: #ffffff !important;
     fill: none !important;
     width: 1.5rem !important;
     height: 1.5rem !important;
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
   }
   
   /* Override any navbar button rules that might hide it */
@@ -3423,6 +3484,13 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   
   .navbar nav[role="navigation"] > * {
     position: relative !important;
+  }
+  
+  /* Hide mobile menu button on desktop */
+  .navbar button.md\:hidden,
+  .navbar .mobile-menu-button,
+  .navbar button[data-drawer-target] {
+    display: none !important;
   }
 }
 

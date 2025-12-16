@@ -13,14 +13,14 @@ const pathPrefix = getPathPrefix();
 const navbar = `
 <nav class="navbar">
     <div class="container">
-        <div class="flex justify-between items-center">
-            <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0">
+        <div class="flex justify-between items-center w-full">
+            <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0 flex-shrink-0">
                 <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
             </a>
             <span class="hidden md:inline-block" style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
             
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-1" role="navigation" aria-label="Main navigation">
+            <nav class="hidden md:flex space-x-1" role="navigation" aria-label="Main navigation" style="flex: 1; justify-content: flex-end;">
                 <!-- About Us Dropdown -->
                 <div class="relative group">
                     <button 
@@ -106,10 +106,10 @@ const navbar = `
                 </a>
             </nav>
             
-            <!-- Mobile menu button -->
-            <button type="button" class="md:hidden mobile-menu-button flex items-center justify-center p-2 rounded-md hover:bg-gray-800 transition duration-200" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-label="Toggle mobile menu" style="color: #ffffff !important; background: transparent !important;">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke: #ffffff !important; color: #ffffff !important;">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <!-- Mobile menu button - MUST be visible on mobile -->
+            <button type="button" id="mobile-menu-btn" class="mobile-menu-button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-label="Toggle mobile menu" style="display: flex !important; visibility: visible !important; opacity: 1 !important; color: #ffffff !important; background: #10B981 !important; border: 2px solid #ffffff !important; position: relative !important; z-index: 9999 !important; width: 3rem !important; height: 3rem !important; min-width: 3rem !important; min-height: 3rem !important; flex-shrink: 0 !important; align-items: center !important; justify-content: center !important; border-radius: 0.375rem !important; cursor: pointer !important; margin-left: auto !important; box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke: #ffffff !important; color: #ffffff !important; display: block !important; visibility: visible !important; opacity: 1 !important; width: 1.5rem !important; height: 1.5rem !important; pointer-events: none !important;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>

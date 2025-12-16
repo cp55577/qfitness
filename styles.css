@@ -1446,8 +1446,8 @@ a.btn-cta-large {
   background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #ffffff;
   font-weight: 700;
-  font-size: 1.25rem;
-  padding: 1.25rem 2.5rem;
+  font-size: 1.5rem; /* Increased from 1.25rem */
+  padding: 1.5rem 3.5rem; /* Increased from 1.25rem 2.5rem */
   border-radius: 0.875rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0) scale(1);
@@ -1510,8 +1510,8 @@ a.btn-primary-green {
   background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #ffffff;
   font-weight: 700;
-  font-size: 1rem;
-  padding: 0.875rem 2rem;
+  font-size: 1.125rem; /* Increased from 1rem */
+  padding: 1.125rem 2.5rem; /* Increased from 0.875rem 2rem */
   border-radius: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
@@ -1577,8 +1577,8 @@ a.btn-primary-green-sm {
   background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.9375rem;
-  padding: 0.75rem 1.75rem;
+  font-size: 1rem; /* Increased from 0.9375rem */
+  padding: 1rem 2rem; /* Increased from 0.75rem 1.75rem */
   border-radius: 0.625rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
@@ -1619,8 +1619,8 @@ a.btn-primary-blue {
   background: linear-gradient(135deg, #0C2340 0%, #1E3A8A 100%);
   color: #ffffff !important;
   font-weight: 700;
-  font-size: 1rem;
-  padding: 0.875rem 1.75rem;
+  font-size: 1.125rem; /* Increased from 1rem */
+  padding: 1.125rem 2.5rem; /* Increased from 0.875rem 1.75rem */
   border-radius: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;

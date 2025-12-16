@@ -1577,8 +1577,8 @@ a.btn-primary-green-sm {
   background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #ffffff;
   font-weight: 700;
-  font-size: 1rem; /* Increased from 0.9375rem */
-  padding: 1rem 2rem; /* Increased from 0.75rem 1.75rem */
+  font-size: 1.25rem; /* Increased from 1rem for better visibility */
+  padding: 1.25rem 2.5rem; /* Increased from 1rem 2rem for bigger buttons */
   border-radius: 0.625rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;

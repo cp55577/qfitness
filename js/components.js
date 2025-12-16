@@ -11,150 +11,95 @@ function getPathPrefix() {
 const pathPrefix = getPathPrefix();
 
 const navbar = `
-<nav class="navbar fixed top-0 left-0 right-0 z-50 bg-primary-blue shadow-lg backdrop-blur-sm bg-opacity-95">
-    <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center h-20">
-            <!-- Logo and Brand -->
-            <div class="flex items-center space-x-3">
-                <a href="${pathPrefix}index.html" class="navbar-brand flex items-center group">
-                    <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-16 w-16 transition-transform duration-300 group-hover:scale-105">
-                </a>
-                <span class="hidden sm:block text-white text-sm font-normal italic font-serif tracking-wide opacity-90">est. 1994</span>
-            </div>
+<nav class="navbar">
+    <div class="container">
+        <div class="flex justify-between items-center">
+            <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0">
+                <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
+            </a>
+            <span style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
             
             <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
+            <nav class="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
                 <!-- About Us Dropdown -->
                 <div class="relative group">
                     <button 
-                        class="nav-link text-white hover:text-primary-green px-4 py-2.5 rounded-md transition-all duration-200 font-semibold text-sm tracking-wide relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-primary-blue"
+                        class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-controls="about-menu"
                         id="about-button"
                     >
-                        <span class="relative z-10">About Us</span>
-                        <span class="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity duration-200"></span>
+                        About Us
                     </button>
                     <div 
                         id="about-menu"
-                        class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible scale-95 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-300 ease-out origin-top-left z-50 overflow-hidden"
+                        class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
                         role="menu"
                         aria-labelledby="about-button"
                     >
-                        <div class="py-2">
-                            <a href="${pathPrefix}about/michael-quarto.html" class="block px-5 py-3 text-sm text-gray-800 hover:bg-primary-green hover:text-white transition-all duration-150 michael-quarto-link font-medium" role="menuitem">
-                                <span class="flex items-center">
-                                    <span>Michael (Founder)</span>
-                                </span>
-                            </a>
-                            <a href="${pathPrefix}about/andrew.html" class="block px-5 py-3 text-sm text-gray-800 hover:bg-primary-green hover:text-white transition-all duration-150 font-medium" role="menuitem">
-                                <span class="flex items-center">
-                                    <span>Andrew (Trainer)</span>
-                                </span>
-                            </a>
-                            <a href="${pathPrefix}about/the-gym.html" class="block px-5 py-3 text-sm text-gray-800 hover:bg-primary-green hover:text-white transition-all duration-150 the-gym-link font-medium" role="menuitem">
-                                <span class="flex items-center">
-                                    <span>The Gym</span>
-                                </span>
-                            </a>
-                        </div>
+                        <a href="${pathPrefix}about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link" role="menuitem">Michael (Founder)</a>
+                        <a href="${pathPrefix}about/andrew.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Andrew (Trainer)</a>
+                        <a href="${pathPrefix}about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link" role="menuitem">The Gym</a>
                     </div>
                 </div>
                 
                 <!-- Services Dropdown -->
                 <div class="relative group">
                     <button 
-                        class="nav-link text-white hover:text-primary-green px-4 py-2.5 rounded-md transition-all duration-200 font-semibold text-sm tracking-wide relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-primary-blue"
+                        class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-controls="services-menu"
                         id="services-button"
                     >
-                        <span class="relative z-10">Services</span>
-                        <span class="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity duration-200"></span>
+                        Services
                     </button>
                     <div 
                         id="services-menu"
-                        class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible scale-95 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-300 ease-out origin-top-left z-50 overflow-hidden"
+                        class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
                         role="menu"
                         aria-labelledby="services-button"
                     >
-                        <div class="py-2">
-                            <a href="${pathPrefix}services/personal-training.html" class="block px-5 py-3 text-sm text-gray-800 hover:bg-primary-green hover:text-white transition-all duration-150 font-medium" role="menuitem">
-                                <span class="flex items-center">
-                                    <span>Personal Training</span>
-                                </span>
-                            </a>
-                            <a href="${pathPrefix}services/group-classes.html" class="block px-5 py-3 text-sm text-gray-800 hover:bg-primary-green hover:text-white transition-all duration-150 font-medium" role="menuitem">
-                                <span class="flex items-center">
-                                    <span>Group Classes</span>
-                                </span>
-                            </a>
-                        </div>
+                        <a href="${pathPrefix}services/personal-training.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Personal Training</a>
+                        <a href="${pathPrefix}services/group-classes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Group Classes</a>
                     </div>
                 </div>
                 
                 <!-- Membership Dropdown -->
                 <div class="relative group">
                     <button 
-                        class="nav-link text-white hover:text-primary-green px-4 py-2.5 rounded-md transition-all duration-200 font-semibold text-sm tracking-wide relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-primary-blue"
+                        class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-controls="membership-menu"
                         id="membership-button"
                     >
-                        <span class="relative z-10">Membership</span>
-                        <span class="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity duration-200"></span>
+                        Membership
                     </button>
                     <div 
                         id="membership-menu"
-                        class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible scale-95 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-300 ease-out origin-top-left z-50 overflow-hidden"
+                        class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
                         role="menu"
                         aria-labelledby="membership-button"
                     >
-                        <div class="py-2">
-                            <a href="${pathPrefix}membership/membership-rates.html" class="block px-5 py-3 text-sm text-gray-800 hover:bg-primary-green hover:text-white transition-all duration-150 font-medium" role="menuitem">
-                                <span class="flex items-center">
-                                    <span>Rates</span>
-                                </span>
-                            </a>
-                            <a href="${pathPrefix}membership/schedule-bookings.html" class="block px-5 py-3 text-sm text-gray-800 hover:bg-primary-green hover:text-white transition-all duration-150 font-medium" role="menuitem">
-                                <span class="flex items-center">
-                                    <span>Schedule</span>
-                                </span>
-                            </a>
-                        </div>
+                        <a href="${pathPrefix}membership/membership-rates.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Rates</a>
+                        <a href="${pathPrefix}membership/schedule-bookings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Schedule</a>
                     </div>
                 </div>
                 
                 <!-- Testimonials -->
-                <a href="${pathPrefix}community/testimonials.html" class="nav-link text-white hover:text-primary-green px-4 py-2.5 rounded-md transition-all duration-200 font-semibold text-sm tracking-wide relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-primary-blue">
-                    <span class="relative z-10">Testimonials</span>
-                    <span class="absolute inset-0 bg-white opacity-0 hover:opacity-5 transition-opacity duration-200"></span>
-                </a>
+                <a href="${pathPrefix}community/testimonials.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Testimonials</a>
                 
                 <!-- Contact -->
-                <a href="${pathPrefix}contact.html" class="nav-link text-white hover:text-primary-green px-4 py-2.5 rounded-md transition-all duration-200 font-semibold text-sm tracking-wide relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-primary-blue">
-                    <span class="relative z-10">Contact</span>
-                    <span class="absolute inset-0 bg-white opacity-0 hover:opacity-5 transition-opacity duration-200"></span>
-                </a>
+                <a href="${pathPrefix}contact.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Contact</a>
                 
                 <!-- FAQ -->
-                <a href="${pathPrefix}faq.html" class="nav-link text-white hover:text-primary-green px-4 py-2.5 rounded-md transition-all duration-200 font-semibold text-sm tracking-wide relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-primary-blue">
-                    <span class="relative z-10">FAQ</span>
-                    <span class="absolute inset-0 bg-white opacity-0 hover:opacity-5 transition-opacity duration-200"></span>
-                </a>
+                <a href="${pathPrefix}faq.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">FAQ</a>
             </nav>
             
             <!-- Mobile menu button -->
-            <button 
-                type="button" 
-                class="lg:hidden text-white hover:text-primary-green p-2 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2 focus:ring-offset-primary-blue" 
-                data-drawer-target="drawer-navigation" 
-                data-drawer-show="drawer-navigation"
-                aria-label="Toggle navigation menu"
-            >
+            <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -162,7 +107,6 @@ const navbar = `
         </div>
     </div>
 </nav>
-<div class="h-20"></div>
 `;
 
 const footer = `

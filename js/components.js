@@ -11,13 +11,13 @@ function getPathPrefix() {
 const pathPrefix = getPathPrefix();
 
 const navbar = `
-<nav class="navbar">
-    <div class="container">
-        <div class="flex justify-between items-center">
+<nav class="navbar overflow-x-hidden">
+    <div class="container overflow-x-hidden">
+        <div class="flex justify-between items-center overflow-x-hidden">
             <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0">
                 <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
             </a>
-            <span style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
+            <span class="hidden md:inline-block" style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-1" role="navigation" aria-label="Main navigation">

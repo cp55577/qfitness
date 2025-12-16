@@ -3252,6 +3252,9 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   min-height: 100px !important;
   border-bottom: 1px solid rgba(196, 206, 212, 0.2) !important; /* Subtle border */
   backdrop-filter: blur(10px) !important; /* Modern glass effect */
+  overflow-x: hidden !important; /* Prevent horizontal overflow */
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .navbar::before {
@@ -3290,6 +3293,24 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   letter-spacing: 2px !important;
   opacity: 0.95 !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Hide est. 1994 text on mobile to prevent overflow */
+@media (max-width: 767px) {
+  .navbar span[style*="est. 1994"],
+  .navbar .est-text {
+    display: none !important;
+  }
+  
+  .navbar .container {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+  
+  .navbar .flex {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
 }
 
 /* Modern Navigation Links */

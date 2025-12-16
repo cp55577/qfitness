@@ -463,6 +463,25 @@ footer svg:hover {
   stroke: var(--primary) !important;
 }
 
+/* Social media icons in footer - Force white color */
+footer a[aria-label="Facebook"] svg,
+footer a[aria-label="YouTube"] svg,
+footer a[href*="facebook"] svg,
+footer a[href*="youtube"] svg {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+footer a[aria-label="Facebook"]:hover svg,
+footer a[aria-label="YouTube"]:hover svg,
+footer a[href*="facebook"]:hover svg,
+footer a[href*="youtube"]:hover svg {
+  fill: #10B981 !important; /* primary-green */
+  stroke: #10B981 !important;
+  color: #10B981 !important;
+}
+
 /* All icons in hero section */
 .hero-section svg {
   fill: var(--white) !important;

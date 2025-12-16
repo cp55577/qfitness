@@ -1,0 +1,18 @@
+# Q Fitness Project Rules
+
+## CRITICAL: No Git Worktrees
+- **NEVER use git worktrees for this project**
+- Always work directly in the main repository: /Users/admin/dev/qfitness
+- If Cursor opens a worktree workspace, close it and open the main repository instead
+- All file edits must be made to /Users/admin/dev/qfitness path, not any worktree paths
+- When workspace path shows .cursor/worktrees/qfitness/*, inform the user and work in the main repo instead
+
+## Repository Location
+- Main repository: /Users/admin/dev/qfitness
+- This is the ONLY location where code changes should be made
+- All git operations should be performed in this directory
+
+## Workflow
+- Always verify you're in /Users/admin/dev/qfitness before making changes
+- Use pwd and git rev-parse --show-toplevel to confirm location
+- If unsure, ask the user to confirm they have the main repository open

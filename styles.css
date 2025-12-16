@@ -2948,3 +2948,158 @@ footer h4.text-lg.font-semibold {
   color: #ffffff !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
+
+/* =============================
+   The Gym page (single source of authority)
+   Scope: body.page-the-gym
+   ============================= */
+body.page-the-gym .hero-section {
+  /* Force the hero image back on for this page (global CSS has conflicting hero rules). */
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/new/gym4.jpeg') center / cover no-repeat !important;
+  background-color: #0C2340 !important;
+  min-height: 60vh !important;
+}
+
+body.page-the-gym .hero-section::before {
+  display: none !important;
+  content: none !important;
+}
+
+body.page-the-gym .hero-section h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6) !important;
+}
+
+body.page-the-gym .hero-section p {
+  color: #ffffff !important;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6) !important;
+}
+
+/* Keep headings readable (avoid global gradient/transparent text) */
+body.page-the-gym .gym-main .section h1,
+body.page-the-gym .gym-main .section h2,
+body.page-the-gym .gym-main .section h3,
+body.page-the-gym .gym-main .section h4,
+body.page-the-gym .gym-main .section h5,
+body.page-the-gym .gym-main .section h6 {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #0C2340 !important;
+  text-shadow: none !important;
+}
+
+/* Base content readability */
+body.page-the-gym .gym-main {
+  color: #334155; /* slate-700 */
+}
+
+body.page-the-gym .gym-main .section {
+  /* Override aggressive global `.section` styling (backgrounds, borders, patterns). */
+  background: #ffffff !important;
+  border-left: none !important;
+  color: #334155 !important; /* slate-700 */
+}
+
+body.page-the-gym .gym-main .section::before {
+  content: none !important;
+}
+
+/* Section-specific backgrounds (avoid Tailwind `bg-gradient-to-*` utilities that are globally overridden) */
+body.page-the-gym .gym-main .gym-section-carousel {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+}
+
+body.page-the-gym .gym-main .gym-section-equipment {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
+}
+
+body.page-the-gym .gym-main .gym-section-location {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+}
+
+/* Force readable content text (beat global `.section * { ... !important; }`), but do NOT clobber links. */
+body.page-the-gym .gym-main .section p,
+body.page-the-gym .gym-main .section li,
+body.page-the-gym .gym-main .section span,
+body.page-the-gym .gym-main .section div {
+  color: #334155 !important; /* slate-700 */
+}
+
+/* The site CSS sets `.section a { color: var(--primary) !important; }` which breaks button-like links.
+   Force white text for CTA-style links on this page. */
+body.page-the-gym .gym-main .section a.bg-primary-blue,
+body.page-the-gym .gym-main .section a.bg-primary-green,
+body.page-the-gym .gym-main .section a.text-white {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Defensive: if any nested spans exist inside a button-like link, keep them white too. */
+body.page-the-gym .gym-main .section a.bg-primary-blue span,
+body.page-the-gym .gym-main .section a.bg-primary-green span {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Keep headings and key numbers navy inside sections */
+body.page-the-gym .gym-main .section h1,
+body.page-the-gym .gym-main .section h2,
+body.page-the-gym .gym-main .section h3,
+body.page-the-gym .gym-main .section h4,
+body.page-the-gym .gym-main .section h5,
+body.page-the-gym .gym-main .section h6 {
+  color: #0C2340 !important;
+  -webkit-text-fill-color: #0C2340 !important;
+}
+
+body.page-the-gym .gym-card .gym-number,
+body.page-the-gym .gym-main .section .text-primary-blue {
+  color: #0C2340 !important;
+}
+
+/* Ensure gym-card content is readable (div text otherwise inherits conflicting globals). */
+body.page-the-gym .gym-card,
+body.page-the-gym .gym-card p,
+body.page-the-gym .gym-card li,
+body.page-the-gym .gym-card div,
+body.page-the-gym .gym-card span {
+  color: #334155 !important;
+}
+
+body.page-the-gym .gym-card .gym-number {
+  color: #0C2340 !important;
+}
+
+body.page-the-gym .gym-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 22px 44px rgba(2, 6, 23, 0.08);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+body.page-the-gym .gym-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 28px 60px rgba(2, 6, 23, 0.12);
+  border-color: rgba(15, 23, 42, 0.14);
+}
+
+body.page-the-gym .gym-pill {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 9999px;
+  padding: 0.6rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+  color: #334155;
+}
+
+body.page-the-gym .gym-number {
+  letter-spacing: -0.04em;
+}

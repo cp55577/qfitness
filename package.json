@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "resend": "^3.0.0"
+  },
   "devDependencies": {
     "gulp": "^5.0.1",
     "gulp-file-include": "^2.3.0"

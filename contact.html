@@ -53,7 +53,9 @@
                 <!-- Contact Form -->
                 <div class="card">
                     <h2 class="text-4xl font-black tracking-tight text-primary-blue mb-6">Send Us a Message</h2>
-                    <form class="space-y-6">
+                    <form id="contact-form" class="space-y-6">
+                        <div id="form-message" class="hidden p-4 rounded-lg mb-4"></div>
+                        
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
                             <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-green focus:border-transparent" required>
@@ -70,7 +72,7 @@
                         </div>
                         
                         <div class="text-center">
-                            <button type="submit" class="btn-primary-green">
+                            <button type="submit" class="btn-primary-green" id="submit-btn">
                                 Send Message
                             </button>
                         </div>
@@ -165,5 +167,72 @@
     
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+    
+    <!-- Contact Form Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const messageDiv = document.getElementById('form-message');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    // Disable submit button
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    
+                    // Hide previous messages
+                    messageDiv.classList.add('hidden');
+                    
+                    // Get form data
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        phone: document.getElementById('phone').value,
+                        message: document.getElementById('message').value,
+                        formType: 'contact'
+                    };
+                    
+                    try {
+                        const response = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formData)
+                        });
+                        
+                        const data = await response.json();
+                        
+                        if (response.ok && data.success) {
+                            // Show success message
+                            messageDiv.className = 'p-4 rounded-lg mb-4 bg-green-100 border border-green-400 text-green-700';
+                            messageDiv.textContent = data.message || 'Thank you! Your message has been sent successfully.';
+                            messageDiv.classList.remove('hidden');
+                            
+                            // Reset form
+                            form.reset();
+                        } else {
+                            // Show error message
+                            messageDiv.className = 'p-4 rounded-lg mb-4 bg-red-100 border border-red-400 text-red-700';
+                            messageDiv.textContent = data.error || 'There was an error sending your message. Please try again.';
+                            messageDiv.classList.remove('hidden');
+                        }
+                    } catch (error) {
+                        // Show error message
+                        messageDiv.className = 'p-4 rounded-lg mb-4 bg-red-100 border border-red-400 text-red-700';
+                        messageDiv.textContent = 'There was an error sending your message. Please try again or call us at 610-574-2300.';
+                        messageDiv.classList.remove('hidden');
+                        console.error('Form submission error:', error);
+                    } finally {
+                        // Re-enable submit button
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

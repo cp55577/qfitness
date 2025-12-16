@@ -3324,8 +3324,9 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   /* Ensure desktop navigation is properly positioned */
   .navbar nav[role="navigation"] {
     display: flex !important;
-    flex: 1 !important;
-    justify-content: flex-end !important;
+    flex: none !important;
+    align-items: center !important;
+    margin-left: auto !important;
   }
 }
 

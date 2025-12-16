@@ -1510,8 +1510,8 @@ a.btn-primary-green {
   background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #ffffff;
   font-weight: 700;
-  font-size: 1.125rem; /* Increased from 1rem */
-  padding: 1.125rem 2.5rem; /* Increased from 0.875rem 2rem */
+  font-size: 1.375rem; /* Increased from 1.125rem for better visibility */
+  padding: 1.375rem 3rem; /* Increased from 1.125rem 2.5rem for bigger buttons */
   border-radius: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;

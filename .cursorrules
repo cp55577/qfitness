@@ -1,0 +1,6 @@
+
+## Worktree Prevention
+- All worktrees have been removed
+- If Cursor creates a new worktree, close it immediately
+- Always open /Users/admin/dev/qfitness directly
+- Never open any folder from .cursor/worktrees/

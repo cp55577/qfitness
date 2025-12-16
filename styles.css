@@ -463,21 +463,47 @@ footer svg:hover {
   stroke: var(--primary) !important;
 }
 
-/* Social media icons in footer - Force white color */
+/* Social media icons in footer - Force white color with maximum specificity */
 footer a[aria-label="Facebook"] svg,
 footer a[aria-label="YouTube"] svg,
 footer a[href*="facebook"] svg,
-footer a[href*="youtube"] svg {
+footer a[href*="youtube"] svg,
+footer .flex.gap-4 svg,
+footer a[aria-label="Facebook"] svg path,
+footer a[aria-label="YouTube"] svg path,
+footer a[href*="facebook"] svg path,
+footer a[href*="youtube"] svg path {
   fill: #ffffff !important;
   stroke: #ffffff !important;
   color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 footer a[aria-label="Facebook"]:hover svg,
 footer a[aria-label="YouTube"]:hover svg,
 footer a[href*="facebook"]:hover svg,
-footer a[href*="youtube"]:hover svg {
+footer a[href*="youtube"]:hover svg,
+footer a[aria-label="Facebook"]:hover svg path,
+footer a[aria-label="YouTube"]:hover svg path,
+footer a[href*="facebook"]:hover svg path,
+footer a[href*="youtube"]:hover svg path {
   fill: #10B981 !important; /* primary-green */
+  stroke: #10B981 !important;
+  color: #10B981 !important;
+  -webkit-text-fill-color: #10B981 !important;
+}
+
+/* Nuclear option - target all SVG paths in footer social links */
+footer div.flex.gap-4 a svg,
+footer div.flex.gap-4 a svg path {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+footer div.flex.gap-4 a:hover svg,
+footer div.flex.gap-4 a:hover svg path {
+  fill: #10B981 !important;
   stroke: #10B981 !important;
   color: #10B981 !important;
 }

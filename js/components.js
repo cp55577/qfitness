@@ -40,6 +40,7 @@ const navbar = `
                     >
                         <a href="${pathPrefix}about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link" role="menuitem">Michael (Founder)</a>
                         <a href="${pathPrefix}about/andrew.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Andrew (Trainer)</a>
+                        <a href="${pathPrefix}about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link" role="menuitem">The Gym</a>
                     </div>
                 </div>
                 

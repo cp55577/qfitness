@@ -88,27 +88,8 @@ const navbar = `
                     </div>
                 </div>
                 
-                <!-- Community Dropdown -->
-                <div class="relative group">
-                    <button 
-                        class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium"
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-controls="community-menu"
-                        id="community-button"
-                    >
-                        Community
-                    </button>
-                    <div 
-                        id="community-menu"
-                        class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                        role="menu"
-                        aria-labelledby="community-button"
-                    >
-                        <a href="${pathPrefix}community/testimonials.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Testimonials</a>
-                        <a href="${pathPrefix}community/blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Blog</a>
-                    </div>
-                </div>
+                <!-- Testimonials -->
+                <a href="${pathPrefix}community/testimonials.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Testimonials</a>
                 
                 <!-- Contact -->
                 <a href="${pathPrefix}contact.html" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Contact</a>

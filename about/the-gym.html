@@ -33,28 +33,36 @@
             }
         }
     </script>
+    <style>
+        /* Override any grey background from styles.css */
+        .scheme-ocean .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/new/gym4.jpeg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+        .scheme-ocean .hero-section::before {
+            display: none !important;
+        }
+    </style>
 </head>
 <body class="scheme-ocean">
-        <!-- Navbar will be loaded by JavaScript -->
+    <!-- Navbar will be loaded by JavaScript -->
     <nav class="navbar"></nav>
                 
-                <!-- Mobile menu button -->
-                <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <!-- Mobile menu button -->
+    <button type="button" class="md:hidden" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
 
     <!-- Hero Section -->
-    <section class="relative text-white py-20 overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../images/7.jpg') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; min-height: 60vh !important;">
-        
-        <!-- Content -->
+    <section class="hero-section relative text-white py-20 overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/new/gym4.jpeg') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; min-height: 60vh !important;">
+        <!-- Content Overlay -->
         <div class="relative z-10 container text-center">
             <h1 class="text-6xl md:text-7xl font-black tracking-tight leading-tight mb-6 text-white" style="color: #ffffff !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; -webkit-text-fill-color: #ffffff !important;">Our State-of-the-Art Facility</h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-white">Experience West Chester's premier 24/7 fitness destination with cutting-edge equipment and expert guidance</p>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto text-white" style="color: #ffffff !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;">Experience West Chester's premier 24/7 fitness destination with cutting-edge equipment and expert guidance</p>
         </div>
     </section>
 
@@ -186,13 +194,14 @@
         </div>
     </section>
 
-        <!-- Footer will be loaded by JavaScript -->
+    <!-- Footer will be loaded by JavaScript -->
     <footer></footer>
 
-        <!-- Components JS -->
+    <!-- Components JS -->
     <script src="../js/components.js"></script>
     
     <!-- Flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
 </body>
 </html>
+

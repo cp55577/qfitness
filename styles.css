@@ -3488,36 +3488,63 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
 
 /* Modern Navigation Links - Only apply on desktop */
 @media (min-width: 768px) {
-  /* Ensure navigation doesn't overlap with est. 1994 text */
-  /* est. 1994 is absolutely positioned at left: 150px, ends around 220px */
+  /* Mathematically perfect spacing: equal margins on both sides */
+  /* Container has padding: 0 var(--space-lg) = 0 1.5rem = 0 24px */
+  /* We want: screen edge to logo = screen edge to navigation start */
   .navbar .flex.justify-between {
     position: relative !important;
+    gap: 3rem !important; /* Generous gap between left (logo+est.1994) and right (navigation) sections */
   }
   
-  /* Position navigation to the right, but ensure it doesn't overlap est. 1994 */
-  /* est. 1994 is at left: 150px and is ~70px wide, so ends around 220px */
-  /* Add minimum left margin to clear it, but still allow navigation to be on the right */
+  /* Ensure equal margins: both logo and navigation should be same distance from screen edges */
+  /* Container has padding: 0 var(--space-lg) = 0 1.5rem */
+  /* The flex container is inside the container, so both sides should naturally align */
+  /* But we need to ensure no extra margins interfere */
+  
+  /* Left side: Logo + est.1994 - ensure it starts at container's left padding edge */
+  .navbar .flex.items-center:has(.navbar-brand) {
+    flex-shrink: 0 !important;
+    min-width: fit-content !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Ensure logo has no extra margins that would push it away from left edge */
+  .navbar .navbar-brand {
+    position: relative !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Right side: Navigation - ensure it aligns with container's right padding edge */
+  /* The navigation's left edge (start of white bar) should match logo's distance from left */
   .navbar nav[role="navigation"] {
     display: flex !important;
     align-items: center !important;
-    gap: 1rem !important; /* Reduced spacing between items */
-    background: #ffffff !important; /* White background bar */
-    padding: 0.5rem 1rem !important; /* Padding for the white bar */
-    border-radius: 0.5rem !important; /* Rounded corners */
-    margin-right: 0 !important; /* Align to right edge */
-    width: auto !important; /* Don't stretch full width */
-    flex: none !important; /* Don't grow to fill space */
-    min-width: fit-content !important; /* Only as wide as content */
-    position: relative !important; /* Ensure proper positioning */
-    /* Minimum left margin to clear est. 1994 (ends around 220px) */
-    margin-left: 250px !important; /* Ensure navigation starts after est. 1994 */
+    gap: 0.625rem !important; /* Reduced from 1rem - tighter spacing between links */
+    background: #ffffff !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem !important;
+    margin-left: auto !important; /* Push to right */
+    margin-right: 0 !important; /* Align with container's right padding edge */
+    width: auto !important;
+    flex: none !important;
+    min-width: fit-content !important;
+    position: relative !important;
   }
   
-  /* On wider screens, if there's enough space, push navigation further right */
-  @media (min-width: 1400px) {
-    .navbar nav[role="navigation"] {
-      margin-left: auto !important; /* On very wide screens, push all the way right */
-    }
+  /* Ensure container padding is explicitly equal on both sides for perfect alignment */
+  .navbar .container {
+    padding-left: var(--space-lg) !important; /* 1.5rem = 24px */
+    padding-right: var(--space-lg) !important; /* 1.5rem = 24px */
+  }
+  
+  /* Adjust navigation to match visual spacing - move 160px right total */
+  .navbar nav[role="navigation"] {
+    margin-right: -160px !important; /* Move navigation 160px right to match visual spacing with left side */
   }
   
   .navbar nav[role="navigation"] > * {

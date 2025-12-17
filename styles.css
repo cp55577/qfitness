@@ -3375,13 +3375,20 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   }
   
   .navbar .container {
-    overflow-x: hidden !important;
+    overflow-x: visible !important; /* Allow logo to be fully visible */
+    overflow-y: visible !important;
     max-width: 100% !important;
   }
   
   .navbar .flex {
-    overflow-x: hidden !important;
+    overflow-x: visible !important; /* Allow logo to be fully visible */
+    overflow-y: visible !important;
     max-width: 100% !important;
+  }
+  
+  /* Ensure logo container isn't clipped */
+  .navbar .flex.justify-between {
+    overflow: visible !important;
   }
   
   /* FORCE desktop navigation to be hidden on mobile */
@@ -3465,10 +3472,28 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     width: 100% !important;
   }
   
-  /* Ensure logo doesn't take too much space */
+  /* Ensure logo doesn't take too much space but is fully visible */
   .navbar .navbar-brand {
     flex-shrink: 0 !important;
-    max-width: calc(100% - 60px) !important;
+    max-width: none !important; /* Remove max-width restriction that might be cutting off logo */
+    min-width: 4rem !important; /* Ensure minimum space for logo */
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important; /* Ensure logo isn't clipped */
+    position: relative !important;
+    z-index: 10 !important; /* Ensure logo is above other elements */
+  }
+  
+  /* Ensure logo container is visible on mobile */
+  .navbar .flex.items-center:has(.navbar-brand),
+  .navbar .flex.items-center.flex-shrink-0 {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    min-width: 4rem !important; /* Ensure container has space for logo */
+    flex-shrink: 0 !important;
   }
   
   .navbar .navbar-brand img {
@@ -3476,6 +3501,14 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     height: 4rem !important;
     max-width: 4rem !important;
     max-height: 4rem !important;
+    min-width: 4rem !important;
+    min-height: 4rem !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    object-fit: contain !important; /* Ensure full logo is visible */
+    position: relative !important;
+    z-index: 10 !important;
   }
   
   /* Ensure hamburger button is on the right */

@@ -15,9 +15,9 @@ const navbar = `
     <div class="container">
         <div class="flex justify-between items-center w-full">
             <!-- Left side: Logo + est. 1994 -->
-            <div class="flex items-center flex-shrink-0" style="position: relative;">
-                <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0">
-                    <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
+            <div class="flex items-center flex-shrink-0" style="position: relative; display: flex !important; visibility: visible !important;">
+                <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0" style="display: flex !important; visibility: visible !important;">
+                    <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24" style="display: block !important; visibility: visible !important; max-width: 100%; height: auto;" onerror="this.src='images/new_logo.png'; this.onerror=null;">
                 </a>
                 <span class="hidden md:inline-block ml-4" style="color: #ffffff !important; font-size: 16px; font-weight: normal; font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
             </div>

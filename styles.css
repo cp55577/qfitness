@@ -3488,26 +3488,36 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
 
 /* Modern Navigation Links - Only apply on desktop */
 @media (min-width: 768px) {
+  /* Ensure navigation doesn't overlap with est. 1994 text */
+  /* est. 1994 is absolutely positioned at left: 150px, ends around 220px */
+  .navbar .flex.justify-between {
+    position: relative !important;
+  }
+  
+  /* Position navigation to the right, but ensure it doesn't overlap est. 1994 */
+  /* est. 1994 is at left: 150px and is ~70px wide, so ends around 220px */
+  /* Add minimum left margin to clear it, but still allow navigation to be on the right */
   .navbar nav[role="navigation"] {
     display: flex !important;
     align-items: center !important;
     gap: 1rem !important; /* Reduced spacing between items */
-    background: transparent !important; /* Ensure no white background */
-    padding: 0 !important; /* Remove any padding that might create a bar */
-    margin: 0 !important;
+    background: #ffffff !important; /* White background bar */
+    padding: 0.5rem 1rem !important; /* Padding for the white bar */
+    border-radius: 0.5rem !important; /* Rounded corners */
+    margin-right: 0 !important; /* Align to right edge */
     width: auto !important; /* Don't stretch full width */
     flex: none !important; /* Don't grow to fill space */
+    min-width: fit-content !important; /* Only as wide as content */
+    position: relative !important; /* Ensure proper positioning */
+    /* Minimum left margin to clear est. 1994 (ends around 220px) */
+    margin-left: 250px !important; /* Ensure navigation starts after est. 1994 */
   }
   
-  /* Ensure the flex container doesn't have a white background */
-  .navbar .flex.justify-between {
-    background: transparent !important;
-  }
-  
-  /* Ensure no white background on any navbar child elements */
-  .navbar .container,
-  .navbar .flex {
-    background: transparent !important;
+  /* On wider screens, if there's enough space, push navigation further right */
+  @media (min-width: 1400px) {
+    .navbar nav[role="navigation"] {
+      margin-left: auto !important; /* On very wide screens, push all the way right */
+    }
   }
   
   .navbar nav[role="navigation"] > * {

@@ -820,9 +820,9 @@ footer {
 /* ===== 🎯 DROPDOWN MENU THEME OVERRIDES ===== */
 
 /* Dropdown menus - Professional white background with dark text */
-.navbar .absolute,
-.navbar [role="menu"],
-.navbar .group .absolute {
+/* Only apply to actual dropdown menus, not all absolute elements */
+.navbar .group .absolute[role="menu"],
+.navbar [role="menu"] {
   background: #ffffff !important; /* White background for contrast */
   border: 1px solid #e5e7eb !important; /* Light gray border */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
@@ -3584,6 +3584,10 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   animation: dropdownFadeIn 0.2s ease-out !important;
   overflow: hidden !important; /* Prevent content from extending */
   box-sizing: border-box !important; /* Include border in width calculation */
+  left: 0 !important; /* Align to left edge of parent button */
+  right: auto !important; /* Don't extend to right */
+  position: absolute !important; /* Ensure absolute positioning */
+  top: 100% !important; /* Position below button */
 }
 
 @keyframes dropdownFadeIn {
@@ -3644,8 +3648,15 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
 }
 
 /* Ensure dropdown items are visible and have proper contrast */
-.navbar .group:hover [role="menu"],
-.navbar .group:hover .absolute[role="menu"] {
+/* Only show dropdowns on hover - hide when not hovered */
+.navbar .group .absolute[role="menu"],
+.navbar .group [role="menu"] {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.navbar .group:hover .absolute[role="menu"],
+.navbar .group:hover [role="menu"] {
   opacity: 1 !important;
   visibility: visible !important;
 }

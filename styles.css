@@ -3378,6 +3378,8 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     overflow-x: visible !important; /* Allow logo to be fully visible */
     overflow-y: visible !important;
     max-width: 100% !important;
+    padding-left: 1rem !important; /* Add left padding for spacing */
+    padding-right: 1rem !important; /* Add right padding for spacing */
   }
   
   .navbar .flex {
@@ -3386,9 +3388,47 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     max-width: 100% !important;
   }
   
-  /* Ensure logo container isn't clipped */
+  /* Ensure logo container isn't clipped and has proper spacing */
   .navbar .flex.justify-between {
     overflow: visible !important;
+    padding-left: 0 !important; /* Container padding handles spacing */
+    padding-right: 0 !important;
+  }
+  
+  /* Ensure logo container has enough space and isn't clipped on the right */
+  .navbar .flex.items-center:has(.navbar-brand),
+  .navbar .flex.items-center.flex-shrink-0 {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0.5rem !important; /* Add right margin to prevent clipping */
+    padding-right: 0 !important;
+    min-width: 4rem !important;
+    max-width: none !important; /* Remove any max-width that might clip */
+    width: auto !important; /* Allow to expand for full logo */
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Ensure logo itself isn't clipped on the right */
+  .navbar .navbar-brand {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+  
+  .navbar .navbar-brand img {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible !important;
+    max-width: 4rem !important; /* Keep logo size but ensure it's not clipped */
+    width: 4rem !important;
+    height: 4rem !important;
   }
   
   /* FORCE desktop navigation to be hidden on mobile */
@@ -3472,20 +3512,23 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     width: 100% !important;
   }
   
-  /* Ensure logo doesn't take too much space but is fully visible */
+  /* Ensure logo doesn't take too much space but is fully visible - fix right side clipping */
   .navbar .navbar-brand {
     flex-shrink: 0 !important;
     max-width: none !important; /* Remove max-width restriction that might be cutting off logo */
     min-width: 4rem !important; /* Ensure minimum space for logo */
+    width: auto !important; /* Allow logo to take its natural width */
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
     overflow: visible !important; /* Ensure logo isn't clipped */
     position: relative !important;
     z-index: 10 !important; /* Ensure logo is above other elements */
+    margin-right: 0 !important; /* Remove any right margin that might cause clipping */
+    padding-right: 0 !important; /* Remove any right padding */
   }
   
-  /* Ensure logo container is visible on mobile */
+  /* Ensure logo container is visible on mobile and has enough space */
   .navbar .flex.items-center:has(.navbar-brand),
   .navbar .flex.items-center.flex-shrink-0 {
     display: flex !important;
@@ -3493,7 +3536,11 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     opacity: 1 !important;
     overflow: visible !important;
     min-width: 4rem !important; /* Ensure container has space for logo */
+    max-width: none !important; /* Remove max-width that might clip logo */
+    width: auto !important; /* Allow container to expand for logo */
     flex-shrink: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
   }
   
   .navbar .navbar-brand img {
@@ -3509,6 +3556,9 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     object-fit: contain !important; /* Ensure full logo is visible */
     position: relative !important;
     z-index: 10 !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible !important;
   }
   
   /* Ensure hamburger button is on the right */

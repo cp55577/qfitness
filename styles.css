@@ -3492,6 +3492,22 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     display: flex !important;
     align-items: center !important;
     gap: 1rem !important; /* Reduced spacing between items */
+    background: transparent !important; /* Ensure no white background */
+    padding: 0 !important; /* Remove any padding that might create a bar */
+    margin: 0 !important;
+    width: auto !important; /* Don't stretch full width */
+    flex: none !important; /* Don't grow to fill space */
+  }
+  
+  /* Ensure the flex container doesn't have a white background */
+  .navbar .flex.justify-between {
+    background: transparent !important;
+  }
+  
+  /* Ensure no white background on any navbar child elements */
+  .navbar .container,
+  .navbar .flex {
+    background: transparent !important;
   }
   
   .navbar nav[role="navigation"] > * {

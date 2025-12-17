@@ -14,10 +14,13 @@ const navbar = `
 <nav class="navbar">
     <div class="container">
         <div class="flex justify-between items-center w-full">
-            <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0 flex-shrink-0">
-                <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
-            </a>
-            <span class="hidden md:inline-block" style="color: #ffffff !important; font-size: 16px; font-weight: normal; position: absolute; left: 150px; top: 60%; transform: translateY(-50%); font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
+            <!-- Left side: Logo + est. 1994 -->
+            <div class="flex items-center flex-shrink-0" style="position: relative;">
+                <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0">
+                    <img src="${pathPrefix}images/new_logo.png" alt="Q Fitness Logo" class="h-24 w-24">
+                </a>
+                <span class="hidden md:inline-block ml-4" style="color: #ffffff !important; font-size: 16px; font-weight: normal; font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px;">est. 1994</span>
+            </div>
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-1" role="navigation" aria-label="Main navigation">

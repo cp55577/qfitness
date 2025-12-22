@@ -1146,9 +1146,12 @@ h3 {
   min-height: 80vh;
 }
 
-/* Minimize white space in navbar */
+/* Minimize white space in navbar - MOVE EVERYTHING RIGHT 20px */
 .navbar {
-  padding: var(--space-md) 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 1.25rem !important; /* 20px left to move everything right */
+  padding-right: 0 !important;
 }
 
 /* Minimize white space in footer */
@@ -2580,6 +2583,17 @@ html {
   z-index: 20 !important;
   border-radius: 0 0 20px 20px !important;
   margin-bottom: 1rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 1.25rem !important; /* 20px (1.25rem) left padding to move EVERYTHING right */
+  padding-right: 0 !important;
+  min-height: auto !important; /* Remove fixed height */
+}
+
+/* Ensure body background is always white for scheme-ocean */
+body.scheme-ocean {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
 .scheme-ocean .card {
@@ -3246,11 +3260,13 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
 /* ===== 🎯 MODERN PROFESSIONAL NAVBAR STYLES ===== */
 .navbar {
   background: linear-gradient(180deg, #0C2340 0%, #0a1a2e 100%) !important; /* Subtle gradient for depth */
-  padding: 1.5rem 0 !important;
+  padding: 0 !important; /* 0 top/bottom */
+  padding-left: 1.25rem !important; /* 20px left padding to move EVERYTHING right */
   box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.1) !important;
   position: relative !important;
   z-index: 50 !important;
-  min-height: 100px !important;
+  min-height: auto !important; /* Removed fixed min-height to allow navbar to shrink */
+  height: auto !important; /* Allow navbar to size to content */
   border-bottom: 1px solid rgba(196, 206, 212, 0.2) !important; /* Subtle border */
   backdrop-filter: blur(10px) !important; /* Modern glass effect */
   width: 100% !important;
@@ -3276,11 +3292,57 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
 }
 
 .navbar-brand img {
-  height: 7rem !important;
-  width: 7rem !important;
+  height: 11.25rem !important; /* 180px - even bigger logo */
+  width: 11.25rem !important; /* 180px */
   padding: 0 !important;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 2.5rem !important; /* FEATHERED EDGES - remove sharp corners */
+  -webkit-border-radius: 2.5rem !important;
+  overflow: hidden !important; /* Clip to rounded corners */
+}
+
+/* NUCLEAR OPTION - Force rounded corners on ALL logo images */
+.navbar .navbar-brand img,
+.navbar-brand img.logo-feathered,
+img.logo-feathered,
+.navbar a img,
+.navbar-brand a img {
+  border-radius: 2.5rem !important;
+  -webkit-border-radius: 2.5rem !important;
+  overflow: hidden !important;
+}
+
+.navbar-brand {
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow: visible !important; /* Allow feathered edges to show */
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Professional rounded corners for logo - remove sharp edges - FORCE ON ALL IMAGES */
+.logo-feathered,
+.navbar-brand img.logo-feathered,
+.navbar-brand img,
+img.logo-feathered {
+  border-radius: 2.5rem !important; /* Large rounded corners to remove sharp edges */
+  -webkit-border-radius: 2.5rem !important;
+  overflow: hidden !important; /* Clip to rounded corners */
+  /* Smooth transition */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar-brand:hover img.logo-feathered {
+  box-shadow: 
+    0 0 65px 32px rgba(12, 35, 64, 0.85),
+    0 0 55px 27px rgba(12, 35, 64, 0.75),
+    0 0 45px 22px rgba(12, 35, 64, 0.65),
+    0 0 35px 17px rgba(12, 35, 64, 0.55),
+    0 0 25px 12px rgba(12, 35, 64, 0.45),
+    0 6px 16px rgba(0, 0, 0, 0.4) !important;
 }
 
 .navbar-brand:hover img {
@@ -3544,12 +3606,12 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   }
   
   .navbar .navbar-brand img {
-    width: 4rem !important; /* Smaller logo on mobile */
-    height: 4rem !important;
-    max-width: 4rem !important;
-    max-height: 4rem !important;
-    min-width: 4rem !important;
-    min-height: 4rem !important;
+    width: 7.5rem !important; /* 120px - increased to match larger desktop logo proportionally */
+    height: 7.5rem !important;
+    max-width: 7.5rem !important;
+    max-height: 7.5rem !important;
+    min-width: 7.5rem !important;
+    min-height: 7.5rem !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -3584,11 +3646,11 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
   /* The flex container is inside the container, so both sides should naturally align */
   /* But we need to ensure no extra margins interfere */
   
-  /* Left side: Logo + est.1994 - ensure it starts at container's left padding edge */
+  /* Left side: Logo + est.1994 - move 20px left from current position */
   .navbar .flex.items-center:has(.navbar-brand) {
     flex-shrink: 0 !important;
     min-width: fit-content !important;
-    margin-left: 0 !important;
+    margin-left: 2.625rem !important; /* Reduced by 20px (1.25rem) from 3.875rem = 2.625rem */
     margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -3602,8 +3664,7 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     padding: 0 !important;
   }
   
-  /* Right side: Navigation - ensure it aligns with container's right padding edge */
-  /* The navigation's left edge (start of white bar) should match logo's distance from left */
+  /* Right side: Navigation - move white menu bar 10px more right */
   .navbar nav[role="navigation"] {
     display: flex !important;
     align-items: center !important;
@@ -3612,23 +3673,23 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     padding: 0.5rem 1rem !important;
     border-radius: 0.5rem !important;
     margin-left: auto !important; /* Push to right */
-    margin-right: 0 !important; /* Align with container's right padding edge */
+    margin-right: 4.5rem !important; /* Move white menu bar 10px more right (3.875rem + 0.625rem = 4.5rem) */
     width: auto !important;
     flex: none !important;
     min-width: fit-content !important;
     position: relative !important;
   }
   
-  /* Ensure container padding is explicitly equal on both sides for perfect alignment */
+  /* Ensure container padding - navbar already has 20px left padding, so keep container as is */
   .navbar .container {
-    padding-left: var(--space-lg) !important; /* 1.5rem = 24px */
+    padding-left: calc(var(--space-lg) + 1.875rem) !important; /* 1.5rem + 1.875rem (30px) = move all contents right by 30px */
     padding-right: var(--space-lg) !important; /* 1.5rem = 24px */
   }
   
-  /* Adjust navigation to match visual spacing - move 160px right total */
-  .navbar nav[role="navigation"] {
-    margin-right: -160px !important; /* Move navigation 160px right to match visual spacing with left side */
-  }
+  /* Remove the old negative margin adjustment */
+  /* .navbar nav[role="navigation"] {
+    margin-right: -160px !important;
+  } */
   
   .navbar nav[role="navigation"] > * {
     position: relative !important;

@@ -41,6 +41,50 @@
                 min-width: 600px !important;
             }
         }
+        
+        /* Mobile Sticky CTA Bar */
+        .mobile-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-top: 2px solid #10B981;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+            padding: 1rem;
+            z-index: 1000;
+            display: none;
+        }
+        
+        @media (max-width: 767px) {
+            .mobile-cta-bar {
+                display: block;
+            }
+            /* Add padding to body to prevent content from being hidden behind sticky bar */
+            body.page-the-gym {
+                padding-bottom: 90px;
+            }
+        }
+        
+        .mobile-cta-bar .cta-container {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 100%;
+        }
+        
+        .mobile-cta-bar .btn-primary {
+            flex: 1;
+            text-align: center;
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .mobile-cta-bar .btn-secondary {
+            flex: 0 0 auto;
+            padding: 0.875rem 1.25rem;
+            font-size: 0.875rem;
+        }
     </style>
     
     <!-- Custom Tailwind Config -->
@@ -76,9 +120,9 @@
         <div class="relative z-10 container text-center">
             <h1 class="text-6xl md:text-7xl font-black tracking-tight leading-tight mb-6 text-white">Our State-of-the-Art Facility</h1>
             <p class="text-xl md:text-2xl max-w-3xl mx-auto text-white">Experience West Chester's premier 24/7 fitness destination with cutting-edge equipment and expert guidance</p>
-            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="../contact.html" class="btn-cta-large" style="padding: 1rem 2rem; font-size: 1.125rem;">Book a Tour</a>
-                <a href="../membership/membership-rates.html" class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-2xl text-lg transition-all duration-300 border border-white/25">View Membership</a>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="../membership/membership-rates.html" class="btn-cta-large" style="padding: 1rem 2rem; font-size: 1.125rem;">Join Now</a>
+                <a href="../contact.html" class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-2xl text-lg transition-all duration-300 border border-white/25">Book a Tour</a>
             </div>
         </div>
     </section>
@@ -231,8 +275,11 @@
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-                        <p class="text-gray-700">Want help choosing a starting program?</p>
-                        <a href="../services/personal-training.html" class="btn-primary-blue text-center">Personal Training</a>
+                        <p class="text-gray-700">Ready to get started?</p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="../membership/membership-rates.html" class="btn-primary-green text-center">Join Now</a>
+                            <a href="../services/personal-training.html" class="text-primary-blue hover:text-primary-green underline text-center font-medium transition-colors">Personal Training</a>
+                        </div>
                     </div>
                 </div>
 
@@ -277,7 +324,7 @@
         <div class="container">
             <div class="max-w-4xl mx-auto text-center mb-12">
                 <h2 class="text-5xl font-black tracking-tight text-primary-blue mb-4">Location</h2>
-                <p class="text-xl text-gray-700 font-light leading-relaxed">We’re easy to find—and even easier to visit. Book a tour and see the gym in person.</p>
+                <p class="text-xl text-gray-700 font-light leading-relaxed">We're easy to find—conveniently located in West Chester, PA.</p>
             </div>
 
             <div class="max-w-6xl mx-auto">
@@ -301,8 +348,8 @@
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-3">
-                            <a href="../contact.html" class="btn-primary-green-sm text-center">Book a Tour</a>
-                            <a href="tel:610-574-2300" class="btn-primary-blue text-center">Call</a>
+                            <a href="../membership/membership-rates.html" class="btn-primary-green text-center">Join Now</a>
+                            <a href="tel:610-574-2300" class="text-primary-blue hover:text-primary-green underline text-center font-medium transition-colors">Call</a>
                         </div>
                     </div>
                 </div>
@@ -356,16 +403,36 @@
     <!-- Join Now CTA -->
     <section class="section bg-primary-blue text-white">
         <div class="container text-center">
-            <h2 class="text-5xl font-black tracking-tight text-white mb-6">Ready to Join?</h2>
-            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Start your fitness journey today with a Q Fitness membership</p>
-            <a href="../membership/membership-rates.html" class="btn-cta-large">
-                Join Now
-            </a>
+            <h2 class="text-5xl font-black tracking-tight text-white mb-4">Start Your Fitness Journey Today</h2>
+            <p class="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">Join West Chester's premier 24/7 gym—private, secure, and fully equipped for serious training.</p>
+            <div class="flex flex-wrap justify-center gap-3 mb-6 text-blue-200 text-sm">
+                <span>✓ 24/7 Access</span>
+                <span>•</span>
+                <span>✓ No Crowds</span>
+                <span>•</span>
+                <span>✓ Expert Guidance</span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="../membership/membership-rates.html" class="btn-cta-large">
+                    Join Now
+                </a>
+                <a href="../contact.html" class="text-white/80 hover:text-white underline text-sm transition-colors">Book a Tour</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer will be loaded by JavaScript -->
     <footer></footer>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <div class="container">
+            <div class="cta-container">
+                <a href="../membership/membership-rates.html" class="btn-primary-green btn-primary">Join Now</a>
+                <a href="../contact.html" class="btn-primary-blue btn-secondary">Tour</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Components JS -->
     <script src="../js/components.js"></script>

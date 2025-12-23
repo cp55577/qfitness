@@ -41,8 +41,8 @@ const navbar = `
                         role="menu"
                         aria-labelledby="about-button"
                     >
-                        <a href="${pathPrefix}about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link" role="menuitem">Michael (Founder and Owner)</a>
                         <a href="${pathPrefix}about/andrew.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" role="menuitem">Andrew (Head Trainer and Manager)</a>
+                        <a href="${pathPrefix}about/michael-quarto.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 michael-quarto-link" role="menuitem">Michael (Founder and Owner)</a>
                         <a href="${pathPrefix}about/the-gym.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 the-gym-link" role="menuitem">The Gym</a>
                     </div>
                 </div>
@@ -139,12 +139,12 @@ const navbar = `
                     </svg>
                 </button>
                 <ul id="mobile-about-menu" class="mobile-dropdown-menu hidden py-2 space-y-1 pl-6 border-l-2 border-gray-200">
-                    <li>
-                        <a href="${pathPrefix}about/michael-quarto.html" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-primary-blue active:bg-gray-200 transition-colors duration-150">Michael (Founder and Owner)</a>
-                    </li>
-                    <li>
-                        <a href="${pathPrefix}about/andrew.html" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-primary-blue active:bg-gray-200 transition-colors duration-150">Andrew (Head Trainer and Manager)</a>
-                    </li>
+                        <li>
+                            <a href="${pathPrefix}about/andrew.html" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-primary-blue active:bg-gray-200 transition-colors duration-150">Andrew (Head Trainer and Manager)</a>
+                        </li>
+                        <li>
+                            <a href="${pathPrefix}about/michael-quarto.html" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-primary-blue active:bg-gray-200 transition-colors duration-150">Michael (Founder and Owner)</a>
+                        </li>
                     <li>
                         <a href="${pathPrefix}about/the-gym.html" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-primary-blue active:bg-gray-200 transition-colors duration-150">The Gym</a>
                     </li>

@@ -20,6 +20,15 @@
     <!-- Custom Styles -->
     <link href="../styles.css" rel="stylesheet" />
     
+    <!-- Button Outline Style -->
+    <style>
+        .btn-outline:hover {
+            background: #10B981 !important;
+            color: #ffffff !important;
+            border-color: #10B981 !important;
+        }
+    </style>
+    
     <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
@@ -164,9 +173,14 @@
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
                         Ready to start your fitness journey? Let's work together to reach your goals.
                     </p>
-                    <a href="../contact.html" class="btn-primary-green">
-                        Contact Us
-                    </a>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="../membership/membership-rates.html" class="btn-primary-green">
+                            Join Now
+                        </a>
+                        <a href="../contact.html" class="btn-primary-green btn-outline" style="background: transparent !important; border: 2px solid #10B981 !important; color: #10B981 !important; box-shadow: none !important;">
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

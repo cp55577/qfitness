@@ -1,13 +1,8 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Sitemap location (for when site goes live)
-# Sitemap: https://qfitness.com/sitemap.xml
+# Sitemap location
+Sitemap: https://qfitness.com/sitemap.xml
 
-# Crawl delay (when live)
-# Crawl-delay: 1
-
-# Allow specific files when live
-# Allow: /styles.css
-# Allow: /images/
-# Allow: /*.js
+# Crawl delay
+Crawl-delay: 1

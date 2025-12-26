@@ -3691,6 +3691,48 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
     position: relative !important;
     overflow: hidden !important;
   }
+}
+
+/* Responsive adjustments for laptop screens - reduce spacing to fit all items */
+@media (min-width: 768px) and (max-width: 1280px) {
+  /* Reduce gap between navigation items */
+  .navbar nav[role="navigation"] {
+    gap: 0.25rem !important; /* Very tight spacing between links */
+    padding: 0.5rem 0.75rem !important; /* Reduced padding on white bar */
+    margin-right: 1rem !important; /* Reduced right margin */
+  }
+  
+  /* Reduce padding on individual navigation items */
+  .navbar nav[role="navigation"] button,
+  .navbar nav[role="navigation"] a {
+    padding: 0.5rem 0.75rem !important; /* Reduced padding */
+    font-size: 0.95rem !important; /* Slightly smaller font */
+  }
+  
+  /* Reduce gap between logo and navigation */
+  .navbar .flex.justify-between {
+    gap: 1.5rem !important; /* Reduced gap */
+  }
+  
+  /* Reduce container padding on laptops */
+  .navbar .container {
+    padding-left: calc(var(--space-lg) + 0.5rem) !important; /* Reduced left padding */
+    padding-right: var(--space-lg) !important;
+  }
+  
+  /* Reduce logo margin on laptops */
+  .navbar .flex.items-center:has(.navbar-brand) {
+    margin-left: 1rem !important; /* Reduced margin */
+  }
+  
+}
+
+/* Hide "est. 1994" text on smaller laptops to save space */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar .hidden.md\:inline-block {
+    display: none !important;
+  }
+}
 
   /* Modern hover effect with underline animation */
   .navbar nav[role="navigation"] button::after,

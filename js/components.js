@@ -17,7 +17,7 @@ const navbar = `
             <!-- Left side: Logo + est. 1994 -->
             <div class="flex items-center flex-shrink-0" style="position: relative; display: flex !important; visibility: visible !important;">
                 <a href="${pathPrefix}index.html" class="navbar-brand flex items-center p-0" style="display: flex !important; visibility: visible !important;">
-                    <img src="${pathPrefix}images/new/qfitness5.png" alt="Q Fitness Logo" class="logo-feathered" style="display: block !important; visibility: visible !important; width: 180px !important; height: 180px !important; max-width: 180px !important; max-height: 180px !important;" onerror="this.src='images/new/qfitness5.png'; this.onerror=null;">
+                    <img src="${pathPrefix}images/logo-transparency.png" alt="Q Fitness Logo" style="display: block !important; visibility: visible !important; width: 180px !important; height: 180px !important; max-width: 180px !important; max-height: 180px !important;" onerror="this.src='images/logo-transparency.png'; this.onerror=null;">
                 </a>
                 <span class="hidden md:inline-block" style="color: #ffffff !important; font-size: 20px !important; font-weight: normal; font-family: 'Times New Roman', serif; font-style: italic; letter-spacing: 1px; margin-left: 2.125rem !important;">est. 1994</span>
             </div>

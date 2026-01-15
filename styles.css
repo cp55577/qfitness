@@ -1146,11 +1146,11 @@ h3 {
   min-height: 80vh;
 }
 
-/* Minimize white space in navbar - MOVE EVERYTHING RIGHT 20px */
+/* Minimize white space in navbar */
 .navbar {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  padding-left: 1.25rem !important; /* 20px left to move everything right */
+  padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
@@ -2585,7 +2585,7 @@ html {
   margin-bottom: 1rem !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  padding-left: 1.25rem !important; /* 20px (1.25rem) left padding to move EVERYTHING right */
+  padding-left: 0 !important;
   padding-right: 0 !important;
   min-height: auto !important; /* Remove fixed height */
 }
@@ -3261,7 +3261,6 @@ body.scheme-ocean .navbar-brand span[class*="italic"] {
 .navbar {
   background: linear-gradient(180deg, #0C2340 0%, #0a1a2e 100%) !important; /* Subtle gradient for depth */
   padding: 0 !important; /* 0 top/bottom */
-  padding-left: 1.25rem !important; /* 20px left padding to move EVERYTHING right */
   box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.1) !important;
   position: relative !important;
   z-index: 50 !important;

@@ -12,7 +12,7 @@ const pathPrefix = getPathPrefix();
 
 const navbar = `
 <nav class="navbar">
-    <div class="container">
+    <div class="container" style="max-width: 100% !important; padding: 0 1.5rem 0 3.5rem !important;">
         <div class="flex justify-between items-center w-full">
             <!-- Left side: Logo + est. 1994 -->
             <div class="flex items-center flex-shrink-0" style="position: relative; display: flex !important; visibility: visible !important;">

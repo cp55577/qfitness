@@ -103,10 +103,19 @@ const navbar = `
                 <!-- Store -->
                 <a href="https://www.customcreationsnow.com/search?type=product%2Ccollection&q=Q+fitness" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-primary-green px-3 py-2 rounded-md transition duration-200 font-medium">Store</a>
                 
-                <!-- Join Now CTA -->
-                <a href="${pathPrefix}membership/membership-rates.html" class="btn-primary-green ml-4">
-                    Join Now
+                <!-- Sign In -->
+                <a href="https://qfitness.clubautomation.com" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-1.5 text-gray-600 hover:text-primary-blue px-3 py-2 rounded-md transition duration-200 font-medium border border-gray-300 hover:border-primary-blue hover:bg-gray-50">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    Sign In
                 </a>
+                
+                <!-- Join Now CTA -->
+                <a href="${pathPrefix}membership/membership-rates.html" 
+                   class="ml-2 px-5 py-2 rounded-lg font-semibold transition duration-200"
+                   style="display: inline-block !important; visibility: visible !important; background: #10B981 !important; color: #ffffff !important; text-decoration: none !important;">Join Now</a>
             </nav>
             
             <!-- Mobile menu button - MUST be visible on mobile -->
@@ -207,6 +216,17 @@ const navbar = `
                 <a href="https://www.customcreationsnow.com/search?type=product%2Ccollection&q=Q+fitness" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 text-base font-semibold text-gray-900 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors duration-150">Store</a>
             </li>
             
+            <!-- Sign In Button - Mobile -->
+            <li>
+                <a href="https://qfitness.clubautomation.com" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-2 p-3 text-base font-semibold text-gray-900 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors duration-150">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    <span>Sign In</span>
+                </a>
+            </li>
+            
             <!-- Join Now CTA -->
             <li class="pt-4 border-t border-gray-200">
                 <a href="${pathPrefix}membership/membership-rates.html" class="btn-primary-green w-full text-center block">
@@ -280,10 +300,12 @@ const footer = `
 
 // Auto-load components
 document.addEventListener('DOMContentLoaded', function() {
-    // Load navbar
+    // Load navbar (includes top bar)
     const navbarContainer = document.querySelector('nav');
     if (navbarContainer) {
-        navbarContainer.outerHTML = navbar;
+        // Insert the navbar (which includes top bar) before the nav element, then remove the old nav
+        navbarContainer.insertAdjacentHTML('beforebegin', navbar);
+        navbarContainer.remove();
     }
     
     // Load footer
